@@ -3,6 +3,7 @@ local _, addonTable = ...
 local common = addonTable.M.common
 local books = addonTable.M.books
 local booksV = addonTable.V.books
+local world_map = addonTable.M.world_map
 local zone_text = addonTable.M.zone_text
 
 local get_stats = function ()
@@ -160,68 +161,12 @@ local prepare_codes = function (name, race, class, is_male)
     at.codes = codes
 end
 
--- [[ world map ]]
-
-local world_map_original_set_map_id = WorldMapFrame.SetMapID
-local world_map_dds = { WorldMapContinentDropDown, WorldMapZoneDropDown }
-
-WorldMapFrame.SetMapID = function (self, mapID)
-    world_map_original_set_map_id(self, mapID)
-
-    for _, v in ipairs(world_map_dds) do
-        local text = v.Text:GetText()
-        local found = common.get_entry_text(text)
-        if found then
-            v.Text:SetText(common.capitalize(found))
-        end
-    end
-end
-
-local world_map_dropdown_button_click = function (self)
-    local dd = DropDownList1
-    if dd:IsShown() then
-        local texts = {}
-        local buttons = {}
-
-        for i = 1, dd.numButtons do
-            local button = _G["DropDownList1Button" .. i]
-            local text = button:GetText()
-            local found = common.get_entry_text(text)
-            if found then
-                local t = common.capitalize(found)
-                texts[#texts + 1] = t
-                buttons[t] = button
-                button:SetText(t)
-            end
-        end
-
-        sort(texts)
-        local h = DropDownList1Button1:GetHeight()
-        for i = 1, #texts do
-            buttons[texts[i]]:SetPoint("TOPLEFT", 16, - i * h)
-        end
-    end
-end
-
-WorldMapContinentDropDownButton:HookScript("OnClick", world_map_dropdown_button_click)
-WorldMapZoneDropDownButton:HookScript("OnClick", world_map_dropdown_button_click)
-
-local world_map_area_label_update = function (self)
-    local text = self.Name:GetText()
-    if text then
-        local found = common.get_entry_text(text)
-        if found then
-            self.Name:SetText(common.capitalize(found))
-        end
-    end
-end
-
 local prepare_world_map = function ()
     for provider, _ in pairs(WorldMapFrame.dataProviders) do
         if provider.setAreaLabelCallback and provider.Label and provider.Label.Name then
             local _, size, style = provider.Label.Name:GetFont()
             provider.Label.Name:SetFont("Interface\\AddOns\\ClassicUA\\assets\\FRIZQT_UA.ttf", size, style)
-            provider.Label:HookScript("OnUpdate", world_map_area_label_update)
+            provider.Label:HookScript("OnUpdate", world_map.world_map_area_label_update)
             break
         end
     end

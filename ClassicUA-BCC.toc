@@ -27,8 +27,10 @@ modules\common.lua
 modules\books.lua
 modules\quests.lua
 modules\tooltips.lua
+modules\world_map.lua
 modules\zone_text.lua
 modules\hooks.lua
+modules\events.lua
 
 talent_tree_tbc.lua
 main.lua
