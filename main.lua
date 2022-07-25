@@ -2,6 +2,7 @@ local _, addonTable = ...
 
 local common = addonTable.M.common
 local books = addonTable.M.books
+local zone_text = addonTable.M.zone_text
 -- [ utils ]
 
 local print_table = function (table, title)
@@ -13,26 +14,6 @@ end
 local copy_table = function (target, source)
     for k, v in pairs(source) do target[k] = v end
     return target
-end
-
-local capitalize = function (text)
-    local b1 = strbyte(text, 1)
-    if b1 >= 208 and b1 <= 210 then -- this is utf8 character, 2 bytes long
-        local b2 = strbyte(text, 2)
-        if b1 == 209 and b2 == 148 then
-            return 'Є' .. text:sub(3)
-        elseif b1 == 209 and b2 == 150 then
-            return 'І' .. text:sub(3)
-        elseif b1 == 209 and b2 == 151 then
-            return 'Ї' .. text:sub(3)
-        elseif b1 == 210 and b2 == 145 then
-            return 'Ґ' .. text:sub(3)
-        else -- run out of special cases -- let default upper() handle it
-            return text:sub(1, 2):upper() .. text:sub(3)
-        end
-    else
-        return text:sub(1, 1):upper() .. text:sub(2)
-    end
 end
 
 local function esc(x) -- https://stackoverflow.com/questions/9790688/escaping-strings-for-gsub
@@ -172,7 +153,7 @@ local prepare_codes = function (name, race, class, is_male)
     for _, c in ipairs(cases) do
         local t = at.race[race][c][sex]
         codes["{раса:" .. c .. "}"] = t
-        codes["{Раса:" .. c .. "}"] = capitalize(t)
+        codes["{Раса:" .. c .. "}"] = common.capitalize(t)
         codes["{РАСА:" .. c .. "}"] = string.upper(t)
         if c == "н" then -- "н" is default grammatical case
             codes["{раса}"] = codes["{раса:н}"]
@@ -186,7 +167,7 @@ local prepare_codes = function (name, race, class, is_male)
     for _, c in ipairs(cases) do
         local t = at.class[class][c][sex]
         codes["{клас:" .. c .. "}"] = t
-        codes["{Клас:" .. c .. "}"] = capitalize(t)
+        codes["{Клас:" .. c .. "}"] = common.capitalize(t)
         codes["{КЛАС:" .. c .. "}"] = string.upper(t)
         if c == "н" then -- "н" is default grammatical case
             codes["{клас}"] = codes["{клас:н}"]
@@ -278,42 +259,6 @@ local get_entry = function (entry_type, entry_id)
     return false
 end
 
--- todo: add another loop to try different "'s", e.g. "XXX's" and "XXXs'" are considered to be equal
-local get_entry_text = function (entry_key)
-    local at = addonTable
-
-    if entry_key then
-        for i = 1, 2 do
-            if i == 2 then
-                -- if failed to find original entry_key, try one more time with/out starting "The "
-                if entry_key:find("^The ") then
-                    -- remove starting "The "
-                    if #entry_key > 5 then
-                        entry_key = entry_key:sub(5)
-                    else
-                        break
-                    end
-                else
-                    -- add starting "The "
-                    entry_key = "The " .. entry_key
-                end
-            end
-
-            local object = at.object[entry_key]
-            if object then
-                return object
-            end
-
-            local zone = at.zone[entry_key]
-            if zone then
-                return zone
-            end
-        end
-    end
-
-    return false
-end
-
 local make_entry_text = function (text, tooltip, tooltip_matches_to_skip)
     if not text then
         return nil
@@ -349,16 +294,6 @@ local make_entry_text = function (text, tooltip, tooltip_matches_to_skip)
     return text[1]:gsub("{(%d+)}", function (a) return values[tonumber(a)] end)
 end
 
-local get_text = function (entry_key)
-    local at = addonTable
-
-    if entry_key and at.text[entry_key] then
-        return at.text[entry_key]
-    else
-        return entry_key
-    end
-end
-
 -- [ tooltips ]
 
 local tooltip_entry_type = false
@@ -378,11 +313,11 @@ local add_entry_to_tooltip = function (tooltip, entry_type, entry_id, content_in
 
     if entry then
         tooltip:AddLine(" ")
-        tooltip:AddLine("|TInterface\\AddOns\\ClassicUA\\assets\\ua:0|t " .. capitalize(entry[1]), 1, 1, 1)
+        tooltip:AddLine("|TInterface\\AddOns\\ClassicUA\\assets\\ua:0|t " .. common.capitalize(entry[1]), 1, 1, 1)
 
         local content = make_entry_text(entry[content_index or 2], tooltip)
         if content then
-            tooltip:AddLine(capitalize(content), 1, 1, 1, true)
+            tooltip:AddLine(common.capitalize(content), 1, 1, 1, true)
         end
 
         if tooltip:IsShown() then
@@ -428,7 +363,7 @@ local add_talent_entry_to_tooltip = function (tooltip, tab_index, talent_index, 
         end
 
         tooltip:AddLine(" ")
-        tooltip:AddLine(get_text("Next rank") .. ":", 1, 1, 1)
+        tooltip:AddLine(common.get_text("Next rank") .. ":", 1, 1, 1)
         tooltip:AddLine(next_rank_desc, 1, 1, 1, true)
     end
 
@@ -514,10 +449,10 @@ GameTooltip:HookScript("OnUpdate", function (self)
     if name == nil and unit == nil and not tooltip_entry_type then
         local text = GameTooltipTextLeft1:GetText()
         if text ~= tooltip_entry_id then
-            local entry = get_entry_text(text)
+            local entry = common.get_entry_text(text)
             if entry then
                 if self:NumLines() > 1 then self:AddLine(" ") end
-                self:AddLine("|TInterface\\AddOns\\ClassicUA\\assets\\ua:0|t " .. capitalize(entry), 1, 1, 1)
+                self:AddLine("|TInterface\\AddOns\\ClassicUA\\assets\\ua:0|t " .. common.capitalize(entry), 1, 1, 1)
 
                 if self:IsShown() then
                     self:Show()
@@ -599,7 +534,7 @@ QuestFrameDetailPanel:HookScript("OnShow", function (event)
     local frame = get_quest_frame()
     local entry = get_entry("quest", GetQuestID())
     if entry then
-        set_quest_content(frame, entry[1], entry[2], get_text("Quest Objectives"), entry[3])
+        set_quest_content(frame, entry[1], entry[2], common.get_text("Quest Objectives"), entry[3])
         frame:Show()
     else
         frame:Hide()
@@ -682,7 +617,7 @@ hooksecurefunc("SelectQuestLogEntry", function ()
         local id = select(8, GetQuestLogTitle(selection))
         local entry = get_entry("quest", id)
         if entry then
-            set_quest_content(frame, entry[1], entry[3], get_text("Description"), entry[2])
+            set_quest_content(frame, entry[1], entry[3], common.get_text("Description"), entry[2])
             frame:Show()
         else
             frame:Hide()
@@ -691,38 +626,6 @@ hooksecurefunc("SelectQuestLogEntry", function ()
         frame:Hide()
     end
 end)
-
--- [[ zone text and minimap ]]
-
-local zone_text_lookup = {
-    -- { FontString object, lookup function }
-    { ZoneTextString, get_entry_text },
-    { SubZoneTextString, get_entry_text },
-    { MinimapZoneText, get_entry_text },
-    { PVPInfoTextString, get_text },
-    { PVPArenaTextString, get_text },
-}
-
-local update_zone_text = function ()
-    local text, found
-    for _, lookup in ipairs(zone_text_lookup) do
-        text = lookup[1]:GetText()
-        if text then
-            local found = lookup[2](text)
-            if found then
-                lookup[1]:SetText(capitalize(found))
-            end
-        end
-    end
-end
-
-local prepare_zone_text = function ()
-    for _, lookup in ipairs(zone_text_lookup) do
-        local _, size, style = lookup[1]:GetFont()
-        lookup[1]:SetFont("Interface\\AddOns\\ClassicUA\\assets\\FRIZQT_UA.ttf", size, style)
-    end
-    update_zone_text()
-end
 
 -- [[ world map ]]
 
@@ -734,9 +637,9 @@ WorldMapFrame.SetMapID = function (self, mapID)
 
     for _, v in ipairs(world_map_dds) do
         local text = v.Text:GetText()
-        local found = get_entry_text(text)
+        local found = common.get_entry_text(text)
         if found then
-            v.Text:SetText(capitalize(found))
+            v.Text:SetText(common.capitalize(found))
         end
     end
 end
@@ -750,9 +653,9 @@ local world_map_dropdown_button_click = function (self)
         for i = 1, dd.numButtons do
             local button = _G["DropDownList1Button" .. i]
             local text = button:GetText()
-            local found = get_entry_text(text)
+            local found = common.get_entry_text(text)
             if found then
-                local t = capitalize(found)
+                local t = common.capitalize(found)
                 texts[#texts + 1] = t
                 buttons[t] = button
                 button:SetText(t)
@@ -773,9 +676,9 @@ WorldMapZoneDropDownButton:HookScript("OnClick", world_map_dropdown_button_click
 local world_map_area_label_update = function (self)
     local text = self.Name:GetText()
     if text then
-        local found = get_entry_text(text)
+        local found = common.get_entry_text(text)
         if found then
-            self.Name:SetText(capitalize(found))
+            self.Name:SetText(common.capitalize(found))
         end
     end
 end
@@ -831,7 +734,7 @@ event_frame:SetScript("OnEvent", function (self, event, ...)
         prepare_quests(faction == "Alliance")
         prepare_codes(name, race, class, sex == 2) -- 2 for male
         prepare_zones()
-        prepare_zone_text()
+        zone_text.prepare_zone_text()
         prepare_world_map()
     elseif event == "ITEM_TEXT_BEGIN" then
         if tooltip_entry_type == "item" then
@@ -844,6 +747,6 @@ event_frame:SetScript("OnEvent", function (self, event, ...)
     elseif event == "ZONE_CHANGED"
         or event == "ZONE_CHANGED_INDOORS"
         or event == "ZONE_CHANGED_NEW_AREA" then
-        update_zone_text()
+        zone_text.update_zone_text()
     end
 end)

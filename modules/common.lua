@@ -76,4 +76,71 @@ function M.setup_frame_scrollbar_values(frame, height)
     frame.content:SetSize(frame.content:GetWidth(), height)
 end
 
+function M.capitalize(text)
+    local b1 = strbyte(text, 1)
+    if b1 >= 208 and b1 <= 210 then -- this is utf8 character, 2 bytes long
+        local b2 = strbyte(text, 2)
+        if b1 == 209 and b2 == 148 then
+            return 'Є' .. text:sub(3)
+        elseif b1 == 209 and b2 == 150 then
+            return 'І' .. text:sub(3)
+        elseif b1 == 209 and b2 == 151 then
+            return 'Ї' .. text:sub(3)
+        elseif b1 == 210 and b2 == 145 then
+            return 'Ґ' .. text:sub(3)
+        else -- run out of special cases -- let default upper() handle it
+            return text:sub(1, 2):upper() .. text:sub(3)
+        end
+    else
+        return text:sub(1, 1):upper() .. text:sub(2)
+    end
+end
+
+-- todo: add another loop to try different "'s", e.g. "XXX's" and "XXXs'" are considered to be equal
+function M.get_entry_text(entry_key)
+    local at = addonTable
+
+    if entry_key then
+        for i = 1, 2 do
+            if i == 2 then
+                -- if failed to find original entry_key, try one more time with/out starting "The "
+                if entry_key:find("^The ") then
+                    -- remove starting "The "
+                    if #entry_key > 5 then
+                        entry_key = entry_key:sub(5)
+                    else
+                        break
+                    end
+                else
+                    -- add starting "The "
+                    entry_key = "The " .. entry_key
+                end
+            end
+
+            local object = at.object[entry_key]
+            if object then
+                return object
+            end
+
+            local zone = at.zone[entry_key]
+            if zone then
+                return zone
+            end
+        end
+    end
+
+    return false
+end
+
+
+function M.get_text(entry_key)
+    local at = addonTable
+
+    if entry_key and at.text[entry_key] then
+        return at.text[entry_key]
+    else
+        return entry_key
+    end
+end
+
 return M
