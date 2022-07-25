@@ -14,7 +14,6 @@ local tooltip_entry_type = nil
 local tooltip_entry_id = nil
 
 
-
 local make_entry_text = function (text, tooltip, tooltip_matches_to_skip)
     if not text then
         return nil
@@ -32,7 +31,7 @@ local make_entry_text = function (text, tooltip, tooltip_matches_to_skip)
     local values = {}
 
     for i = 2, #text do
-        local p = esc(text[i]):gsub("{(%d+)}", function (a) return "(%d+)" end)
+        local p = common.esc(text[i]):gsub("{(%d+)}", function (a) return "(%d+)" end)
         local match_number = 0
         for j = 1, tooltip:NumLines() do
             local t = getglobal(tooltip:GetName() .. "TextLeft" .. j):GetText()

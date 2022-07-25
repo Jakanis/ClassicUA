@@ -147,6 +147,30 @@ local copy_table = function (target, source)
     return target
 end
 
+local make_text = function (text)
+    if not text then
+        return nil
+    end
+
+    for k, v in pairs(addonTable.codes) do
+        text = text:gsub(k, v)
+    end
+
+    return text
+end
+
+local make_text_array = function (array)
+    if array then
+        local result = {}
+        for i = 1, #array do
+            result[i] = make_text(array[i])
+        end
+        return result
+    else
+        return nil
+    end
+end
+
 function M.get_entry(entry_type, entry_id)
     local at = addonTable
 
@@ -193,6 +217,29 @@ function M.get_entry(entry_type, entry_id)
 
     return false
 end
+
+function M.print_table(table, title)
+    print(title .. " {")
+    for k, v in pairs(table) do print("[" .. k .. "]=" .. tostring(v)) end
+    print("} " .. title)
+end
+
+function M.esc(x) -- https://stackoverflow.com/questions/9790688/escaping-strings-for-gsub
+    return x:gsub('%%', '%%%%')
+            :gsub('^%^', '%%^')
+            :gsub('%$$', '%%$')
+            :gsub('%(', '%%(')
+            :gsub('%)', '%%)')
+            :gsub('%.', '%%.')
+            :gsub('%[', '%%[')
+            :gsub('%]', '%%]')
+            :gsub('%*', '%%*')
+            :gsub('%+', '%%+')
+            :gsub('%-', '%%-')
+            :gsub('%?', '%%?')
+end
+
+-- [ entries ]
 
 
 return M
