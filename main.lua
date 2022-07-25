@@ -3,6 +3,8 @@ local _, addonTable = ...
 local common = addonTable.M.common
 local books = addonTable.M.books
 local booksV = addonTable.V.books
+local quests = addonTable.M.quests
+local tooltips = addonTable.M.tooltips
 local tooltipV = addonTable.V.tooltip
 local world_map = addonTable.M.world_map
 local zone_text = addonTable.M.zone_text
@@ -174,6 +176,9 @@ local prepare_world_map = function ()
 end
 
 -- [[ events ]]
+
+tooltips.register_tooltip_hooks()
+quests.register_quests_hooks()
 
 local event_frame = CreateFrame("frame")
 
