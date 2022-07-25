@@ -1,5 +1,7 @@
 local _, addonTable = ...
 
+local common = addonTable.M.common
+local books = addonTable.M.books
 -- [ utils ]
 
 local print_table = function (table, title)
@@ -528,77 +530,6 @@ GameTooltip:HookScript("OnUpdate", function (self)
     end
 end)
 
--- [ frames ]
-
-local setup_frame_background_and_border = function (frame)
-    local texture = frame:CreateTexture(nil, "BACKGROUND")
-    texture:SetTexture("Interface\\QuestFrame\\QuestBG")
-    texture:SetTexCoord(0.0, 0.58, 0.0, 0.65)
-    texture:SetPoint("TOPLEFT", 4, -8)
-    texture:SetPoint("BOTTOMRIGHT", -4, 8)
-
-    frame:SetBackdrop({
-        edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
-        edgeSize = 24
-    })
-end
-
--- areas: { area1 = { font, size }, ... }
-local setup_frame_scrollbar_and_content = function (frame, areas)
-    local scrollframe = CreateFrame("ScrollFrame", nil, frame)
-    scrollframe:SetPoint("TOPLEFT", 8, -9)
-    scrollframe:SetPoint("BOTTOMRIGHT", -8, 9)
-    frame.scrollframe = scrollframe
-
-    local content = CreateFrame("Frame", nil, scrollframe)
-    content:SetSize(scrollframe:GetWidth() - 60, 0)
-    scrollframe:SetScrollChild(content)
-    frame.content = content
-
-    for k, v in pairs(areas) do
-        local a = content:CreateFontString(nil, "OVERLAY")
-        a:SetWidth(frame:GetWidth() - 60)
-        a:SetJustifyH("LEFT")
-        a:SetJustifyV("TOP")
-        a:SetTextColor(0, 0, 0)
-        if type(v) == "table" and #v == 2 then
-            a:SetFont(v[1], v[2])
-        end
-        frame[k] = a
-    end
-
-    local scrollbar = CreateFrame("Slider", nil, scrollframe, "UIPanelScrollBarTemplate")
-    scrollbar:SetPoint("TOPLEFT", frame, "TOPRIGHT", -26, -27)
-    scrollbar:SetPoint("BOTTOMLEFT", frame, "BOTTOMRIGHT", 0, 26)
-    scrollbar:SetValueStep(40)
-    scrollbar.scrollStep = 100
-    scrollbar:SetValue(1)
-    scrollbar:SetWidth(16)
-    scrollbar:SetScript("OnValueChanged", function (self, value)
-        self:GetParent():SetVerticalScroll(value)
-    end)
-    frame.scrollbar = scrollbar
-
-    frame:EnableMouse(true)
-    frame:EnableMouseWheel(true)
-    frame:SetScript("OnMouseWheel", function(self, delta)
-        local v = scrollbar:GetValue()
-        scrollbar:SetValue(v - delta * self.scrollbar.scrollStep)
-    end)
-end
-
-local setup_frame_scrollbar_values = function (frame, height)
-    local delta = height - frame:GetHeight() + 24
-    if delta > 0 then
-        frame.scrollbar:SetMinMaxValues(1, delta)
-    else
-        frame.scrollbar:SetMinMaxValues(1, 1)
-    end
-
-    frame.scrollbar:SetValue(1)
-    frame.content:SetSize(frame.content:GetWidth(), height)
-end
-
 -- [ quests ]
 
 local quest_title_font = "Interface\\AddOns\\ClassicUA\\assets\\Morpheus_UA.ttf"
@@ -617,9 +548,9 @@ local get_quest_frame = function ()
     frame:SetPoint("TOP", 0, -72)
     frame:SetPoint("RIGHT", frame:GetWidth() - 37, 0)
 
-    setup_frame_background_and_border(frame)
+    common.setup_frame_background_and_border(frame)
 
-    setup_frame_scrollbar_and_content(frame, { -- todo: take quest font sizes from config
+    common.setup_frame_scrollbar_and_content(frame, { -- todo: take quest font sizes from config
         title = { quest_title_font, 18 },
         text = { quest_text_font, 13 },
         more_title = { quest_title_font, 18 },
@@ -760,64 +691,6 @@ hooksecurefunc("SelectQuestLogEntry", function ()
         frame:Hide()
     end
 end)
-
--- [[ books ]]
-
-local book_item_id = false
-local book_text_font = "Interface\\AddOns\\ClassicUA\\assets\\Morpheus_UA.ttf"
-
-local book_frame = nil
-local get_book_frame = function ()
-    if book_frame then
-        return book_frame
-    end
-
-    local width, height = ItemTextFrame:GetSize()
-    local frame = CreateFrame("frame", nil, ItemTextFrame, "BackdropTemplate")
-    frame:SetFrameStrata("HIGH")
-    frame:SetSize(width - 64, height - 160)
-    frame:SetPoint("TOP", 0, -72)
-    frame:SetPoint("RIGHT", frame:GetWidth() - 37, 0)
-
-    setup_frame_background_and_border(frame)
-
-    setup_frame_scrollbar_and_content(frame, { -- todo: take book font size from config
-        text = { book_text_font, 15 }
-    })
-
-    frame:Show()
-
-    book_frame = frame
-    return book_frame
-end
-
-local set_book_content = function (text)
-    local f = get_book_frame()
-    local h = 16
-
-    f.text:SetPoint("TOPLEFT", f.content, 12, -h)
-    f.text:SetText(text)
-    h = h + f.text:GetHeight() + 12
-
-    setup_frame_scrollbar_values(f, h)
-end
-
-local show_book = function (text)
-    local book = get_entry("book", book_item_id)
-    if book then
-        local page = ItemTextGetPage()
-        if not book[page] and book[1] then
-            book[page] = book[1]
-        end
-        set_book_content(book[page])
-        get_book_frame():Show()
-    end
-end
-
-local hide_book = function ()
-    get_book_frame():Hide()
-    book_item_id = false
-end
 
 -- [[ zone text and minimap ]]
 
@@ -965,9 +838,9 @@ event_frame:SetScript("OnEvent", function (self, event, ...)
             book_item_id = tooltip_entry_id
         end
     elseif event == "ITEM_TEXT_READY" then
-        show_book()
+        books.show_book()
     elseif event == "ITEM_TEXT_CLOSED" then
-        hide_book()
+        books.hide_book()
     elseif event == "ZONE_CHANGED"
         or event == "ZONE_CHANGED_INDOORS"
         or event == "ZONE_CHANGED_NEW_AREA" then
