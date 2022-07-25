@@ -132,7 +132,6 @@ function M.get_entry_text(entry_key)
     return false
 end
 
-
 function M.get_text(entry_key)
     local at = addonTable
 
@@ -142,5 +141,53 @@ function M.get_text(entry_key)
         return entry_key
     end
 end
+
+function M.get_entry(entry_type, entry_id)
+    local at = addonTable
+
+    if entry_type and entry_id then
+        entry_id = tonumber(entry_id)
+
+        if entry_type == "quest" then
+            local quest = nil
+
+            if at.quest_f[entry_id] then
+                quest = at.quest_f[entry_id]
+            elseif at.quest_n[entry_id] then
+                quest = at.quest_n[entry_id]
+            end
+
+            if quest then
+                return make_text_array(quest)
+            end
+        end
+
+        if entry_type == "book" then
+            local book = at.book[entry_id]
+            if book then
+                return make_text_array(book)
+            end
+        end
+
+        if at[entry_type] and at[entry_type][entry_id] then
+            local entry = at[entry_type][entry_id]
+
+            if entry.ref and (entry_type == "spell" or entry_type == "item") then
+                local entry_ref = at[entry_type][entry.ref]
+                if entry_ref then
+                    -- todo: maybe add caching of the result table
+                    return copy_table(copy_table({}, entry_ref), entry)
+                else
+                    return copy_table({ entry_type .. "|cff999999#|r" .. entry_id .. "|cff999999=>|r" .. entry.ref }, entry)
+                end
+            end
+
+            return entry
+        end
+    end
+
+    return false
+end
+
 
 return M

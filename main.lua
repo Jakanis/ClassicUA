@@ -2,6 +2,7 @@ local _, addonTable = ...
 
 local common = addonTable.M.common
 local books = addonTable.M.books
+local booksV = addonTable.V.books
 local zone_text = addonTable.M.zone_text
 -- [ utils ]
 
@@ -212,53 +213,6 @@ local make_text_array = function (array)
     end
 end
 
-local get_entry = function (entry_type, entry_id)
-    local at = addonTable
-
-    if entry_type and entry_id then
-        entry_id = tonumber(entry_id)
-
-        if entry_type == "quest" then
-            local quest = nil
-
-            if at.quest_f[entry_id] then
-                quest = at.quest_f[entry_id]
-            elseif at.quest_n[entry_id] then
-                quest = at.quest_n[entry_id]
-            end
-
-            if quest then
-                return make_text_array(quest)
-            end
-        end
-
-        if entry_type == "book" then
-            local book = at.book[entry_id]
-            if book then
-                return make_text_array(book)
-            end
-        end
-
-        if at[entry_type] and at[entry_type][entry_id] then
-            local entry = at[entry_type][entry_id]
-
-            if entry.ref and (entry_type == "spell" or entry_type == "item") then
-                local entry_ref = at[entry_type][entry.ref]
-                if entry_ref then
-                    -- todo: maybe add caching of the result table
-                    return copy_table(copy_table({}, entry_ref), entry)
-                else
-                    return copy_table({ entry_type .. "|cff999999#|r" .. entry_id .. "|cff999999=>|r" .. entry.ref }, entry)
-                end
-            end
-
-            return entry
-        end
-    end
-
-    return false
-end
-
 local make_entry_text = function (text, tooltip, tooltip_matches_to_skip)
     if not text then
         return nil
@@ -296,8 +250,8 @@ end
 
 -- [ tooltips ]
 
-local tooltip_entry_type = false
-local tooltip_entry_id = false
+local tooltip_entry_type = nil
+local tooltip_entry_id = nil
 
 -- content_index: default is 2 (description)
 local add_entry_to_tooltip = function (tooltip, entry_type, entry_id, content_index)
@@ -305,7 +259,7 @@ local add_entry_to_tooltip = function (tooltip, entry_type, entry_id, content_in
         return
     end
 
-    local entry = get_entry(entry_type, entry_id)
+    local entry = common.get_entry(entry_type, entry_id)
 
     if not entry then -- todo: check if debug info should be shown
         entry = { entry_type .. "|cff999999#|r" .. entry_id }
@@ -342,7 +296,7 @@ local add_talent_entry_to_tooltip = function (tooltip, tab_index, talent_index, 
         return
     end
 
-    local entry = get_entry("spell", talent[rank_to_show])
+    local entry = common.get_entry("spell", talent[rank_to_show])
     if not entry then
         entry = { "spell|cff999999#|r" .. talent[rank_to_show] }
     end
@@ -357,7 +311,7 @@ local add_talent_entry_to_tooltip = function (tooltip, tab_index, talent_index, 
     if rank_to_show ~= next_rank_to_show then
         local next_rank_desc = "spell|cff999999#|r" .. talent[next_rank_to_show]
 
-        local entry = get_entry("spell", talent[next_rank_to_show])
+        local entry = common.get_entry("spell", talent[next_rank_to_show])
         if entry and entry[2] then
             next_rank_desc = make_entry_text(entry[2], tooltip, 1)
         end
@@ -527,12 +481,12 @@ local set_quest_content = function (frame, title, text, more_title, more_text)
         frame.more_text:SetText("")
     end
 
-    setup_frame_scrollbar_values(frame, h)
+    common.setup_frame_scrollbar_values(frame, h)
 end
 
 QuestFrameDetailPanel:HookScript("OnShow", function (event)
     local frame = get_quest_frame()
-    local entry = get_entry("quest", GetQuestID())
+    local entry = common.get_entry("quest", GetQuestID())
     if entry then
         set_quest_content(frame, entry[1], entry[2], common.get_text("Quest Objectives"), entry[3])
         frame:Show()
@@ -548,7 +502,7 @@ end)
 
 QuestFrameProgressPanel:HookScript("OnShow", function (event)
     local frame = get_quest_frame()
-    local entry = get_entry("quest", GetQuestID())
+    local entry = common.get_entry("quest", GetQuestID())
     if entry then
         set_quest_content(frame, entry[1], entry[4])
         frame:Show()
@@ -564,7 +518,7 @@ end)
 
 QuestFrameRewardPanel:HookScript("OnShow", function (event)
     local frame = get_quest_frame()
-    local entry = get_entry("quest", GetQuestID())
+    local entry = common.get_entry("quest", GetQuestID())
     if entry then
         set_quest_content(frame, entry[1], entry[5])
         frame:Show()
@@ -591,9 +545,9 @@ local get_questlog_frame = function ()
     frame:SetPoint("TOP", 0, -166)
     frame:SetPoint("RIGHT", frame:GetWidth() - 41, 0)
 
-    setup_frame_background_and_border(frame)
+    common.setup_frame_background_and_border(frame)
 
-    setup_frame_scrollbar_and_content(frame, { -- todo: take quest font sizes from config
+    common.setup_frame_scrollbar_and_content(frame, { -- todo: take quest font sizes from config
         title = { quest_title_font, 18 },
         text = { quest_text_font, 13 },
         more_title = { quest_title_font, 18 },
@@ -615,7 +569,7 @@ hooksecurefunc("SelectQuestLogEntry", function ()
     local selection = GetQuestLogSelection()
     if selection > 0 then
         local id = select(8, GetQuestLogTitle(selection))
-        local entry = get_entry("quest", id)
+        local entry = common.get_entry("quest", id)
         if entry then
             set_quest_content(frame, entry[1], entry[3], common.get_text("Description"), entry[2])
             frame:Show()
@@ -738,7 +692,7 @@ event_frame:SetScript("OnEvent", function (self, event, ...)
         prepare_world_map()
     elseif event == "ITEM_TEXT_BEGIN" then
         if tooltip_entry_type == "item" then
-            book_item_id = tooltip_entry_id
+            booksV.book_item_id = tooltip_entry_id
         end
     elseif event == "ITEM_TEXT_READY" then
         books.show_book()

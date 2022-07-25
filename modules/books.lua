@@ -4,17 +4,23 @@ if not addonTable.M then
     addonTable.M = {}
 end
 
+if not addonTable.V then
+    addonTable.V = {}
+end
+
 addonTable.M.books = {}
+addonTable.V.books = {}
 local M = addonTable.M.books
+local V = addonTable.V.books
 
 local common = addonTable.M.common
 
 -- [[ books ]]
 
-local book_item_id = false
+V.book_item_id = nil
 local book_text_font = "Interface\\AddOns\\ClassicUA\\assets\\Morpheus_UA.ttf"
-
 local book_frame = nil
+
 local get_book_frame = function ()
     if book_frame then
         return book_frame
@@ -50,8 +56,8 @@ local set_book_content = function (text)
     common.setup_frame_scrollbar_values(f, h)
 end
 
-local show_book = function (text)
-    local book = get_entry("book", book_item_id)
+function M.show_book(text)
+    local book = common.get_entry("book", V.book_item_id)
     if book then
         local page = ItemTextGetPage()
         if not book[page] and book[1] then
@@ -62,9 +68,9 @@ local show_book = function (text)
     end
 end
 
-local hide_book = function ()
+function M.hide_book()
     get_book_frame():Hide()
-    book_item_id = false
+    V.book_item_id = nil
 end
 
 return M
