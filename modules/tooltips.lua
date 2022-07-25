@@ -56,7 +56,7 @@ end
 
 -- content_index: default is 2 (description)
 local add_entry_to_tooltip = function (tooltip, entry_type, entry_id, content_index)
-    if tooltip_entry_type then
+    if V.tooltip_entry_type then
         return
     end
 
@@ -80,8 +80,8 @@ local add_entry_to_tooltip = function (tooltip, entry_type, entry_id, content_in
         end
     end
 
-    tooltip_entry_type = entry_type
-    tooltip_entry_id = entry_id
+    V.tooltip_entry_type = entry_type
+    V.tooltip_entry_id = entry_id
 end
 
 local add_talent_entry_to_tooltip = function (tooltip, tab_index, talent_index, rank, max_rank)
@@ -126,8 +126,8 @@ local add_talent_entry_to_tooltip = function (tooltip, tab_index, talent_index, 
         tooltip:Show()
     end
 
-    tooltip_entry_type = "spell"
-    tooltip_entry_id = talent[rank_to_show]
+    V.tooltip_entry_type = "spell"
+    V.tooltip_entry_id = talent[rank_to_show]
 end
 
 local tooltip_set_item = function (self)
@@ -159,8 +159,8 @@ local tooltip_set_unit = function (self)
 end
 
 local tooltip_cleared = function (self)
-    tooltip_entry_type = false
-    tooltip_entry_id = false
+    V.tooltip_entry_type = nil
+    V.tooltip_entry_id = nil
 end
 
 function M.register_tooltip_hooks()
@@ -203,9 +203,9 @@ function M.register_tooltip_hooks()
     
     GameTooltip:HookScript("OnUpdate", function (self)
         local name, unit = self:GetUnit()
-        if name == nil and unit == nil and not tooltip_entry_type then
+        if name == nil and unit == nil and not V.tooltip_entry_type then
             local text = GameTooltipTextLeft1:GetText()
-            if text ~= tooltip_entry_id then
+            if text ~= V.tooltip_entry_id then
                 local entry = common.get_entry_text(text)
                 if entry then
                     if self:NumLines() > 1 then self:AddLine(" ") end
@@ -216,8 +216,8 @@ function M.register_tooltip_hooks()
                     end
                 end
     
-                tooltip_entry_type = "text"
-                tooltip_entry_id = text
+                V.tooltip_entry_type = "text"
+                V.tooltip_entry_id = text
             end
         end
     end)
