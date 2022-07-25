@@ -4,14 +4,19 @@ if not addonTable.M then
     addonTable.M = {}
 end
 
+if not addonTable.V then
+    addonTable.V = {}
+end
+
 addonTable.M.tooltips = {}
 local M = addonTable.M.tooltips
+local V = addonTable.V.tooltips
 local common = addonTable.M.common
 
 -- [ tooltips ]
 
-local tooltip_entry_type = nil
-local tooltip_entry_id = nil
+V.tooltip_entry_type = nil
+V.tooltip_entry_id = nil
 
 
 local make_entry_text = function (text, tooltip, tooltip_matches_to_skip)

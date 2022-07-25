@@ -3,6 +3,7 @@ local _, addonTable = ...
 local common = addonTable.M.common
 local books = addonTable.M.books
 local booksV = addonTable.V.books
+local tooltipV = addonTable.V.tooltip
 local world_map = addonTable.M.world_map
 local zone_text = addonTable.M.zone_text
 
@@ -215,8 +216,8 @@ event_frame:SetScript("OnEvent", function (self, event, ...)
         zone_text.prepare_zone_text()
         prepare_world_map()
     elseif event == "ITEM_TEXT_BEGIN" then
-        if tooltip_entry_type == "item" then
-            booksV.book_item_id = tooltip_entry_id
+        if tooltipV.tooltip_entry_type == "item" then
+            booksV.book_item_id = tooltipV.tooltip_entry_id
         end
     elseif event == "ITEM_TEXT_READY" then
         books.show_book()
