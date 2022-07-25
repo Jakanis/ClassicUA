@@ -23,6 +23,58 @@ local prepare_talent_tree = function (class)
     addonTable.talent_tree = addonTable.talent_tree[class]
 end
 
+local prepare_codes = function (name, race, class, is_male)
+    -- print("preparing codes for: " .. name .. " / " .. race .. " / " .. class .. " / " .. (is_male and "male" or "famale"))
+    local at = addonTable
+    local sex = is_male and 1 or 2
+    local cases = { "н", "р", "д", "з", "о", "м", "к" }
+
+    local codes = {
+        ["{ім'я}"] = name,
+        ["{Ім'я}"] = name,
+        ["{ІМ'Я}"] = string.upper(name),
+    }
+
+    -- race
+
+    for _, c in ipairs(cases) do
+        local t = at.race[race][c][sex]
+        codes["{раса:" .. c .. "}"] = t
+        codes["{Раса:" .. c .. "}"] = common.capitalize(t)
+        codes["{РАСА:" .. c .. "}"] = string.upper(t)
+        if c == "н" then -- "н" is default grammatical case
+            codes["{раса}"] = codes["{раса:н}"]
+            codes["{Раса}"] = codes["{Раса:н}"]
+            codes["{РАСА}"] = codes["{РАСА:н}"]
+        end
+    end
+
+    -- class
+
+    for _, c in ipairs(cases) do
+        local t = at.class[class][c][sex]
+        codes["{клас:" .. c .. "}"] = t
+        codes["{Клас:" .. c .. "}"] = common.capitalize(t)
+        codes["{КЛАС:" .. c .. "}"] = string.upper(t)
+        if c == "н" then -- "н" is default grammatical case
+            codes["{клас}"] = codes["{клас:н}"]
+            codes["{Клас}"] = codes["{Клас:н}"]
+            codes["{КЛАС}"] = codes["{КЛАС:н}"]
+        end
+    end
+
+    -- sex
+
+    -- only "стать" is needed, but we make possible to use any letter casing
+    -- (even if it has nothing to do with the letter case of the result, as text gets shown as is)
+    codes["{стать:(.-):(.-)}"] = function (a, b) return is_male and a or b end
+    codes["{Стать:(.-):(.-)}"] = function (a, b) return is_male and a or b end
+    codes["{СТАТЬ:(.-):(.-)}"] = function (a, b) return is_male and a or b end
+
+    -- common.print_table(codes, "codes")
+    at.codes = codes
+end
+
 local prepare_zones = function ()
     local z = addonTable.zone
 
@@ -105,56 +157,36 @@ local prepare_zones = function ()
     end
 end
 
-local prepare_codes = function (name, race, class, is_male)
-    -- print("preparing codes for: " .. name .. " / " .. race .. " / " .. class .. " / " .. (is_male and "male" or "famale"))
-    local at = addonTable
-    local sex = is_male and 1 or 2
-    local cases = { "н", "р", "д", "з", "о", "м", "к" }
+local addon_load = function (self)
+    local s = get_stats()
+    local v = GetAddOnMetadata("ClassicUA", "Version")
+    print("|TInterface\\AddOns\\ClassicUA\\assets\\ua:0|t ClassicUA v" .. v .. " loaded: "
+        .. s.quest_a + s.quest_h + s.quest_n .. " quests, "
+        .. s.book .. " books, "
+        .. s.item .. " items, "
+        .. s.spell .. " spells, "
+        .. s.npc .. " NPCs, "
+        .. s.object .. " objects, "
+        .. s.zone .. " zones"
+    )
+    self:UnregisterEvent("ADDON_LOADED")
+end
 
-    local codes = {
-        ["{ім'я}"] = name,
-        ["{Ім'я}"] = name,
-        ["{ІМ'Я}"] = string.upper(name),
-    }
+local player_login = function (self)
+    local name = UnitName("player")
+    local guid = UnitGUID("player")
+    local _, class = UnitClass("player")
+    local _, race = UnitRace("player")
+    local sex = UnitSex("player")
+    local faction = UnitFactionGroup("player")
 
-    -- race
-
-    for _, c in ipairs(cases) do
-        local t = at.race[race][c][sex]
-        codes["{раса:" .. c .. "}"] = t
-        codes["{Раса:" .. c .. "}"] = common.capitalize(t)
-        codes["{РАСА:" .. c .. "}"] = string.upper(t)
-        if c == "н" then -- "н" is default grammatical case
-            codes["{раса}"] = codes["{раса:н}"]
-            codes["{Раса}"] = codes["{Раса:н}"]
-            codes["{РАСА}"] = codes["{РАСА:н}"]
-        end
-    end
-
-    -- class
-
-    for _, c in ipairs(cases) do
-        local t = at.class[class][c][sex]
-        codes["{клас:" .. c .. "}"] = t
-        codes["{Клас:" .. c .. "}"] = common.capitalize(t)
-        codes["{КЛАС:" .. c .. "}"] = string.upper(t)
-        if c == "н" then -- "н" is default grammatical case
-            codes["{клас}"] = codes["{клас:н}"]
-            codes["{Клас}"] = codes["{Клас:н}"]
-            codes["{КЛАС}"] = codes["{КЛАС:н}"]
-        end
-    end
-
-    -- sex
-
-    -- only "стать" is needed, but we make possible to use any letter casing
-    -- (even if it has nothing to do with the letter case of the result, as text gets shown as is)
-    codes["{стать:(.-):(.-)}"] = function (a, b) return is_male and a or b end
-    codes["{Стать:(.-):(.-)}"] = function (a, b) return is_male and a or b end
-    codes["{СТАТЬ:(.-):(.-)}"] = function (a, b) return is_male and a or b end
-
-    -- common.print_table(codes, "codes")
-    at.codes = codes
+    -- print("PLAYER_LOGIN", name, race, class, sex, faction)
+    prepare_talent_tree(class)
+    quests.prepare_quests(faction == "Alliance")
+    prepare_codes(name, race, class, sex == 2) -- 2 for male
+    prepare_zones()
+    zone_text.prepare_zone_text()
+    world_map.prepare_world_map()
 end
 
 -- [[ events ]]
@@ -193,33 +225,9 @@ event_frame:RegisterEvent("ZONE_CHANGED_NEW_AREA")
 
 event_frame:SetScript("OnEvent", function (self, event, ...)
     if event == "ADDON_LOADED" then
-        local s = get_stats()
-        local v = GetAddOnMetadata("ClassicUA", "Version")
-        print("|TInterface\\AddOns\\ClassicUA\\assets\\ua:0|t ClassicUA v" .. v .. " loaded: "
-            .. s.quest_a + s.quest_h + s.quest_n .. " quests, "
-            .. s.book .. " books, "
-            .. s.item .. " items, "
-            .. s.spell .. " spells, "
-            .. s.npc .. " NPCs, "
-            .. s.object .. " objects, "
-            .. s.zone .. " zones"
-        )
-        self:UnregisterEvent("ADDON_LOADED")
+        addon_load(self)
     elseif event == "PLAYER_LOGIN" then
-        local name = UnitName("player")
-        local guid = UnitGUID("player")
-        local _, class = UnitClass("player")
-        local _, race = UnitRace("player")
-        local sex = UnitSex("player")
-        local faction = UnitFactionGroup("player")
-
-        -- print("PLAYER_LOGIN", name, race, class, sex, faction)
-        prepare_talent_tree(class)
-        quests.prepare_quests(faction == "Alliance")
-        prepare_codes(name, race, class, sex == 2) -- 2 for male
-        prepare_zones()
-        zone_text.prepare_zone_text()
-        world_map.prepare_world_map()
+        player_login(self)
     elseif event == "ITEM_TEXT_BEGIN" then
         if tooltipV.tooltip_entry_type == "item" then
             booksV.book_item_id = tooltipV.tooltip_entry_id
