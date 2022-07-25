@@ -22,8 +22,12 @@ entries\text.lua
 entries\zone.lua
 entries\zone_tbc.lua
 
-talent_tree_tbc.lua
 modules\common.lua
 modules\books.lua
+modules\common.lua
+modules\hooks.lua
+modules\quests.lua
+modules\tooltips.lua
 modules\zone_text.lua
+talent_tree_tbc.lua
 main.lua
