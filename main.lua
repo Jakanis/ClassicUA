@@ -2,12 +2,12 @@ local _, addonTable = ...
 
 local common = addonTable.M.common
 local books = addonTable.M.books
-local booksV = addonTable.V.books
 local quests = addonTable.M.quests
 local tooltips = addonTable.M.tooltips
-local tooltipV = addonTable.V.tooltip
 local world_map = addonTable.M.world_map
 local zone_text = addonTable.M.zone_text
+
+local globals = addonTable.V
 
 local get_stats = function ()
     local stats = {}
@@ -229,8 +229,8 @@ event_frame:SetScript("OnEvent", function (self, event, ...)
     elseif event == "PLAYER_LOGIN" then
         player_login(self)
     elseif event == "ITEM_TEXT_BEGIN" then
-        if tooltipV.tooltip_entry_type == "item" then
-            booksV.book_item_id = tooltipV.tooltip_entry_id
+        if globals.tooltip_entry_type == "item" then
+            globals.book_item_id = globals.tooltip_entry_id
         end
     elseif event == "ITEM_TEXT_READY" then
         books.show_book()

@@ -9,9 +9,8 @@ if not addonTable.V then
 end
 
 addonTable.M.books = {}
-addonTable.V.books = {}
 local M = addonTable.M.books
-local V = addonTable.V.books
+local V = addonTable.V
 
 local common = addonTable.M.common
 

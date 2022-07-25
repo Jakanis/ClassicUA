@@ -10,7 +10,7 @@ end
 
 addonTable.M.tooltips = {}
 local M = addonTable.M.tooltips
-local V = addonTable.V.tooltips
+local V = addonTable.V
 local common = addonTable.M.common
 
 -- [ tooltips ]
