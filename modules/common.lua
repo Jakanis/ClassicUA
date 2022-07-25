@@ -142,6 +142,11 @@ function M.get_text(entry_key)
     end
 end
 
+local copy_table = function (target, source)
+    for k, v in pairs(source) do target[k] = v end
+    return target
+end
+
 function M.get_entry(entry_type, entry_id)
     local at = addonTable
 
