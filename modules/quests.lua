@@ -105,6 +105,13 @@ end
 
 
 
+function M.prepare_quests(is_alliance)
+    -- init faction quests reference
+    addonTable.quest_f = is_alliance and addonTable.quest_a or addonTable.quest_h
+    -- drop opposite faction quests
+    addonTable[ is_alliance and "quest_h" or "quest_a" ] = nil
+end
+
 function M.register_quests_hooks()
     QuestFrameDetailPanel:HookScript("OnShow", function (event)
         local frame = get_quest_frame()

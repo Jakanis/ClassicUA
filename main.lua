@@ -105,13 +105,6 @@ local prepare_zones = function ()
     end
 end
 
-local prepare_quests = function (is_alliance)
-    -- init faction quests reference
-    addonTable.quest_f = is_alliance and addonTable.quest_a or addonTable.quest_h
-    -- drop opposite faction quests
-    addonTable[ is_alliance and "quest_h" or "quest_a" ] = nil
-end
-
 local prepare_codes = function (name, race, class, is_male)
     -- print("preparing codes for: " .. name .. " / " .. race .. " / " .. class .. " / " .. (is_male and "male" or "famale"))
     local at = addonTable
@@ -164,18 +157,25 @@ local prepare_codes = function (name, race, class, is_male)
     at.codes = codes
 end
 
-local prepare_world_map = function ()
-    for provider, _ in pairs(WorldMapFrame.dataProviders) do
-        if provider.setAreaLabelCallback and provider.Label and provider.Label.Name then
-            local _, size, style = provider.Label.Name:GetFont()
-            provider.Label.Name:SetFont("Interface\\AddOns\\ClassicUA\\assets\\FRIZQT_UA.ttf", size, style)
-            provider.Label:HookScript("OnUpdate", world_map.world_map_area_label_update)
-            break
+-- [[ events ]]
+
+local world_map_original_set_map_id = WorldMapFrame.SetMapID
+local world_map_dds = { WorldMapContinentDropDown, WorldMapZoneDropDown }
+
+WorldMapFrame.SetMapID = function (self, mapID)
+    world_map_original_set_map_id(self, mapID)
+
+    for _, v in ipairs(world_map_dds) do
+        local text = v.Text:GetText()
+        local found = common.get_entry_text(text)
+        if found then
+            v.Text:SetText(common.capitalize(found))
         end
     end
 end
 
--- [[ events ]]
+WorldMapContinentDropDownButton:HookScript("OnClick", world_map.world_map_dropdown_button_click)
+WorldMapZoneDropDownButton:HookScript("OnClick", world_map.world_map_dropdown_button_click)
 
 tooltips.register_tooltip_hooks()
 quests.register_quests_hooks()
@@ -215,11 +215,11 @@ event_frame:SetScript("OnEvent", function (self, event, ...)
 
         -- print("PLAYER_LOGIN", name, race, class, sex, faction)
         prepare_talent_tree(class)
-        prepare_quests(faction == "Alliance")
+        quests.prepare_quests(faction == "Alliance")
         prepare_codes(name, race, class, sex == 2) -- 2 for male
         prepare_zones()
         zone_text.prepare_zone_text()
-        prepare_world_map()
+        world_map.prepare_world_map()
     elseif event == "ITEM_TEXT_BEGIN" then
         if tooltipV.tooltip_entry_type == "item" then
             booksV.book_item_id = tooltipV.tooltip_entry_id

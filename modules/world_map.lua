@@ -8,24 +8,8 @@ addonTable.M.world_map = {}
 local M = addonTable.M.world_map
 local common = addonTable.M.common
 
--- [[ world map ]]
 
-local world_map_original_set_map_id = WorldMapFrame.SetMapID
-local world_map_dds = { WorldMapContinentDropDown, WorldMapZoneDropDown }
-
-WorldMapFrame.SetMapID = function (self, mapID)
-    world_map_original_set_map_id(self, mapID)
-
-    for _, v in ipairs(world_map_dds) do
-        local text = v.Text:GetText()
-        local found = common.get_entry_text(text)
-        if found then
-            v.Text:SetText(common.capitalize(found))
-        end
-    end
-end
-
-local world_map_dropdown_button_click = function (self)
+function M.world_map_dropdown_button_click(self)
     local dd = DropDownList1
     if dd:IsShown() then
         local texts = {}
@@ -51,15 +35,23 @@ local world_map_dropdown_button_click = function (self)
     end
 end
 
-WorldMapContinentDropDownButton:HookScript("OnClick", world_map_dropdown_button_click)
-WorldMapZoneDropDownButton:HookScript("OnClick", world_map_dropdown_button_click)
-
-function M.world_map_area_label_update(self)
+local world_map_area_label_update = function (self)
     local text = self.Name:GetText()
     if text then
         local found = common.get_entry_text(text)
         if found then
             self.Name:SetText(common.capitalize(found))
+        end
+    end
+end
+
+function M.prepare_world_map()
+    for provider, _ in pairs(WorldMapFrame.dataProviders) do
+        if provider.setAreaLabelCallback and provider.Label and provider.Label.Name then
+            local _, size, style = provider.Label.Name:GetFont()
+            provider.Label.Name:SetFont("Interface\\AddOns\\ClassicUA\\assets\\FRIZQT_UA.ttf", size, style)
+            provider.Label:HookScript("OnUpdate", world_map_area_label_update)
+            break
         end
     end
 end
