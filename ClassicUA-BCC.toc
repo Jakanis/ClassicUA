@@ -23,6 +23,7 @@ entries\zone.lua
 entries\zone_tbc.lua
 
 
+modules\settings.lua
 modules\common.lua
 modules\books.lua
 modules\quests.lua
