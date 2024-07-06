@@ -722,6 +722,24 @@ local make_text_array = function (array)
     return result
 end
 
+function resolve_entry_reference(at, entry_type, entry)
+    if entry.ref and (entry_type == "spell" or entry_type == "item") then
+        if not at[entry_type][entry.ref] then
+            return false
+        end
+        local entry_ref = copy_table({}, at[entry_type][entry.ref])
+        entry_ref = resolve_entry_reference(at, entry_type, entry_ref)
+        for k, v in pairs(entry) do
+            if v then
+                entry_ref[k] = v
+            end
+        end
+        return entry_ref
+    else
+        return entry
+    end
+end
+
 local get_entry = function (entry_type, entry_id)
     if not entry_type or not entry_id then
         return false
@@ -755,9 +773,9 @@ local get_entry = function (entry_type, entry_id)
         local entry = at[entry_type][entry_id]
 
         if entry.ref and (entry_type == "spell" or entry_type == "item") then
-            local entry_ref = at[entry_type][entry.ref]
-            if entry_ref then
-                return copy_table(copy_table({}, entry_ref), entry)
+            local built_entry_ref = resolve_entry_reference(at, entry_type, entry)
+            if built_entry_ref then
+                return built_entry_ref
             elseif options.dev_mode then
                 dev_log_issue_entry(entry_type, entry_id, "невірне значення ref " .. entry_ref)
                 return copy_table({ entry_type .. "#" .. entry_id .. "=>#" .. entry.ref }, entry)
