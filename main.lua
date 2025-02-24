@@ -972,6 +972,43 @@ local function make_text_array(array)
     return result
 end
 
+
+local function get_race_translation(race_en, case, sex, uppercased, capitalized)
+    if not race_en then
+        return nil
+    end
+
+    local at = addonTable
+    local race_key = race_en:lower():gsub(" ", "")
+    if #case == 4 and case:sub(1, 2) == 'м' then
+        sex = 3
+        case = case:sub(-2)
+    end
+    local race_uk = at.race[race_key] and at.race[race_key][case][sex]
+    race_uk = race_uk and capitalized and capitalize(race_uk) or race_uk
+    race_uk = race_uk and uppercased and upper(race_uk) or race_uk
+    return race_uk
+end
+
+
+local function get_class_translation(class_en, case, sex, uppercased, capitalized)
+    if not class_en then
+        return nil
+    end
+
+    local at = addonTable
+    local class_key = class_en:upper():gsub(" ", "")
+    if #case == 4 and case:sub(1, 2) == 'м' then
+        sex = 3
+        case = case:sub(-2)
+    end
+    local class_uk = at.race[class_key] and at.race[class_key][case][sex]
+    class_uk = class_uk and capitalized and capitalize(class_uk) or class_uk
+    class_uk = class_uk and uppercased and upper(class_uk) or class_uk
+    return class_uk
+end
+
+
 local function make_chat_text(original, translation)
     local known_templates = { ["name"] = true, ["race"] = true, ["class"] = true, ["target"] = true }
     local at = addonTable
@@ -990,7 +1027,6 @@ local function make_chat_text(original, translation)
     local text_templates = {}
     for i = 2, #translation_split do
         local template = translation_split[i]
-        -- TODO: Instead of one-placeholder-per-template remember placeholders types, allowing to have few placeholders in one template
         local template_type = template:match("<(.+)>")
         if known_templates[template_type] then
             text_templates[template_type] = template
@@ -1029,30 +1065,20 @@ local function make_chat_text(original, translation)
             else
                 name_uk = name_en
             end
-            name_uk = name_uk and pattern_uk_type == "Ім'я" and capitalize(name_uk) or name_uk  -- TODO: check these operators and maybe optimize their usage
+            name_uk = name_uk and pattern_uk_type == "Ім'я" and capitalize(name_uk) or name_uk
             name_uk = name_uk and pattern_uk_type == "ІМ'Я" and upper(name_uk) or name_uk
             translation = translation:gsub(pattern_uk, name_uk)
         end
 
         if pattern_uk_type:lower() == "раса" then
             local race_en = template_matches["race"]
-            local race_key = race_en:lower():gsub(" ", "")
-            if race_key == "undead" then
-                -- Player's race called "scourge", but NPCs call them "undead"
-                race_key = "scourge"
-            end
-            local race_uk = at.race[race_key] and at.race[race_key][case][sex]
-            race_uk = race_uk and pattern_uk_type == "Раса" and capitalize(race_uk) or race_uk
-            race_uk = race_uk and pattern_uk_type == "РАСА" and upper(race_uk) or race_uk
+            local race_uk = get_race_translation(race_en, case, sex, pattern_uk_type == "РАСА", pattern_uk_type == "Раса")
             translation = translation:gsub(pattern_uk, race_uk or race_en)
         end
 
         if pattern_uk_type:lower() == "клас" then
             local class_en = template_matches["class"]
-            local class_key = class_en:upper():gsub(" ", "")
-            local class_uk = at.class[class_key] and at.class[class_key][case][sex]
-            class_uk = class_uk and pattern_uk_type == "Клас" and capitalize(class_uk) or class_uk
-            class_uk = class_uk and pattern_uk_type == "КЛАС" and upper(class_uk) or class_uk
+            local class_uk = get_class_translation(class_en, case, sex, pattern_uk_type == "КЛАС", pattern_uk_type == "Клас")
             translation = translation:gsub(pattern_uk, class_uk or class_en)
         end
 
@@ -1062,13 +1088,9 @@ local function make_chat_text(original, translation)
             if target_en == player_unit.name then
                 target_uk = character_options.name_cases and character_options.name_cases[case]
             elseif at.class[target_en:upper():gsub(" ", "")] then
-                target_uk = at.class[target_en:upper():gsub(" ", "")][case][sex]
+                target_uk = get_class_translation(target_en, case, sex, false, false)
             elseif at.race[target_en:lower():gsub(" ", "")] then
-                local race_key = target_en:lower():gsub(" ", "")
-                if race_key == "undead" then
-                    race_key = "scourge"
-                end
-                target_uk = at.race[race_key][case][sex]
+                target_uk = get_race_translation(target_en, case, sex, false, false)
             elseif at.glossary[target_en:lower()] then
                 target_uk = at.glossary[target_en:lower()]
             end
