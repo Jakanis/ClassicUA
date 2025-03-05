@@ -410,15 +410,15 @@ local known_gossip_dynamic_seq_with_multiple_words_for_get_text_code = {
     {"mag'har orc", "magharorc"},
     {"zandalari troll", "zandalaritroll"},
 }
--- [!] Any changes made to get_text_code() func must be kept in sync with Python impl in utils.py
-local function get_text_code_for_chat(text)
+-- [!] Any changes made to get_chat_code() func must be kept in sync with Python impl in utils.py
+local function get_chat_code(text)
     local text_low_case = text:lower()
     local seq_pairs = known_gossip_dynamic_seq_with_multiple_words_for_get_text_code
     for i = 1, #seq_pairs do
         text_low_case = text_low_case:gsub(seq_pairs[i][1], seq_pairs[i][2])
     end
     local result = {}
-    for word in string.gmatch(text_low_case, "%w+") do
+    for word in string.gmatch(text_low_case, [===[%w[%w%-']*%w]===]) do
         if #word > 0 then
             result[#result+1] = word:sub(1, 1)
             result[#result+1] = word:sub(-1)
@@ -987,44 +987,46 @@ local function make_chat_text(original, translation)
         return nil
     end
 
+    print("original: "..tostring(original))
     local translation_split = { string.split("#", translation) }
-    if #translation_split == 1 then
-        return translation_split[1]
-    end
-
-    translation = translation_split[1]
-    local text_templates = {}
-    for i = 2, #translation_split do
-        local template = translation_split[i]
-        local template_type = template:match("<(.+)>")
-        if known_templates[template_type] then
-            text_templates[template_type] = template
-        elseif template_type:match("/") then
-            local match_male, match_female = template_type:match("^(%w+)/(%w+)$")
-            if original:match(template:gsub("<"..template_type..">", match_male)) then
-                sex = 1
-            elseif original:match(template:gsub("<"..template_type..">", match_female)) then
-                sex = 2
+    local template_matches = {}
+    if #translation_split > 1 then
+        local text_templates = {}
+        for i = 2, #translation_split do
+            local template = translation_split[i]
+            local template_type = template:match("<(.+)>")
+            if known_templates[template_type] then
+                text_templates[template_type] = template
+            elseif template_type:match("/") then
+                local match_male, match_female = template_type:match("^(.+)/(.+)$")
+                if original:match(esc(template:gsub("<"..esc(template_type)..">", match_male))) then
+                    sex = 1
+                    print("Sex set to male")
+                elseif original:match(esc(template:gsub("<"..esc(template_type)..">", match_female))) then
+                    sex = 2
+                    print("Sex set to female")
+                else
+                    error("Error. Unknown sex.")
+                end
             else
-                error("Error. Unknown sex.")
+                error("Error. Unknown template type: " .. tostring(template_type))
             end
-        else
-            error("Error. Unknown template type: " .. tostring(template_type))
+        end
+
+        for template_type, template in pairs(text_templates) do
+            local template_expression = esc(template):gsub("<" .. template_type .. ">", "(.-)")
+            local match = original:match(template_expression)
+            template_matches[template_type] = match
         end
     end
 
-    local template_matches = {}
-    for template_type, template in pairs(text_templates) do
-        local template_expression = esc(template):gsub("<" .. template_type .. ">", "(.-)")
-        local match = original:match(template_expression)
-        template_matches[template_type] = match
-    end
+    translation = translation_split[1]
 
     for pattern_uk in translation:gmatch("{(.-)}") do
         local pattern_uk_split = { string.split(":", pattern_uk) }
         local pattern_uk_type = pattern_uk_split[1]
         local case = pattern_uk_split[2] or "н"
-        pattern_uk = "{" .. pattern_uk .. "}"
+        pattern_uk = "{" .. esc(pattern_uk) .. "}"
 
         if lower(pattern_uk_type) == "ім'я" then
             local name_en = template_matches["name"]
@@ -1408,7 +1410,7 @@ local function get_chat_text(npc_name, chat_text)
         return
     end
 
-    local chat_code = get_text_code_for_chat(chat_text)
+    local chat_code = get_chat_code(chat_text)
 
     if chat_code and #chat_code > 0 then
         for _, char_key in ipairs({ npc_name, '!common' }) do
