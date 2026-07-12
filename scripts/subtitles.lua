@@ -87,9 +87,10 @@ local intro = {
     lines = false,
     started_at = 0,
     last_text = false,
+    replay_requested = false,
 }
 
-local function intro_get_lines()
+local function intro_get_lines(skip_map_guard)
     local data = addon_table.subtitle
     local intro_data = data and data.intro
     if not intro_data then
@@ -100,6 +101,12 @@ local function intro_get_lines()
     local lines = intro_data[race_file]
     if not lines then
         return
+    end
+
+    -- an OpeningCinematic() call right before means this is the race intro
+    -- for sure, no need to guess by zone
+    if skip_map_guard then
+        return lines
     end
 
     -- race intros only ever play in the racial starting zone; the optional map
@@ -202,6 +209,13 @@ subtitles.prepare = function ()
         end)
     end
 
+    -- OpeningCinematic() replays the race intro: the exact signal, no heuristics
+    if _G.OpeningCinematic then
+        hooksecurefunc("OpeningCinematic", function ()
+            intro.replay_requested = true
+        end)
+    end
+
     event_frame:SetScript("OnEvent", function (_, event, ...)
         if event == "PLAY_MOVIE" then
             local movie_id = ...
@@ -217,7 +231,8 @@ subtitles.prepare = function ()
             -- can_be_cancelled == false means a vehicle cinematic, never an intro;
             -- the movieSubtitle cvar is the game's own "show subtitles" setting
             if can_be_cancelled then
-                local lines = C_CVar.GetCVarBool("movieSubtitle") and intro_get_lines()
+                local lines = C_CVar.GetCVarBool("movieSubtitle") and intro_get_lines(intro.replay_requested)
+                intro.replay_requested = false
 
                 if options.account.dev_mode then
                     local _, race_file = UnitRace("player")
