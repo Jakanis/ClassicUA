@@ -609,6 +609,16 @@ local function prepare_options_frame()
         function (self) options.account.translate_nameplates = self:GetChecked() end
     )
 
+    -- translate_subtitles
+
+    options_ui.frame.translate_subtitles_checkbox = frames.create_checkbox_frame(
+        options_ui.frame, "TOPLEFT", 24, -80-48,
+        "Перекладати субтитри",
+        options.account.translate_subtitles,
+        "Перекладати субтитри у відеороликах та ігрових кат-сценах (вступні ролики рас, кінематографічні вставки).\n\nЗміна налаштування потребує перезавантаження інтерфейсу гри.",
+        function (self) options.account.translate_subtitles = self:GetChecked() end
+    )
+
     -- tabs
 
     options_ui.frame.current_tab = CreateFrame("Frame", "$parent.Current_Tab", options_ui.frame, "BackdropTemplate")
@@ -689,6 +699,7 @@ local function prepare_options_frame()
         local oa = options.account
         of.override_system_fonts_checkbox:SetChecked(oa.override_system_fonts)
         of.translate_nameplates_checkbox:SetChecked(oa.translate_nameplates)
+        of.translate_subtitles_checkbox:SetChecked(oa.translate_subtitles)
         of.dev_mode_checkbox:SetChecked(oa.dev_mode)
         of.dev_mode_notify_activity_checkbox:SetChecked(oa.dev_mode_notify_activity)
     end

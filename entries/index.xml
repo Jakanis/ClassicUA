@@ -7,5 +7,6 @@
     <Script file="stat_count.lua"/>
     <Script file="stat_quest.lua"/>
     <Script file="string.lua"/>
+    <Script file="subtitle.lua"/>
     <Script file="zone.lua"/>
 </Ui>

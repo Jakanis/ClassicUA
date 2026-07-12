@@ -10,6 +10,7 @@ local default_account = { ---@class account_options_class
     dev_mode_notify_activity = false,
     override_system_fonts = true,
     translate_nameplates = true,
+    translate_subtitles = true,
 }
 
 options.character = nil ---@class character_options_class

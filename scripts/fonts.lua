@@ -32,6 +32,7 @@ fonts.prepare = function ()
         { name="CombatTextFontOutline",             file=assets.font_frizqt, height=25 },
         { name="GameTooltipHeader",                 file=assets.font_frizqt },
         { name="MailFont_Large",                    file=assets.font_morpheus },
+        { name="MovieSubtitleFont",                 file=assets.font_frizqt },
         { name="PVPInfoTextFont",                   file=assets.font_frizqt },
         { name="QuestFont_Huge",                    file=assets.font_morpheus },
         { name="QuestFont_Large",                   file=assets.font_morpheus },

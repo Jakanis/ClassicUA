@@ -23,6 +23,7 @@ local default_log = {
     missing_zones = {},
     missing_objects = {},
     missing_sod_engravings = {},
+    missing_subtitles = {},
     issues = {}
 }
 
@@ -45,6 +46,7 @@ local function log_init()
     if not log.missing_zones            then log.missing_zones = {} end
     if not log.missing_objects          then log.missing_objects = {} end
     if not log.missing_sod_engravings   then log.missing_sod_engravings = {} end
+    if not log.missing_subtitles        then log.missing_subtitles = {} end
     if not log.issues                   then log.issues = {} end
 end
 
@@ -73,6 +75,7 @@ dev_log.print_stats = function ()
     dev_print("Відсутні чати: "         .. utils.table_keys_count(log.missing_chats))
     dev_print("Відсутні зони: "         .. utils.table_keys_count(log.missing_zones))
     dev_print("Відсутні об'єкти: "      .. utils.table_keys_count(log.missing_objects))
+    dev_print("Відсутні субтитри: "     .. utils.table_keys_count(log.missing_subtitles))
     if utils.is_classic_sod then
         dev_print("Відсутні SOD гравіювання: " .. utils.table_keys_count(log.missing_sod_engravings))
     end
@@ -242,6 +245,22 @@ dev_log.missing_chat_text = function (npc_name, chat_code, chat_text_en, lang_na
     end
 
     log.missing_chats[npc_name][chat_code] = { string_trim(chat_text_en), lang_name=lang_name }
+end
+
+dev_log.missing_subtitle = function (context_key, order, text_en, sender)
+    if not log.missing_subtitles[context_key] then
+        log.missing_subtitles[context_key] = {}
+    end
+
+    if log.missing_subtitles[context_key][text_en] then
+        return
+    end
+
+    if options.account.dev_mode_notify_activity then
+        dev_print("Відсутній субтитр (" .. context_key .. ") " .. text_en)
+    end
+
+    log.missing_subtitles[context_key][text_en] = { order=order, sender=sender or false }
 end
 
 dev_log.missing_zone = function (zone_name)

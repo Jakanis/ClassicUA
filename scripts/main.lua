@@ -9,6 +9,7 @@ local fonts         = addon_table.use("fonts") ---@class fonts_class
 local frame_hooks   = addon_table.use("frame_hooks") ---@class frame_hooks_class
 local options       = addon_table.use("options") ---@class options_class
 local options_ui    = addon_table.use("options_ui") ---@class options_ui_class
+local subtitles     = addon_table.use("subtitles") ---@class subtitles_class
 local tooltips      = addon_table.use("tooltips") ---@class tooltips_class
 local utils         = addon_table.use("utils") ---@class utils_class
 
@@ -163,6 +164,7 @@ event_frame:SetScript("OnEvent", function (self, event, ...)
         fonts.prepare()
         tooltips.prepare()
         chats.prepare()
+        subtitles.prepare()
         prepare_nameplates()
 
     elseif event == "PLAYER_LOGIN" then
