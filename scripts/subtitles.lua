@@ -98,13 +98,24 @@ local function intro_get_lines()
 
     local _, race_file = UnitRace("player")
     local lines = intro_data[race_file]
+    if not lines then
+        return
+    end
 
     -- race intros only ever play in the racial starting zone; the optional map
     -- guard keeps other in-engine cinematics from matching. on a brand new
-    -- character the map may not be resolved yet (nil) when the intro starts,
-    -- so an unknown map does not block
-    local player_map = C_Map.GetBestMapForUnit("player")
-    if lines and lines.map and player_map and lines.map ~= player_map then
+    -- character the map may not be resolved yet (nil) or resolve only to the
+    -- continent when the intro starts, so unknown maps and ancestors of the
+    -- expected zone do not block
+    local player_map = lines.map and C_Map.GetBestMapForUnit("player")
+    if lines.map and player_map and lines.map ~= player_map then
+        local map_info = C_Map.GetMapInfo(lines.map)
+        while map_info and map_info.parentMapID and map_info.parentMapID > 0 do
+            if map_info.parentMapID == player_map then
+                return lines
+            end
+            map_info = C_Map.GetMapInfo(map_info.parentMapID)
+        end
         return
     end
 
