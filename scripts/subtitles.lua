@@ -1,12 +1,17 @@
 local _, addon_table = ...
 
+local assets    = addon_table.use("assets") ---@class assets_class
 local dev_log   = addon_table.use("dev_log") ---@class dev_log_class
 local options   = addon_table.use("options") ---@class options_class
 local subtitles = addon_table.use("subtitles") ---@class subtitles_class
 
 local string_format = _G.string.format
 local string_trim   = _G.string.trim
+local C_Map         = _G.C_Map
+local C_Timer       = _G.C_Timer
 local CreateFrame   = _G.CreateFrame
+local GetTime       = _G.GetTime
+local UnitRace      = _G.UnitRace
 local hooksecurefunc = _G.hooksecurefunc
 
 -- context of the currently playing video, used to attribute subtitle lines in dev log:
@@ -71,6 +76,93 @@ local function translate_subtitle(message, sender)
     end
 end
 
+-- ---------------------------------------------------------------------------
+-- race intro cinematics have no client subtitle data (narration is voice only,
+-- text is sent as raid boss emotes on the very first login), so we render our
+-- own subtitles from a per-race timed table
+-- ---------------------------------------------------------------------------
+
+local intro = {
+    font_string = false,
+    ticker = false,
+    lines = false,
+    started_at = 0,
+}
+
+local function intro_get_lines()
+    local data = addon_table.subtitle
+    local intro_data = data and data.intro
+    if not intro_data then
+        return
+    end
+
+    local _, race_file = UnitRace("player")
+    local lines = intro_data[race_file]
+
+    -- race intros only ever play in the racial starting zone; the optional map
+    -- guard keeps other in-engine cinematics from matching
+    if lines and lines.map and lines.map ~= C_Map.GetBestMapForUnit("player") then
+        return
+    end
+
+    return lines
+end
+
+local function intro_update()
+    local elapsed = GetTime() - intro.started_at
+    local text
+
+    for i = 1, #intro.lines do
+        local line = intro.lines[i]
+        if elapsed >= line[1] and elapsed < line[2] then
+            text = line[3]
+            break
+        end
+    end
+
+    -- elapsed counter for subtitle timings calibration
+    if options.account.dev_mode then
+        local mark = "|cff88ccff" .. string_format("%.1f", elapsed) .. "|r"
+        text = text and (mark .. " " .. text) or mark
+    end
+
+    local font_string = intro.font_string
+    if text then
+        font_string:SetText(text)
+        font_string:Show()
+    else
+        font_string:Hide()
+    end
+end
+
+local function intro_start(lines)
+    if not intro.font_string then
+        local font_string = _G.CinematicFrame:CreateFontString(nil, "ARTWORK")
+        font_string:SetPoint("CENTER", _G.CinematicFrame, "BOTTOM", 0, 70)
+        font_string:SetWidth(800)
+        font_string:SetFont(assets.font_frizqt, 22, "")
+        font_string:SetTextColor(1, 1, 1, 1)
+        font_string:SetShadowColor(0, 0, 0, 1)
+        font_string:SetShadowOffset(1, -1)
+        intro.font_string = font_string
+    end
+
+    intro.lines = lines
+    intro.started_at = GetTime()
+    intro.ticker = C_Timer.NewTicker(0.1, intro_update)
+end
+
+local function intro_stop()
+    if intro.ticker then
+        intro.ticker:Cancel()
+        intro.ticker = false
+    end
+    if intro.font_string then
+        intro.font_string:Hide()
+    end
+    intro.lines = false
+end
+
 subtitles.prepare = function ()
     if not options.account.translate_subtitles then
         return
@@ -100,13 +192,27 @@ subtitles.prepare = function ()
             current.movie_id = movie_id
             current.order = 0
         elseif event == "CINEMATIC_START" then
+            local can_be_cancelled = ...
             current.mode = "cinematic"
             current.movie_id = false
             current.order = 0
+
+            -- can_be_cancelled == false means a vehicle cinematic, never an intro
+            if can_be_cancelled then
+                local lines = intro_get_lines()
+                if lines then
+                    intro_start(lines)
+                elseif options.account.dev_mode then
+                    -- no data for this cinematic: show just the elapsed counter,
+                    -- so subtitle timings can be measured for calibration
+                    intro_start({})
+                end
+            end
         elseif event == "STOP_MOVIE" or event == "CINEMATIC_STOP" then
             current.mode = false
             current.movie_id = false
             current.order = 0
+            intro_stop()
         elseif event == "SHOW_SUBTITLE" then
             current.order = current.order + 1
             translate_subtitle(...)

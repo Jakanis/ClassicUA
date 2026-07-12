@@ -26,4 +26,30 @@ addonTable.subtitle = {
     -- in-engine cinematics and any other subtitle lines: [english text (trimmed)] = translation
     text = {
     },
+
+    -- race intro cinematics have no client subtitle data at all, so these are our own
+    -- subtitles: [race file name from UnitRace] = { map = starting zone uiMapID (optional
+    -- guard), { start second, stop second, translation }, ... }
+    -- timings need in-game calibration with the dev-mode elapsed counter
+    intro = {
+        Human = {
+            map = 1429, -- Elwynn Forest
+            -- The noble humans of Stormwind are a proud, tenacious race.
+            {  0,  5, "Шляхетні люди Штормовію — горда та непохитна раса." },
+            -- Though the recent invasion of the demonic Burning Legion decimated their sister kingdom of Lordaeron, the defenders of Stormwind stand vigilant against any who would threaten the sanctity of their lands.
+            {  5, 15, "Хоча нещодавнє вторгнення демонічного Палаючого Легіону спустошило їхнє братнє королівство Лордерон, захисники Штормовію пильно стережуть свої землі від будь-якої загрози." },
+            -- Nestled in the foothills of Elwynn Forest, Stormwind City is one of the last bastions of human power in the world.
+            { 15, 22, "Розташоване серед пагорбів лісу Ельвінн, місто Штормовій — один з останніх бастіонів людської могутності у світі." },
+            -- Ruled by the child king, Anduin Wrynn, the people of Stormwind remain steadfast in their commitment to the Grand Alliance.
+            { 22, 30, "Кероване юним королем Андуїном Рінном, населення Штормовію лишається відданим Великому Альянсу." },
+            -- Backed by their stalwart allies, the armies of Stormwind have been called away to fight the savage Horde on distant battlefields.
+            { 30, 38, "За підтримки вірних союзників армії Штормовію вирушили битися з жорстокою Ордою на далеких полях битв." },
+            -- With the armies gone, the defense of Stormwind now falls to its proud citizens.
+            { 38, 44, "Коли армії пішли, захист Штормовію ліг на плечі його гордих громадян." },
+            -- You must defend the kingdom against the foul mongrels that encroach upon it and hunt down the subversive traitors who seek to destroy it from within.
+            { 44, 54, "Ти мусиш захистити королівство від підлих псів, що зазіхають на нього, і вистежити підступних зрадників, які прагнуть знищити його зсередини." },
+            -- Now is the time for heroes. Now humanity's greatest chapter can be told.
+            { 54, 62, "Настав час героїв. Тепер може розпочатися найвеличніший розділ історії людства." },
+        },
+    },
 }
