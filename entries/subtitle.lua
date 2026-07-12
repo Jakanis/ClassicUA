@@ -51,6 +51,65 @@ addonTable.subtitle = {
             -- Now is the time for heroes. Now humanity's greatest chapter can be told.
             { 78, 86, "Настав час героїв. Тепер може розпочатися найвеличніший розділ історії людства." },
         },
+        Dwarf = {
+            map = 1426, -- Dun Morogh
+            -- The stoic dwarves of Ironforge spent countless generations mining treasures from deep within the earth.
+            { 0, 7, "Незворушні дворфи Залізогарту незліченними поколіннями видобували скарби з земних глибин." },
+            -- Hidden within their impregnable stronghold of Ironforge Mountain, they rarely ventured beyond the wintry peaks of Dun Morogh.
+            { 7, 16, "Сховані у неприступній твердині гори Залізогарт, вони рідко полишали засніжені вершини Дун-Морогу." },
+            -- Recently however, the dwarves unearthed a series of ruins that held secrets to their ancient heritage.
+            { 16, 23, "Та нещодавно дворфи розкопали руїни, що приховували таємниці їхньої прадавньої спадщини." },
+            -- Driven to discover the truth about his people's fabled origins, the great King Magni Bronzebeard ordered that the dwarves shift their industry from mining to archaeology.
+            { 23, 35, "Прагнучи дізнатися правду про легендарне походження свого народу, великий король Маґні Бронзобородий наказав дворфам змінити ремесло з гірництва на археологію." },
+            -- As part of the Grand Alliance, the stalwart dwarven armies have been called away to battle the merciless Horde in faraway lands.
+            { 35, 43, "Як частина Великого Альянсу, непохитні армії дворфів вирушили битися з безжальною Ордою в далеких краях." },
+            -- In these perilous times, the defense of the mountain kingdom falls to brave dwarves like you.
+            { 43, 50, "У ці небезпечні часи захист гірського королівства лягає на плечі хоробрих дворфів, таких як ви." },
+            -- The spirits of the ancient kings watch over you, and the very mountains are your strength. The future of your people is in your hands.
+            { 50, 60, "Духи стародавніх королів пильнують вас, а самі гори — ваша сила. Майбутнє вашого народу у ваших руках." },
+        },
+        Gnome = {
+            map = 1426, -- Dun Morogh
+            -- The eccentric, often brilliant gnomes are held as one of the most peculiar races of the world.
+            { 0, 7, "Ексцентричні, часто геніальні гноми вважаються однією з найхимерніших рас світу." },
+            -- With their obsession for developing radical new technologies and constructing marvels of mind-bending engineering, it's a wonder that any gnomes have survived to proliferate.
+            { 7, 18, "З їхньою одержимістю сміливими новими технологіями та запаморочливими дивами інженерії, дивно, що гноми взагалі вижили та розплодилися." },
+            -- Over the years, the gnomes have contributed ingenious weapons to aid the Grand Alliance in its fierce battles against the Horde.
+            { 18, 27, "Роками гноми постачали хитромудру зброю Великому Альянсу в його запеклих битвах з Ордою." },
+            -- Thriving in the wondrous techno-city of Gnomeregan, the gnomes shared the resources of the forested peaks of Dun Morogh with their dwarven cousins for generations.
+            { 27, 37, "Процвітаючи в дивовижному техномісті Гномреґані, гноми поколіннями ділили багатства лісистих вершин Дун-Морогу зі своїми родичами дворфами." },
+            -- Yet recently, a barbaric menace rose up from the bowels of the earth and invaded Gnomeregan.
+            { 37, 44, "Але нещодавно з надр землі постала варварська загроза і вдерлася до Гномреґану." },
+            -- Aided by their dwarven allies, the gnomes fought a valiant battle to save their beloved city. Nevertheless, Gnomeregan was irrevocably lost.
+            { 44, 55, "За підтримки союзників-дворфів гноми відважно боролися за своє улюблене місто. Та попри все, Гномреґан було безповоротно втрачено." },
+            -- The surviving gnomes fled to the safety of the dwarf stronghold of Ironforge. There they remained; devising strategies to retake their city.
+            { 55, 65, "Уцілілі гноми втекли під захист дворфської твердині Залізогарту. Там вони й залишилися, розробляючи плани повернення свого міста." },
+            -- As a gnome of proud stand, it falls to you to answer the challenge and lead your curious people to a brighter future.
+            { 65, 77, "Ви — гном гордої постави, тож саме вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
+        },
+        NightElf = {
+            map = 1438, -- Teldrassil
+            -- For ten thousand years, the immortal night elves cultivated a druidic society within the shadowed recesses of Ashenvale Forest.
+            { 2, 11, "Десять тисяч років безсмертні нічні ельфи плекали друїдське суспільство в тінистих хащах Ясенедолу." },
+            -- Yet recently, the catastrophic invasion of the Burning Legion shattered the tranquility of their ancient civilization.
+            { 11, 21, "Але нещодавно катастрофічне вторгнення Палаючого Легіону зруйнувало спокій їхньої стародавньої цивілізації." },
+            -- Led by the Arch-Druid Malfurion Stormrage and the Priestess Tyrande Whisperwind, the mighty night elves rose to challenge the demonic onslaught.
+            { 21, 31, "На чолі з архідруїдом Малфуріоном Лютобурем та жрицею Тірандою Шелест Вітру могутні нічні ельфи постали проти демонічної навали." },
+            -- Though victorious, the night elves were forced to sacrifice their cherished immortality and watch their beloved forests burn.
+            { 31, 42, "Здобувши перемогу, нічні ельфи все ж мусили пожертвувати своїм заповітним безсмертям і дивитися, як палають їхні улюблені ліси." },
+            -- Seeking to regain their immortality, a number of wayward druids conspired to plant a special tree that would reestablish a link between their spirits and the eternal world.
+            { 42, 53, "Прагнучи повернути безсмертя, купка свавільних друїдів змовилася посадити особливе дерево, яке відновило б зв'язок між їхніми духами та вічним світом." },
+            -- Despite Malfurion's warning that nature would never bless such a selfish act, the druids planted the great tree, Teldrassil, off the stormy coasts of northern Kalimdor.
+            { 53, 65, "Попри застереження Малфуріона, що природа ніколи не благословить такий себелюбний вчинок, друїди посадили велике дерево Тельдрассіль біля буремних берегів північного Калімдору." },
+            -- Among the twilight boughs of the colossal tree, the wondrous city of Darnassus took root.
+            { 65, 72, "Серед сутінкового гілля велетенського дерева вкоренилося дивовижне місто Дарнас." },
+            -- However, the great tree was not consecrated with nature's blessing and soon fell prey to the corruption of the Burning Legion.
+            { 72, 80, "Проте велике дерево не було освячене благословенням природи і невдовзі стало жертвою скверни Палаючого Легіону." },
+            -- Now the wildlife and even the limbs of the great tree itself are tainted by a growing darkness.
+            { 80, 89, "Тепер дику природу й навіть віття самого великого дерева поглинає дедалі більша темрява." },
+            -- As one of the few Night Elves left in the world, it is your sworn duty to defend Darnassus and the wild children of nature against the Legion's encroaching corruption.
+            { 89, 102, "Ваш священний обов'язок — захистити Дарнас і диких дітей природи від скверни Легіону, що насувається." },
+        },
 
         -- TIMINGS OF ALL RACES BELOW ARE NOT CALIBRATED YET (rough estimates)
 
@@ -71,49 +130,6 @@ addonTable.subtitle = {
             -- As a proud defender of Durotar, it is your duty to crush the enemies, both seen and unseen, for the nefarious agents of the Burning Legion still wander the land.
             { 56, 68, "Ви — гордий захисник Дуротару, і ваш обов'язок — нищити ворогів, видимих і невидимих, адже підступні посіпаки Палаючого Легіону досі блукають цими землями." },
         },
-
-        Dwarf = {
-            map = 1426, -- Dun Morogh
-            -- The stoic dwarves of Ironforge spent countless generations mining treasures from deep within the earth.
-            { 14, 21, "Незворушні дворфи Залізогарту незліченними поколіннями видобували скарби з земних глибин." },
-            -- Hidden within their impregnable stronghold of Ironforge Mountain, they rarely ventured beyond the wintry peaks of Dun Morogh.
-            { 21, 29, "Сховані у неприступній твердині гори Залізогарт, вони рідко полишали засніжені вершини Дун-Морогу." },
-            -- Recently however, the dwarves unearthed a series of ruins that held secrets to their ancient heritage.
-            { 29, 35, "Та нещодавно дворфи розкопали руїни, що приховували таємниці їхньої прадавньої спадщини." },
-            -- Driven to discover the truth about his people's fabled origins, the great King Magni Bronzebeard ordered that the dwarves shift their industry from mining to archaeology.
-            { 35, 44, "Прагнучи дізнатися правду про легендарне походження свого народу, великий король Маґні Бронзобородий наказав дворфам змінити ремесло з гірництва на археологію." },
-            -- As part of the Grand Alliance, the stalwart dwarven armies have been called away to battle the merciless Horde in faraway lands.
-            { 44, 51, "Як частина Великого Альянсу, непохитні армії дворфів вирушили битися з безжальною Ордою в далеких краях." },
-            -- In these perilous times, the defense of the mountain kingdom falls to brave dwarves like you.
-            { 51, 58, "У ці небезпечні часи захист гірського королівства лягає на плечі хоробрих дворфів, таких як ви." },
-            -- The spirits of the ancient kings watch over you, and the very mountains are your strength. The future of your people is in your hands.
-            { 58, 68, "Духи стародавніх королів пильнують вас, а самі гори — ваша сила. Майбутнє вашого народу у ваших руках." },
-        },
-
-        NightElf = {
-            map = 1438, -- Teldrassil
-            -- For ten thousand years, the immortal night elves cultivated a druidic society within the shadowed recesses of Ashenvale Forest.
-            { 14, 22, "Десять тисяч років безсмертні нічні ельфи плекали друїдське суспільство в тінистих хащах Ясенедолу." },
-            -- Yet recently, the catastrophic invasion of the Burning Legion shattered the tranquility of their ancient civilization.
-            { 22, 29, "Але нещодавно катастрофічне вторгнення Палаючого Легіону зруйнувало спокій їхньої стародавньої цивілізації." },
-            -- Led by the Arch-Druid Malfurion Stormrage and the Priestess Tyrande Whisperwind, the mighty night elves rose to challenge the demonic onslaught.
-            { 29, 37, "На чолі з архідруїдом Малфуріоном Лютобурем та жрицею Тірандою Шелест Вітру могутні нічні ельфи постали проти демонічної навали." },
-            -- Though victorious, the night elves were forced to sacrifice their cherished immortality and watch their beloved forests burn.
-            { 37, 45, "Здобувши перемогу, нічні ельфи все ж мусили пожертвувати своїм заповітним безсмертям і дивитися, як палають їхні улюблені ліси." },
-            -- Seeking to regain their immortality, a number of wayward druids conspired to plant a special tree that would reestablish a link between their spirits and the eternal world.
-            { 45, 54, "Прагнучи повернути безсмертя, купка свавільних друїдів змовилася посадити особливе дерево, яке відновило б зв'язок між їхніми духами та вічним світом." },
-            -- Despite Malfurion's warning that nature would never bless such a selfish act, the druids planted the great tree, Teldrassil, off the stormy coasts of northern Kalimdor.
-            { 54, 63, "Попри застереження Малфуріона, що природа ніколи не благословить такий себелюбний вчинок, друїди посадили велике дерево Тельдрассіль біля буремних берегів північного Калімдору." },
-            -- Among the twilight boughs of the colossal tree, the wondrous city of Darnassus took root.
-            { 63, 70, "Серед сутінкового гілля велетенського дерева вкоренилося дивовижне місто Дарнас." },
-            -- However, the great tree was not consecrated with nature's blessing and soon fell prey to the corruption of the Burning Legion.
-            { 70, 77, "Проте велике дерево не було освячене благословенням природи і невдовзі стало жертвою скверни Палаючого Легіону." },
-            -- Now the wildlife and even the limbs of the great tree itself are tainted by a growing darkness.
-            { 77, 84, "Тепер дику природу й навіть віття самого великого дерева поглинає дедалі більша темрява." },
-            -- It is your sworn duty to defend Darnassus and the wild children of nature against the Legion's encroaching corruption.
-            { 84, 94, "Ваш священний обов'язок — захистити Дарнас і диких дітей природи від скверни Легіону, що насувається." },
-        },
-
         Scourge = { -- undead player race file name is "Scourge"
             map = 1420, -- Tirisfal Glades
             -- Bound to the iron will of the tyrant Lich King, the vast undead armies of the Scourge seek to eradicate all life on Azeroth.
@@ -135,7 +151,6 @@ addonTable.subtitle = {
             -- As one of the Forsaken, you must massacre any who pose a threat to the new order – human, undead, or otherwise.
             { 76, 86, "Як один із Покинутих, ви мусите винищувати всіх, хто загрожує новому порядку, — людей, нежить чи будь-кого іншого." },
         },
-
         Tauren = {
             map = 1412, -- Mulgore
             -- Once a nomadic people, the tauren roamed the endless plains of the Barrens, hunting the mighty kodo.
@@ -155,27 +170,6 @@ addonTable.subtitle = {
             -- As a tribesman of Mulgore, you must test your skills in the wild and prove yourself in the Great Hunt.
             { 62, 71, "Як одноплемінник Мулґору, ви мусите випробувати свої вміння в дикій природі та проявити себе у Великому Полюванні." },
         },
-
-        Gnome = {
-            map = 1426, -- Dun Morogh
-            -- The eccentric, often brilliant gnomes are held as one of the most peculiar races of the world.
-            { 14, 20, "Ексцентричні, часто геніальні гноми вважаються однією з найхимерніших рас світу." },
-            -- With their obsession for developing radical new technologies and constructing marvels of mind-bending engineering, it's a wonder that any gnomes have survived to proliferate.
-            { 20, 29, "З їхньою одержимістю сміливими новими технологіями та запаморочливими дивами інженерії, дивно, що гноми взагалі вижили та розплодилися." },
-            -- Over the years, the gnomes have contributed ingenious weapons to aid the Grand Alliance in its fierce battles against the Horde.
-            { 29, 36, "Роками гноми постачали хитромудру зброю Великому Альянсу в його запеклих битвах з Ордою." },
-            -- Thriving in the wondrous techno-city of Gnomeregan, the gnomes shared the resources of the forested peaks of Dun Morogh with their dwarven cousins for generations.
-            { 36, 44, "Процвітаючи в дивовижному техномісті Гномреґані, гноми поколіннями ділили багатства лісистих вершин Дун-Морогу зі своїми родичами дворфами." },
-            -- Yet recently, a barbaric menace rose up from the bowels of the earth and invaded Gnomeregan.
-            { 44, 51, "Але нещодавно з надр землі постала варварська загроза і вдерлася до Гномреґану." },
-            -- Aided by their dwarven allies, the gnomes fought a valiant battle to save their beloved city. Nevertheless, Gnomeregan was irrevocably lost.
-            { 51, 59, "За підтримки союзників-дворфів гноми відважно боролися за своє улюблене місто. Та попри все, Гномреґан було безповоротно втрачено." },
-            -- The surviving gnomes fled to the safety of the dwarf stronghold of Ironforge. There they remained; devising strategies to retake their city.
-            { 59, 67, "Уцілілі гноми втекли під захист дворфської твердині Залізогарту. Там вони й залишилися, розробляючи плани повернення свого міста." },
-            -- As a gnome of proud stand, it falls to you to answer the challenge and lead your curious people to a brighter future.
-            { 67, 76, "Ви — гном гордої постави, тож саме вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
-        },
-
         Troll = {
             map = 1411, -- Durotar
             -- The vicious trolls that populate the numerous jungle isles of the South Seas, are renowned for their cruelty and dark mysticism.
@@ -191,7 +185,6 @@ addonTable.subtitle = {
             -- As one of the only surviving Darkspears, it falls to you to reclaim the glory of your tribe.
             { 49, 58, "Ви — один з небагатьох уцілілих тролів Темного Списа, тож саме вам належить відродити славу свого племені." },
         },
-
         Draenei = {
             map = 1943, -- Azuremyst Isle
             -- One month ago, a terrible explosion tore open the skies above northern Kalimdor.
@@ -209,7 +202,6 @@ addonTable.subtitle = {
             -- Now, the fate of two worlds rests in your hands.
             { 61, 67, "Тепер доля двох світів у ваших руках." },
         },
-
         BloodElf = {
             map = 1941, -- Eversong Woods
             -- For nearly seven thousand years, the high elves cultivated a shining magical kingdom hidden deep within the forests of northern Lordaeron.
