@@ -35,21 +35,21 @@ addonTable.subtitle = {
         Human = {
             map = 1429, -- Elwynn Forest
             -- The noble humans of Stormwind are a proud, tenacious race.
-            { 14, 19, "Шляхетні люди Штормовію — горда та непохитна раса." },
+            { 14, 20, "Шляхетні люди Штормовію — горда та непохитна раса." },
             -- Though the recent invasion of the demonic Burning Legion decimated their sister kingdom of Lordaeron, the defenders of Stormwind stand vigilant against any who would threaten the sanctity of their lands.
-            { 19, 29, "Хоча нещодавнє вторгнення демонічного Палаючого Легіону спустошило їхнє братнє королівство Лордерон, захисники Штормовію пильно стережуть свої землі від будь-якої загрози." },
+            { 20, 33, "Хоча нещодавнє вторгнення демонічного Палаючого Легіону спустошило їхнє братнє королівство Лордерон, захисники Штормовію пильно стережуть свої землі від будь-якої загрози." },
             -- Nestled in the foothills of Elwynn Forest, Stormwind City is one of the last bastions of human power in the world.
-            { 29, 36, "Розташоване серед пагорбів лісу Ельвінн, місто Штормовій — один з останніх бастіонів людської могутності у світі." },
+            { 33, 42, "Розташоване серед пагорбів лісу Ельвінн, місто Штормовій — один з останніх бастіонів людської могутності у світі." },
             -- Ruled by the child king, Anduin Wrynn, the people of Stormwind remain steadfast in their commitment to the Grand Alliance.
-            { 36, 44, "Кероване юним королем Андуїном Рінном, населення Штормовію лишається відданим Великому Альянсу." },
+            { 42, 51, "Кероване юним королем Андуїном Рінном, населення Штормовію лишається відданим Великому Альянсу." },
             -- Backed by their stalwart allies, the armies of Stormwind have been called away to fight the savage Horde on distant battlefields.
-            { 44, 52, "За підтримки вірних союзників армії Штормовію вирушили битися з жорстокою Ордою на далеких полях битв." },
+            { 51, 60, "За підтримки вірних союзників армії Штормовію вирушили битися з жорстокою Ордою на далеких полях битв." },
             -- With the armies gone, the defense of Stormwind now falls to its proud citizens.
-            { 52, 58, "Коли армії пішли, захист Штормовію ліг на плечі його гордих громадян." },
+            { 60, 66, "Коли армії пішли, захист Штормовію ліг на плечі його гордих громадян." },
             -- You must defend the kingdom against the foul mongrels that encroach upon it and hunt down the subversive traitors who seek to destroy it from within.
-            { 58, 68, "Ти мусиш захистити королівство від підлих псів, що зазіхають на нього, і вистежити підступних зрадників, які прагнуть знищити його зсередини." },
+            { 66, 78, "Ти мусиш захистити королівство від підлих псів, що зазіхають на нього, і вистежити підступних зрадників, які прагнуть знищити його зсередини." },
             -- Now is the time for heroes. Now humanity's greatest chapter can be told.
-            { 68, 76, "Настав час героїв. Тепер може розпочатися найвеличніший розділ історії людства." },
+            { 78, 84, "Настав час героїв. Тепер може розпочатися найвеличніший розділ історії людства." },
         },
     },
 }
