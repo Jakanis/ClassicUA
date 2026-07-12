@@ -11,6 +11,7 @@ local C_Map         = _G.C_Map
 local C_Timer       = _G.C_Timer
 local CreateFrame   = _G.CreateFrame
 local GetTime       = _G.GetTime
+local UnitLevel     = _G.UnitLevel
 local UnitRace      = _G.UnitRace
 local hooksecurefunc = _G.hooksecurefunc
 
@@ -87,10 +88,9 @@ local intro = {
     lines = false,
     started_at = 0,
     last_text = false,
-    replay_requested = false,
 }
 
-local function intro_get_lines(skip_map_guard)
+local function intro_get_lines()
     local data = addon_table.subtitle
     local intro_data = data and data.intro
     if not intro_data then
@@ -103,10 +103,12 @@ local function intro_get_lines(skip_map_guard)
         return
     end
 
-    -- an OpeningCinematic() call right before means this is the race intro
-    -- for sure, no need to guess by zone
-    if skip_map_guard then
-        return lines
+    -- race intros play for freshly created characters; the default level range
+    -- also lets OpeningCinematic() replays work as a bonus (the client itself
+    -- refuses to replay on higher levels). death knight intro will use 55+
+    local level = UnitLevel("player")
+    if level < (lines.level_min or 1) or level > (lines.level_max or 5) then
+        return
     end
 
     -- race intros only ever play in the racial starting zone; the optional map
@@ -209,13 +211,6 @@ subtitles.prepare = function ()
         end)
     end
 
-    -- OpeningCinematic() replays the race intro: the exact signal, no heuristics
-    if _G.OpeningCinematic then
-        hooksecurefunc("OpeningCinematic", function ()
-            intro.replay_requested = true
-        end)
-    end
-
     event_frame:SetScript("OnEvent", function (_, event, ...)
         if event == "PLAY_MOVIE" then
             local movie_id = ...
@@ -231,13 +226,13 @@ subtitles.prepare = function ()
             -- can_be_cancelled == false means a vehicle cinematic, never an intro;
             -- the movieSubtitle cvar is the game's own "show subtitles" setting
             if can_be_cancelled then
-                local lines = C_CVar.GetCVarBool("movieSubtitle") and intro_get_lines(intro.replay_requested)
-                intro.replay_requested = false
+                local lines = C_CVar.GetCVarBool("movieSubtitle") and intro_get_lines()
 
                 if options.account.dev_mode then
                     local _, race_file = UnitRace("player")
                     print("[ClassicUA] CINEMATIC_START:"
                         .. " race=" .. tostring(race_file)
+                        .. " level=" .. tostring(UnitLevel("player"))
                         .. " map=" .. tostring(C_Map.GetBestMapForUnit("player"))
                         .. " subs_cvar=" .. tostring(C_CVar.GetCVarBool("movieSubtitle"))
                         .. " lines=" .. tostring(lines and #lines or nil))
