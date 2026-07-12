@@ -100,8 +100,11 @@ local function intro_get_lines()
     local lines = intro_data[race_file]
 
     -- race intros only ever play in the racial starting zone; the optional map
-    -- guard keeps other in-engine cinematics from matching
-    if lines and lines.map and lines.map ~= C_Map.GetBestMapForUnit("player") then
+    -- guard keeps other in-engine cinematics from matching. on a brand new
+    -- character the map may not be resolved yet (nil) when the intro starts,
+    -- so an unknown map does not block
+    local player_map = C_Map.GetBestMapForUnit("player")
+    if lines and lines.map and player_map and lines.map ~= player_map then
         return
     end
 
@@ -204,6 +207,16 @@ subtitles.prepare = function ()
             -- the movieSubtitle cvar is the game's own "show subtitles" setting
             if can_be_cancelled then
                 local lines = C_CVar.GetCVarBool("movieSubtitle") and intro_get_lines()
+
+                if options.account.dev_mode then
+                    local _, race_file = UnitRace("player")
+                    print("[ClassicUA] CINEMATIC_START:"
+                        .. " race=" .. tostring(race_file)
+                        .. " map=" .. tostring(C_Map.GetBestMapForUnit("player"))
+                        .. " subs_cvar=" .. tostring(C_CVar.GetCVarBool("movieSubtitle"))
+                        .. " lines=" .. tostring(lines and #lines or nil))
+                end
+
                 if lines then
                     intro_start(lines)
                 elseif options.account.dev_mode then
