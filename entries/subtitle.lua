@@ -9,4 +9,11 @@ addonTable.subtitle = { -- [english text, trimmed] = text
 -- wow intro movie (movie id 2)
 ["Four years have passed since the mortal races banded together and stood united against the might of the Burning Legion."] = "Чотири роки минуло відтоді, як смертні раси об'єдналися і разом постали проти могутності Палаючого Легіону.",
 ["Though Azeroth was saved, the tenuous pact between the Horde and the Alliance has all but evaporated."] = "Хоча Азерот було врятовано, хисткий пакт між Ордою та Альянсом майже розвіявся.",
+["The drums of war thunder once again."] = "Барабани війни гримлять знову.",
+-- tbc intro movie (movie id 27)
+["Imprisoned for 10,000 years."] = "Ув'язнений десять тисяч років.",
+["Banished from my own homeland."] = "Вигнаний з власної батьківщини.",
+["And now you dare enter MY realm."] = "І тепер ви смієте вступати до МОЇХ володінь.",
+["You are not prepared."] = "Ви не готові.",
+["YOU ARE NOT PREPARED!"] = "ВИ НЕ ГОТОВІ!",
 }
