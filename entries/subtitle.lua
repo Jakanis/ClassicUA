@@ -148,7 +148,7 @@ addonTable.subtitle = {
             -- As a proud defender of Durotar, it is your duty to crush the enemies, both seen and unseen,
             { 54.5, 63, "Ви — гордий захисник Дуротару, і ваш обов'язок — нищити ворогів, видимих і невидимих." },
             -- for the nefarious agents of the Burning Legion still wander the land.
-            { 63, 70, "Aдже підступні посіпаки Палаючого Легіону досі блукають цими землями." },
+            { 63, 70, "Адже підступні посіпаки Палаючого Легіону досі блукають цими землями." },
         },
         Scourge = { -- undead player race file name is "Scourge"
             map = 1420, -- Tirisfal Glades
