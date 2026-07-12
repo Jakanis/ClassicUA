@@ -4,6 +4,7 @@
 -- ------------------------------------------------------------------- --
 
 local _, addonTable = ...
+-- TRANSLATION ARE AI-GENERATED FOR TESTING PURPOSES
 
 addonTable.subtitle = {
     -- movies: [movie id] = { [subtitle order] = translation }
@@ -35,7 +36,7 @@ addonTable.subtitle = {
         Human = {
             map = 1429, -- Elwynn Forest
             -- The noble humans of Stormwind are a proud, tenacious race.
-            { 14, 20, "Шляхетні люди Штормовію — горда та непохитна раса." },
+            { 14.5, 20, "Шляхетні люди Штормовію — горда та непохитна раса." },
             -- Though the recent invasion of the demonic Burning Legion decimated their sister kingdom of Lordaeron, the defenders of Stormwind stand vigilant against any who would threaten the sanctity of their lands.
             { 20, 33, "Хоча нещодавнє вторгнення демонічного Палаючого Легіону спустошило їхнє братнє королівство Лордерон, захисники Штормовію пильно стережуть свої землі від будь-якої загрози." },
             -- Nestled in the foothills of Elwynn Forest, Stormwind City is one of the last bastions of human power in the world.
@@ -65,17 +66,19 @@ addonTable.subtitle = {
             { 35, 43, "Як частина Великого Альянсу, непохитні армії дворфів вирушили битися з безжальною Ордою в далеких краях." },
             -- In these perilous times, the defense of the mountain kingdom falls to brave dwarves like you.
             { 43, 50, "У ці небезпечні часи захист гірського королівства лягає на плечі хоробрих дворфів, таких як ви." },
-            -- The spirits of the ancient kings watch over you, and the very mountains are your strength. The future of your people is in your hands.
-            { 50, 60, "Духи стародавніх королів пильнують вас, а самі гори — ваша сила. Майбутнє вашого народу у ваших руках." },
+            -- The spirits of the ancient kings watch over you, and the very mountains are your strength.
+            { 50, 56.5, "Духи стародавніх королів пильнують вас, а самі гори — ваша сила." },
+            -- The future of your people is in your hands.
+            { 56.5, 60, "Майбутнє вашого народу у ваших руках." },
         },
         Gnome = {
             map = 1426, -- Dun Morogh
             -- The eccentric, often brilliant gnomes are held as one of the most peculiar races of the world.
             { 0, 7, "Ексцентричні, часто геніальні гноми вважаються однією з найхимерніших рас світу." },
             -- With their obsession for developing radical new technologies and constructing marvels of mind-bending engineering, it's a wonder that any gnomes have survived to proliferate.
-            { 7, 18, "З їхньою одержимістю сміливими новими технологіями та запаморочливими дивами інженерії, дивно, що гноми взагалі вижили та розплодилися." },
+            { 7, 18.5, "З їхньою одержимістю сміливими новими технологіями та запаморочливими дивами інженерії, дивно, що гноми взагалі вижили та розплодилися." },
             -- Over the years, the gnomes have contributed ingenious weapons to aid the Grand Alliance in its fierce battles against the Horde.
-            { 18, 27, "Роками гноми постачали хитромудру зброю Великому Альянсу в його запеклих битвах з Ордою." },
+            { 18.5, 27, "Роками гноми постачали хитромудру зброю Великому Альянсу в його запеклих битвах з Ордою." },
             -- Thriving in the wondrous techno-city of Gnomeregan, the gnomes shared the resources of the forested peaks of Dun Morogh with their dwarven cousins for generations.
             { 27, 37, "Процвітаючи в дивовижному техномісті Гномреґані, гноми поколіннями ділили багатства лісистих вершин Дун-Морогу зі своїми родичами дворфами." },
             -- Yet recently, a barbaric menace rose up from the bowels of the earth and invaded Gnomeregan.
@@ -83,9 +86,9 @@ addonTable.subtitle = {
             -- Aided by their dwarven allies, the gnomes fought a valiant battle to save their beloved city. Nevertheless, Gnomeregan was irrevocably lost.
             { 44, 55, "За підтримки союзників-дворфів гноми відважно боролися за своє улюблене місто. Та попри все, Гномреґан було безповоротно втрачено." },
             -- The surviving gnomes fled to the safety of the dwarf stronghold of Ironforge. There they remained; devising strategies to retake their city.
-            { 55, 65, "Уцілілі гноми втекли під захист дворфської твердині Залізогарту. Там вони й залишилися, розробляючи плани повернення свого міста." },
+            { 55, 65.5, "Уцілілі гноми втекли під захист дворфської твердині Залізогарту. Там вони й залишилися, розробляючи плани повернення свого міста." },
             -- As a gnome of proud stand, it falls to you to answer the challenge and lead your curious people to a brighter future.
-            { 65, 77, "Ви — гном гордої постави, тож саме вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
+            { 65.5, 77, "Ви — гном гордої постави, тож саме вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
         },
         NightElf = {
             map = 1438, -- Teldrassil
@@ -102,122 +105,122 @@ addonTable.subtitle = {
             -- Despite Malfurion's warning that nature would never bless such a selfish act, the druids planted the great tree, Teldrassil, off the stormy coasts of northern Kalimdor.
             { 53, 65, "Попри застереження Малфуріона, що природа ніколи не благословить такий себелюбний вчинок, друїди посадили велике дерево Тельдрассіль біля буремних берегів північного Калімдору." },
             -- Among the twilight boughs of the colossal tree, the wondrous city of Darnassus took root.
-            { 65, 72, "Серед сутінкового гілля велетенського дерева вкоренилося дивовижне місто Дарнас." },
+            { 65, 71.5, "Серед сутінкового гілля велетенського дерева вкоренилося дивовижне місто Дарнас." },
             -- However, the great tree was not consecrated with nature's blessing and soon fell prey to the corruption of the Burning Legion.
-            { 72, 80, "Проте велике дерево не було освячене благословенням природи і невдовзі стало жертвою скверни Палаючого Легіону." },
+            { 71.5, 80, "Проте велике дерево не було освячене благословенням природи і невдовзі стало жертвою скверни Палаючого Легіону." },
             -- Now the wildlife and even the limbs of the great tree itself are tainted by a growing darkness.
             { 80, 89, "Тепер дику природу й навіть віття самого великого дерева поглинає дедалі більша темрява." },
             -- As one of the few Night Elves left in the world, it is your sworn duty to defend Darnassus and the wild children of nature against the Legion's encroaching corruption.
             { 89, 102, "Ви — одні з небагатьох нічних ельфів, що лишилися у світі, тож ваш священний обов'язок — захистити Дарнас і диких дітей природи від скверни Легіону, що насувається." },
         },
-
-        -- TIMINGS OF ALL RACES BELOW ARE NOT CALIBRATED YET (rough estimates)
+        Draenei = {
+            map = 1943, -- Azuremyst Isle
+            -- One month ago, a terrible explosion tore open the skies above northern Kalimdor.
+            { 0, 7, "Місяць тому жахливий вибух розітнув небеса над північним Калімдором." },
+            -- At that moment, the great ship Exodar, plummeted from the heavens and crashed upon the world of Azeroth.
+            { 7, 15, "Тієї миті великий корабель Екзодар упав з небес і розбився об світ Азерот." },
+            -- Having fled the ravaged world of Outland, the noble draenei used the dimension traveling Exodar to reach safe haven.
+            { 15, 24, "Втікши зі сплюндрованого світу Позамежжя, шляхетні дренеї скористалися міжвимірним Екзодаром, щоб дістатися безпечного притулку." },
+            -- Inspired by tales of the heroic Alliance that stood against the might of the Burning Legion, the draenei have come to enlist aid in retaking their shattered homeland.
+            { 24, 35, "Натхненні переказами про героїчний Альянс, що вистояв проти могутності Палаючого Легіону, дренеї прибули просити допомоги в поверненні своєї розтрощеної батьківщини." },
+            -- Dedicated to preserving life and upholding the tenets of the Holy Light, the draenei hope to gather a new coalition of warriors to battle the Burning Legion and put a halt to its horrific Burning Crusade.
+            { 35, 49.5, "Віддані збереженню життя та заповідям Святого Світла, дренеї сподіваються зібрати нову спілку воїнів, щоб битися з Палаючим Легіоном і зупинити його жаский Палаючий Похід." },
+            -- Armed only with courage and their unshakable faith in the Light, the draenei look forward to finding the Alliance and ushering them towards the destiny that awaits beyond the skies of Azeroth.
+            { 49.5, 63, "Озброєні лише відвагою та непохитною вірою у Світло, дренеї прагнуть знайти Альянс і повести його назустріч долі, що чекає за небесами Азероту." },
+            -- Now, the fate of two worlds rests in your hands.
+            { 63, 69.5, "Тепер доля двох світів у ваших руках." },
+        },
 
         Orc = {
             map = 1411, -- Durotar
             -- Long ago, the orcish horde was corrupted by the Burning Legion and lured to the world of Azeroth.
-            { 14, 21, "Давним-давно Палаючий Легіон розбестив орківську орду та заманив її до світу Азерот." },
+            { 4, 12, "Давним-давно Палаючий Легіон розбестив орківську орду та заманив її до світу Азерот." },
             -- For generations, the orcs made war upon the human kingdoms of Stormwind and Lordaeron.
-            { 21, 27, "Поколіннями орки воювали з людськими королівствами Штормовію та Лордерону." },
+            { 12, 20, "Поколіннями орки воювали з людськими королівствами Штормовію та Лордерону." },
             -- Though the Horde was ultimately defeated, a visionary young warchief named Thrall rose to lead his people in their darkest hour.
-            { 27, 35, "Хоча Орду зрештою було переможено, у найтемнішу годину її народ очолив далекоглядний молодий вождь на ім'я Тралл." },
+            { 20, 29.5, "Хоча Орду зрештою було переможено, у найтемнішу годину її народ очолив далекоглядний молодий вождь на ім'я Тралл." },
             -- Under Thrall's rule, the orcs freed themselves from the chains of demonic corruption and embraced their shamanistic heritage.
-            { 35, 42, "Під проводом Тралла орки звільнилися від кайданів демонічної скверни та повернулися до своєї шаманської спадщини." },
+            { 29.5, 39, "Під проводом Тралла орки звільнилися від кайданів демонічної скверни та повернулися до своєї шаманської спадщини." },
             -- After years of wandering, the orcs founded their own kingdom in the harsh wastelands of Durotar.
-            { 42, 49, "Після років поневірянь орки заснували власне королівство в суворих пустках Дуротару." },
+            { 39, 47, "Після років поневірянь орки заснували власне королівство в суворих пустках Дуротару." },
             -- Based in the warrior city of Orgrimmar, they stand ready to destroy all who would challenge their supremacy.
-            { 49, 56, "Осівши у місті воїнів Орґріммарі, вони готові знищити всіх, хто кине виклик їхній зверхності." },
-            -- As a proud defender of Durotar, it is your duty to crush the enemies, both seen and unseen, for the nefarious agents of the Burning Legion still wander the land.
-            { 56, 68, "Ви — гордий захисник Дуротару, і ваш обов'язок — нищити ворогів, видимих і невидимих, адже підступні посіпаки Палаючого Легіону досі блукають цими землями." },
+            { 47, 54.5, "Осівши у місті воїнів Орґріммарі, вони готові знищити всіх, хто кине виклик їхній зверхності." },
+            -- As a proud defender of Durotar, it is your duty to crush the enemies, both seen and unseen,
+            { 54.5, 63, "Ви — гордий захисник Дуротару, і ваш обов'язок — нищити ворогів, видимих і невидимих." },
+            -- for the nefarious agents of the Burning Legion still wander the land.
+            { 63, 70, "Aдже підступні посіпаки Палаючого Легіону досі блукають цими землями." },
         },
         Scourge = { -- undead player race file name is "Scourge"
             map = 1420, -- Tirisfal Glades
             -- Bound to the iron will of the tyrant Lich King, the vast undead armies of the Scourge seek to eradicate all life on Azeroth.
-            { 14, 22, "Скуті залізною волею тирана Короля-Лича, незліченні армії нежиті Скари прагнуть винищити все живе в Азероті." },
+            { 0, 11, "Скуті залізною волею тирана Короля-Лича, незліченні армії нежиті Скари прагнуть винищити все живе в Азероті." },
             -- Led by the banshee Sylvanas Windrunner, a group of renegades broke away from the Scourge, and freed themselves of the Lich King's domination.
-            { 22, 30, "Очолювані баньші Сильваною Вітрогін, відступники відкололися від Скари та звільнилися з-під панування Короля-Лича." },
+            { 11, 22, "Очолювані баньші Сильваною Вітрогін, відступники відкололися від Скари та звільнилися з-під панування Короля-Лича." },
             -- Known by some as the Forsaken, this group fights a constant battle not only to retain their freedom from the Scourge, but also to slaughter those who would hunt them as monsters.
-            { 30, 39, "Відомі як Покинуті, вони безнастанно борються не лише за свою свободу від Скари, а й винищують тих, хто полює на них, як на чудовиськ." },
+            { 22, 35.5, "Відомі як Покинуті, вони безнастанно борються не лише за свою свободу від Скари, а й винищують тих, хто полює на них, як на чудовиськ." },
             -- With Sylvanas as their banshee queen, the Forsaken have built a dark stronghold beneath the ruins of Lordaeron's former capital city.
-            { 39, 46, "Із Сильваною, своєю королевою-баньші, Покинуті звели похмуру твердиню під руїнами колишньої столиці Лордерону." },
+            { 35.5, 45, "Із Сильваною, своєю королевою-баньші, Покинуті звели похмуру твердиню під руїнами колишньої столиці Лордерону." },
             -- This hidden 'Undercity' forms a sprawling labyrinth that stretches beneath the haunted woods of the Tirisfal Glades.
-            { 46, 53, "Це потаємне «Підмістя» — розлогий лабіринт, що тягнеться під примарними лісами Тірісфальського перелісся." },
+            { 45, 54.5, "Це потаємне «Підмістя» — розлогий лабіринт, що тягнеться під примарними лісами Тірісфальського перелісся." },
             -- Though the very land is cursed, the zealous humans of the Scarlet Crusade still cling to their scattered holdings, obsessed with eradicating the undead and retaking their homeland.
-            { 53, 62, "Хоча сама земля тут проклята, фанатичні люди Багряного Походу досі чіпляються за свої розкидані володіння, одержимі винищенням нежиті та поверненням батьківщини." },
+            { 54.5, 70, "Хоча сама земля тут проклята, фанатичні люди Багряного Походу досі чіпляються за свої розкидані володіння, одержимі винищенням нежиті та поверненням батьківщини." },
             -- Convinced that the primitive races of the Horde can help them achieve victory over their enemies, the Forsaken have entered an alliance of convenience.
-            { 62, 69, "Переконані, що примітивні раси Орди допоможуть їм здолати ворогів, Покинуті уклали союз із розрахунку." },
+            { 70, 80.5, "Переконані, що примітивні раси Орди допоможуть їм здолати ворогів, Покинуті уклали союз із розрахунку." },
             -- Harboring no true loyalty for their new allies, they will go to any lengths to ensure their dark plans come to fruition.
-            { 69, 76, "Не плекаючи справжньої вірності новим союзникам, вони підуть на все, аби їхні темні плани здійснилися." },
+            { 80.5, 90, "Не плекаючи справжньої вірності новим союзникам, вони підуть на все, аби їхні темні плани здійснилися." },
             -- As one of the Forsaken, you must massacre any who pose a threat to the new order – human, undead, or otherwise.
-            { 76, 86, "Як один із Покинутих, ви мусите винищувати всіх, хто загрожує новому порядку, — людей, нежить чи будь-кого іншого." },
+            { 90, 102, "Як один із Покинутих, ви мусите винищувати всіх, хто загрожує новому порядку, — людей, нежить чи будь-кого іншого." },
         },
         Tauren = {
             map = 1412, -- Mulgore
             -- Once a nomadic people, the tauren roamed the endless plains of the Barrens, hunting the mighty kodo.
-            { 14, 21, "Колись кочовий народ, таурени мандрували безкраїми рівнинами Пустищ, полюючи на могутніх кодо." },
+            { 1, 9.5, "Колись кочовий народ, таурени мандрували безкраїми рівнинами Пустищ, полюючи на могутніх кодо." },
             -- Scattered across the land, the wandering tribes were united only by their common hatred for their sworn enemy, the marauding centaur.
-            { 21, 28, "Розпорошені по цих землях мандрівні племена єднала лише спільна ненависть до заклятого ворога — кентаврів-грабіжників." },
+            { 9.5, 19, "Розпорошені по цих землях мандрівні племена єднала лише спільна ненависть до заклятого ворога — кентаврів-грабіжників." },
             -- Seeking aid against the centaur, the great chieftain, Cairne Bloodhoof, befriended the savage orcs, who had recently journeyed to Kalimdor.
-            { 28, 36, "Шукаючи допомоги проти кентаврів, великий вождь Кейрн Криваве Копито заприятелював із дикими орками, що нещодавно прибули до Калімдору." },
+            { 19, 29, "Шукаючи допомоги проти кентаврів, великий вождь Кейрн Криваве Копито заприятелював із дикими орками, що нещодавно прибули до Калімдору." },
             -- With the orcs' help, Cairne and his tribe were able to drive back the centaur and claim the grasslands of Mulgore for their own.
-            { 36, 43, "З допомогою орків Кейрн та його плем'я відтіснили кентаврів і зайняли трав'янисті землі Мулґору." },
+            { 29, 38, "З допомогою орків Кейрн та його плем'я відтіснили кентаврів і зайняли трав'янисті землі Мулґору." },
             -- Upon the windswept mesa of Thunder Bluff, Cairne built a refuge for his people.
-            { 43, 49, "На овіяному вітрами плоскогір'ї Громового Бескиду Кейрн збудував прихисток для свого народу." },
+            { 38, 44.5, "На овіяному вітрами плоскогір'ї Громового Бескиду Кейрн збудував прихисток для свого народу." },
             -- Over time, the scattered tribes united under a single banner.
-            { 49, 54, "З часом розпорошені племена об'єдналися під єдиним стягом." },
+            { 44.5, 50.5, "З часом розпорошені племена об'єдналися під єдиним стягом." },
             -- Though the noble tauren are peaceful in nature, the rites of the Great Hunt are venerated as the heart of their spiritual culture.
-            { 54, 62, "Хоча шляхетні таурени мирні за вдачею, обряди Великого Полювання шануються як серце їхньої духовної культури." },
+            { 50.5, 60, "Хоча шляхетні таурени мирні за вдачею, обряди Великого Полювання шануються як серце їхньої духовної культури." },
             -- As a tribesman of Mulgore, you must test your skills in the wild and prove yourself in the Great Hunt.
-            { 62, 71, "Як одноплемінник Мулґору, ви мусите випробувати свої вміння в дикій природі та проявити себе у Великому Полюванні." },
+            { 60, 70, "Як одноплемінник Мулґору, ви мусите випробувати свої вміння в дикій природі та проявити себе у Великому Полюванні." },
         },
         Troll = {
             map = 1411, -- Durotar
             -- The vicious trolls that populate the numerous jungle isles of the South Seas, are renowned for their cruelty and dark mysticism.
-            { 14, 21, "Люті тролі, що населяють численні джунглеві острови Південних морів, славляться жорстокістю та темним містицизмом." },
+            { 2, 11.5, "Люті тролі, що населяють численні джунглеві острови Південних морів, славляться жорстокістю та темним містицизмом." },
             -- Barbarous and superstitious, they carry a seething hatred for all other races.
-            { 21, 27, "Варварські та забобонні, вони плекають кипучу ненависть до всіх інших рас." },
+            { 11.5, 19, "Варварські та забобонні, вони плекають кипучу ненависть до всіх інших рас." },
             -- Long since exiled from their ancestral homeland in Stranglethorn Vale, the Darkspear tribe was nearly destroyed by rampaging murlocs.
-            { 27, 35, "Давно вигнане з прабатьківщини в Тернистій долині, плем'я Темного Списа мало не знищили оскаженілі мурлоки." },
+            { 19, 29.5, "Давно вигнане з прабатьківщини в Тернистій долині, плем'я Темного Списа мало не знищили оскаженілі мурлоки." },
             -- Rescued by the young Warchief Thrall and his orcish warriors, the Darkspear tribe swore an allegiance to the Horde.
-            { 35, 42, "Врятоване молодим вождем Траллом та його орками-воїнами, плем'я Темного Списа присягнуло на вірність Орді." },
+            { 29.5, 38.5, "Врятоване молодим вождем Траллом та його орками-воїнами, плем'я Темного Списа присягнуло на вірність Орді." },
             -- Led by the cunning Shadow Hunter, Vol'jin, the Darkspears now make their home in Durotar along with their orcish allies.
-            { 42, 49, "Під проводом хитрого тіньового мисливця Вол'джина плем'я Темного Списа нині мешкає в Дуротарі разом зі своїми союзниками орками." },
+            { 38.5, 48, "Під проводом хитрого тіньового мисливця Вол'джина плем'я Темного Списа нині мешкає в Дуротарі разом зі своїми союзниками орками." },
             -- As one of the only surviving Darkspears, it falls to you to reclaim the glory of your tribe.
-            { 49, 58, "Ви — один з небагатьох уцілілих тролів Темного Списа, тож саме вам належить відродити славу свого племені." },
-        },
-        Draenei = {
-            map = 1943, -- Azuremyst Isle
-            -- One month ago, a terrible explosion tore open the skies above northern Kalimdor.
-            { 14, 20, "Місяць тому жахливий вибух розітнув небеса над північним Калімдором." },
-            -- At that moment, the great ship Exodar, plummeted from the heavens and crashed upon the world of Azeroth.
-            { 20, 27, "Тієї миті великий корабель Екзодар упав з небес і розбився об світ Азерот." },
-            -- Having fled the ravaged world of Outland, the noble draenei used the dimension traveling Exodar to reach safe haven.
-            { 27, 34, "Втікши зі сплюндрованого світу Позамежжя, шляхетні дренеї скористалися міжвимірним Екзодаром, щоб дістатися безпечного притулку." },
-            -- Inspired by tales of the heroic Alliance that stood against the might of the Burning Legion, the draenei have come to enlist aid in retaking their shattered homeland.
-            { 34, 42, "Натхненні переказами про героїчний Альянс, що вистояв проти могутності Палаючого Легіону, дренеї прибули просити допомоги в поверненні своєї розтрощеної батьківщини." },
-            -- Dedicated to preserving life and upholding the tenets of the Holy Light, the draenei hope to gather a new coalition of warriors to battle the Burning Legion and put a halt to its horrific Burning Crusade.
-            { 42, 52, "Віддані збереженню життя та заповідям Святого Світла, дренеї сподіваються зібрати нову спілку воїнів, щоб битися з Палаючим Легіоном і зупинити його жаский Палаючий Похід." },
-            -- Armed only with courage and their unshakable faith in the Light, the draenei look forward to finding the Alliance and ushering them towards the destiny that awaits beyond the skies of Azeroth.
-            { 52, 61, "Озброєні лише відвагою та непохитною вірою у Світло, дренеї прагнуть знайти Альянс і повести його назустріч долі, що чекає за небесами Азероту." },
-            -- Now, the fate of two worlds rests in your hands.
-            { 61, 67, "Тепер доля двох світів у ваших руках." },
+            { 48, 57.5, "Ви — один з небагатьох уцілілих тролів Темного Списа, тож саме вам належить відродити славу свого племені." },
         },
         BloodElf = {
             map = 1941, -- Eversong Woods
             -- For nearly seven thousand years, the high elves cultivated a shining magical kingdom hidden deep within the forests of northern Lordaeron.
-            { 14, 22, "Майже сім тисяч років високі ельфи плекали осяйне магічне королівство, приховане в глибині лісів північного Лордерону." },
+            { 1, 11.5, "Майже сім тисяч років високі ельфи плекали осяйне магічне королівство, приховане в глибині лісів північного Лордерону." },
             -- But five years ago, the undead Scourge invaded Quel'Thalas and drove the elves to the brink of extinction.
-            { 22, 29, "Але п'ять років тому нежить Скари вторглася до Квел'Таласу й поставила ельфів на межу вимирання." },
+            { 11.5, 20.5, "Але п'ять років тому нежить Скари вторглася до Квел'Таласу й поставила ельфів на межу вимирання." },
             -- Led by the evil death knight Arthas, the Scourge destroyed the mystical Sunwell, thereby severing the elves from the source of their arcane power.
-            { 29, 37, "Очолювана лихим лицарем смерті Артасом, Скара знищила містичний Сонячний Колодязь, відрізавши ельфів від джерела їхньої чарівної сили." },
+            { 20.5, 32, "Очолювана лихим лицарем смерті Артасом, Скара знищила містичний Сонячний Колодязь, відрізавши ельфів від джерела їхньої чарівної сили." },
             -- Though the scars of that conflict are evident, the remaining elves have banded together and retaken much of their homeland.
-            { 37, 44, "Хоча шрами тієї війни й досі помітні, уцілілі ельфи згуртувалися та відвоювали більшу частину батьківщини." },
+            { 32, 41.5, "Хоча шрами тієї війни й досі помітні, уцілілі ельфи згуртувалися та відвоювали більшу частину батьківщини." },
             -- Calling themselves "blood elves", these grim survivors are committed to regaining the vast powers they once commanded.
-            { 44, 51, "Назвавшись «ельфами крові», ці суворі вцілілі поклялися повернути колишню безмежну могутність." },
+            { 41.5, 50, "Назвавшись «ельфами крові», ці суворі вцілілі поклялися повернути колишню безмежну могутність." },
             -- Inspired by the leadership of their beloved prince, Kael'thas Sunstrider, the blood elves now seek new sources of arcane magic and the means of defending their land against the undying horrors of the Scourge.
-            { 51, 61, "Натхненні проводом улюбленого принца Кель'таса Сонячного Блукача, ельфи крові шукають нові джерела чарівної магії та способи захистити свою землю від безсмертних жахіть Скари." },
+            { 50, 65.5, "Натхненні проводом улюбленого принца Кель'таса Сонячного Блукача, ельфи крові шукають нові джерела чарівної магії та способи захистити свою землю від безсмертних жахіть Скари." },
             -- As one of the few surviving blood elves, you must master your thirst for magic and help shape the destiny of your people.
-            { 61, 70, "Ви — один з небагатьох уцілілих ельфів крові, тож мусите приборкати свою жагу до магії та допомогти визначити долю свого народу." },
+            { 65.5, 77, "Ви — один з небагатьох уцілілих ельфів крові, тож мусите приборкати свою жагу до магії та допомогти визначити долю свого народу." },
         },
     },
 }
