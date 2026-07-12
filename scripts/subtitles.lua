@@ -18,9 +18,29 @@ local current = {
 }
 
 local function translate_subtitle(message, sender)
+    local data = addon_table.subtitle
+    if not data then
+        return
+    end
+
     -- the client delivers subtitle lines with trailing whitespace, so entry keys are trimmed
     local message_key = string_trim(message)
-    local text_uk = addon_table.subtitle and addon_table.subtitle[message_key]
+    local text_uk
+
+    -- movie lines are grouped by movie id and matched by subtitle order,
+    -- with the english text stored alongside as a guard
+    if current.mode == "movie" and data.movie then
+        local movie = data.movie[current.movie_id]
+        local line = movie and movie[current.order]
+        if line and line[1] == message_key then
+            text_uk = line[2]
+        end
+    end
+
+    -- cinematics (and movie lines that failed the order match) use text keys
+    if not text_uk and data.text then
+        text_uk = data.text[message_key]
+    end
 
     if not text_uk then
         if options.account.dev_mode then
