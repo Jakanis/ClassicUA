@@ -108,7 +108,7 @@ addonTable.subtitle = {
             -- Now the wildlife and even the limbs of the great tree itself are tainted by a growing darkness.
             { 80, 89, "Тепер дику природу й навіть віття самого великого дерева поглинає дедалі більша темрява." },
             -- As one of the few Night Elves left in the world, it is your sworn duty to defend Darnassus and the wild children of nature against the Legion's encroaching corruption.
-            { 89, 102, "Ваш священний обов'язок — захистити Дарнас і диких дітей природи від скверни Легіону, що насувається." },
+            { 89, 102, "Ви — одні з небагатьох нічних ельфів, що лишилися у світі, тож ваш священний обов'язок — захистити Дарнас і диких дітей природи від скверни Легіону, що насувається." },
         },
 
         -- TIMINGS OF ALL RACES BELOW ARE NOT CALIBRATED YET (rough estimates)
