@@ -39,17 +39,17 @@ addonTable.subtitle = {
             -- Though the recent invasion of the demonic Burning Legion decimated their sister kingdom of Lordaeron, the defenders of Stormwind stand vigilant against any who would threaten the sanctity of their lands.
             { 20, 33, "Хоча нещодавнє вторгнення демонічного Палаючого Легіону спустошило їхнє братнє королівство Лордерон, захисники Штормовію пильно стережуть свої землі від будь-якої загрози." },
             -- Nestled in the foothills of Elwynn Forest, Stormwind City is one of the last bastions of human power in the world.
-            { 33, 42, "Розташоване серед пагорбів лісу Ельвінн, місто Штормовій — один з останніх бастіонів людської могутності у світі." },
+            { 33, 42, "Розташоване серед пагорбів Ельвиннського лісу, місто Штормовій — один з останніх бастіонів людської могутності у світі." },
             -- Ruled by the child king, Anduin Wrynn, the people of Stormwind remain steadfast in their commitment to the Grand Alliance.
             { 42, 51, "Кероване юним королем Андуїном Рінном, населення Штормовію лишається відданим Великому Альянсу." },
             -- Backed by their stalwart allies, the armies of Stormwind have been called away to fight the savage Horde on distant battlefields.
             { 51, 60, "За підтримки вірних союзників армії Штормовію вирушили битися з жорстокою Ордою на далеких полях битв." },
             -- With the armies gone, the defense of Stormwind now falls to its proud citizens.
-            { 60, 66, "Коли армії пішли, захист Штормовію ліг на плечі його гордих громадян." },
+            { 60, 67, "Коли армії пішли, захист Штормовію ліг на плечі його гордих громадян." },
             -- You must defend the kingdom against the foul mongrels that encroach upon it and hunt down the subversive traitors who seek to destroy it from within.
-            { 66, 78, "Ти мусиш захистити королівство від підлих псів, що зазіхають на нього, і вистежити підступних зрадників, які прагнуть знищити його зсередини." },
+            { 67, 78, "Ви мусите захистити королівство від підлих псів, що зазіхають на нього, і вистежити підступних зрадників, які прагнуть знищити його зсередини." },
             -- Now is the time for heroes. Now humanity's greatest chapter can be told.
-            { 78, 84, "Настав час героїв. Тепер може розпочатися найвеличніший розділ історії людства." },
+            { 78, 86, "Настав час героїв. Тепер може розпочатися найвеличніший розділ історії людства." },
         },
     },
 }
