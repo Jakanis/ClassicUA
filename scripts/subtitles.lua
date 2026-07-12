@@ -1,12 +1,12 @@
 local _, addon_table = ...
 
-local assets    = addon_table.use("assets") ---@class assets_class
 local dev_log   = addon_table.use("dev_log") ---@class dev_log_class
 local options   = addon_table.use("options") ---@class options_class
 local subtitles = addon_table.use("subtitles") ---@class subtitles_class
 
 local string_format = _G.string.format
 local string_trim   = _G.string.trim
+local C_CVar        = _G.C_CVar
 local C_Map         = _G.C_Map
 local C_Timer       = _G.C_Timer
 local CreateFrame   = _G.CreateFrame
@@ -83,10 +83,10 @@ end
 -- ---------------------------------------------------------------------------
 
 local intro = {
-    font_string = false,
     ticker = false,
     lines = false,
     started_at = 0,
+    last_text = false,
 }
 
 local function intro_get_lines()
@@ -108,6 +108,21 @@ local function intro_get_lines()
     return lines
 end
 
+-- shows the text through the default SubtitlesFrame, so our lines get the
+-- original look: MovieSubtitleFont, auto-scaling, position and the subtitle
+-- background type/opacity options from the game settings
+local function intro_set_text(text)
+    local frame = _G.SubtitlesFrame
+    if not frame or not frame.AddSubtitle or not frame.HideSubtitles then
+        return
+    end
+
+    frame:HideSubtitles()
+    if text then
+        frame:AddSubtitle(text)
+    end
+end
+
 local function intro_update()
     local elapsed = GetTime() - intro.started_at
     local text
@@ -126,29 +141,16 @@ local function intro_update()
         text = text and (mark .. " " .. text) or mark
     end
 
-    local font_string = intro.font_string
-    if text then
-        font_string:SetText(text)
-        font_string:Show()
-    else
-        font_string:Hide()
+    if text ~= intro.last_text then
+        intro.last_text = text
+        intro_set_text(text)
     end
 end
 
 local function intro_start(lines)
-    if not intro.font_string then
-        local font_string = _G.CinematicFrame:CreateFontString(nil, "ARTWORK")
-        font_string:SetPoint("CENTER", _G.CinematicFrame, "BOTTOM", 0, 70)
-        font_string:SetWidth(800)
-        font_string:SetFont(assets.font_frizqt, 22, "")
-        font_string:SetTextColor(1, 1, 1, 1)
-        font_string:SetShadowColor(0, 0, 0, 1)
-        font_string:SetShadowOffset(1, -1)
-        intro.font_string = font_string
-    end
-
     intro.lines = lines
     intro.started_at = GetTime()
+    intro.last_text = false
     intro.ticker = C_Timer.NewTicker(0.1, intro_update)
 end
 
@@ -157,8 +159,9 @@ local function intro_stop()
         intro.ticker:Cancel()
         intro.ticker = false
     end
-    if intro.font_string then
-        intro.font_string:Hide()
+    if intro.last_text then
+        intro_set_text(nil)
+        intro.last_text = false
     end
     intro.lines = false
 end
@@ -197,14 +200,15 @@ subtitles.prepare = function ()
             current.movie_id = false
             current.order = 0
 
-            -- can_be_cancelled == false means a vehicle cinematic, never an intro
+            -- can_be_cancelled == false means a vehicle cinematic, never an intro;
+            -- the movieSubtitle cvar is the game's own "show subtitles" setting
             if can_be_cancelled then
-                local lines = intro_get_lines()
+                local lines = C_CVar.GetCVarBool("movieSubtitle") and intro_get_lines()
                 if lines then
                     intro_start(lines)
                 elseif options.account.dev_mode then
-                    -- no data for this cinematic: show just the elapsed counter,
-                    -- so subtitle timings can be measured for calibration
+                    -- no data for this cinematic (or subtitles are disabled): show
+                    -- just the elapsed counter, so subtitle timings can be measured
                     intro_start({})
                 end
             end
