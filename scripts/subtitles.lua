@@ -27,17 +27,13 @@ local function translate_subtitle(message, sender)
     local message_key = string_trim(message)
     local text_uk
 
-    -- movie lines are grouped by movie id and matched by subtitle order,
-    -- with the english text stored alongside as a guard
+    -- movie lines are grouped by movie id and matched by subtitle order
     if current.mode == "movie" and data.movie then
         local movie = data.movie[current.movie_id]
-        local line = movie and movie[current.order]
-        if line and line[1] == message_key then
-            text_uk = line[2]
-        end
+        text_uk = movie and movie[current.order]
     end
 
-    -- cinematics (and movie lines that failed the order match) use text keys
+    -- cinematics (and movie lines without an order match) use text keys
     if not text_uk and data.text then
         text_uk = data.text[message_key]
     end

@@ -6,28 +6,20 @@
 local _, addonTable = ...
 
 addonTable.subtitle = {
-    -- movies: [movie id] = { [subtitle order] = { english text (trimmed), translation } }
-    -- english lines come from the client subtitle files (Movie.db2 SubtitleFileDataID -> .sbt)
+    -- movies: [movie id] = { [subtitle order] = translation }
+    -- order follows the client subtitle files (Movie.db2 SubtitleFileDataID -> .sbt)
     movie = {
         [2] = { -- wow intro
-            [1] = { "Four years have passed since the mortal races banded together and stood united against the might of the Burning Legion.",
-                    "Чотири роки минуло відтоді, як смертні раси об'єдналися і разом постали проти могутності Палаючого Легіону." },
-            [2] = { "Though Azeroth was saved, the tenuous pact between the Horde and the Alliance has all but evaporated.",
-                    "Хоча Азерот було врятовано, хисткий пакт між Ордою та Альянсом майже розвіявся." },
-            [3] = { "The drums of war thunder once again.",
-                    "Барабани війни гримлять знову." },
+            [1] = "Чотири роки минуло відтоді, як смертні раси об'єдналися і разом постали проти могутності Палаючого Легіону.",
+            [2] = "Хоча Азерот було врятовано, хисткий пакт між Ордою та Альянсом майже розвіявся.",
+            [3] = "Барабани війни гримлять знову.",
         },
         [27] = { -- tbc intro
-            [1] = { "Imprisoned for 10,000 years.",
-                    "Ув'язнений десять тисяч років." },
-            [2] = { "Banished from my own homeland.",
-                    "Вигнаний з власної батьківщини." },
-            [3] = { "And now you dare enter MY realm.",
-                    "І тепер ви смієте вступати до МОЇХ володінь." },
-            [4] = { "You are not prepared.",
-                    "Ви не готові." },
-            [5] = { "YOU ARE NOT PREPARED!",
-                    "ВИ НЕ ГОТОВІ!" },
+            [1] = "Ув'язнений десять тисяч років.",
+            [2] = "Вигнаний з власної батьківщини.",
+            [3] = "І тепер ви смієте вступати до МОЇХ володінь.",
+            [4] = "Ви не готові.",
+            [5] = "ВИ НЕ ГОТОВІ!",
         },
     },
 
