@@ -5,7 +5,9 @@ local options   = addon_table.use("options") ---@class options_class
 local subtitles = addon_table.use("subtitles") ---@class subtitles_class
 
 local string_format = _G.string.format
+local string_trim   = _G.string.trim
 local CreateFrame   = _G.CreateFrame
+local hooksecurefunc = _G.hooksecurefunc
 
 -- context of the currently playing video, used to attribute subtitle lines in dev log:
 -- movies (PLAY_MOVIE) have an id, in-engine cinematics (CINEMATIC_START) do not
@@ -16,7 +18,9 @@ local current = {
 }
 
 local function translate_subtitle(message, sender)
-    local text_uk = addon_table.subtitle and addon_table.subtitle[message]
+    -- the client delivers subtitle lines with trailing whitespace, so entry keys are trimmed
+    local message_key = string_trim(message)
+    local text_uk = addon_table.subtitle and addon_table.subtitle[message_key]
 
     if not text_uk then
         if options.account.dev_mode then
@@ -26,7 +30,7 @@ local function translate_subtitle(message, sender)
             elseif current.mode == "cinematic" then
                 context = "cinematic"
             end
-            dev_log.missing_subtitle(context, current.order, message, sender)
+            dev_log.missing_subtitle(context, current.order, message_key, sender)
         end
         return
     end
@@ -62,6 +66,16 @@ subtitles.prepare = function ()
     event_frame:RegisterEvent("CINEMATIC_START")
     event_frame:RegisterEvent("CINEMATIC_STOP")
     event_frame:RegisterEvent("SHOW_SUBTITLE")
+
+    -- PLAY_MOVIE event does not fire when the movie is started directly
+    -- (e.g. via MovieFrame_PlayMovie call), so the function is hooked too
+    if _G.MovieFrame_PlayMovie then
+        hooksecurefunc("MovieFrame_PlayMovie", function (_, movie_id)
+            current.mode = "movie"
+            current.movie_id = movie_id
+            current.order = 0
+        end)
+    end
 
     event_frame:SetScript("OnEvent", function (_, event, ...)
         if event == "PLAY_MOVIE" then

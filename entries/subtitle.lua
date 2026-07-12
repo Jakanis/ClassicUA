@@ -5,8 +5,8 @@
 
 local _, addonTable = ...
 
-addonTable.subtitle = { -- [english text] = text
--- wow intro movie (movie id 2), first line; used to verify the mechanism e2e,
--- the exact english text must match what SHOW_SUBTITLE delivers
+addonTable.subtitle = { -- [english text, trimmed] = text
+-- wow intro movie (movie id 2)
 ["Four years have passed since the mortal races banded together and stood united against the might of the Burning Legion."] = "Чотири роки минуло відтоді, як смертні раси об'єдналися і разом постали проти могутності Палаючого Легіону.",
+["Though Azeroth was saved, the tenuous pact between the Horde and the Alliance has all but evaporated."] = "Хоча Азерот було врятовано, хисткий пакт між Ордою та Альянсом майже розвіявся.",
 }
