@@ -17,8 +17,8 @@ local hooksecurefunc = _G.hooksecurefunc
 -- context of the currently playing video, used to attribute subtitle lines in dev log:
 -- movies (PLAY_MOVIE) have an id, in-engine cinematics (CINEMATIC_START) do not
 local current = {
-    mode = false, -- "movie" | "cinematic" | false
-    movie_id = false,
+    mode = false, ---@type "movie"|"cinematic"|false
+    movie_id = false, ---@type number|false
     order = 0,
 }
 
