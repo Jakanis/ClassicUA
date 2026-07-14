@@ -11,6 +11,7 @@ local C_Map         = _G.C_Map
 local C_Timer       = _G.C_Timer
 local CreateFrame   = _G.CreateFrame
 local GetTime       = _G.GetTime
+local UnitClass     = _G.UnitClass
 local UnitLevel     = _G.UnitLevel
 local UnitRace      = _G.UnitRace
 local hooksecurefunc = _G.hooksecurefunc
@@ -84,10 +85,10 @@ end
 -- ---------------------------------------------------------------------------
 
 local intro = {
-    ticker = false,
-    lines = false,
+    ticker = false, ---@type table|false
+    lines = false, ---@type table|false
     started_at = 0,
-    last_text = false,
+    last_text = false, ---@type string|false
 }
 
 local function intro_get_lines()
@@ -97,8 +98,15 @@ local function intro_get_lines()
         return
     end
 
-    local _, race_file = UnitRace("player")
-    local lines = intro_data[race_file]
+    -- the death knight intro plays for every race, so the class key takes
+    -- priority over the race key; class file names are all-caps and cannot
+    -- collide with race file names
+    local _, class_file = UnitClass("player")
+    local lines = intro_data[class_file]
+    if not lines then
+        local _, race_file = UnitRace("player")
+        lines = intro_data[race_file]
+    end
     if not lines then
         return
     end
@@ -230,8 +238,10 @@ subtitles.prepare = function ()
 
                 if options.account.dev_mode then
                     local _, race_file = UnitRace("player")
+                    local _, class_file = UnitClass("player")
                     print("[ClassicUA] CINEMATIC_START:"
                         .. " race=" .. tostring(race_file)
+                        .. " class=" .. tostring(class_file)
                         .. " level=" .. tostring(UnitLevel("player"))
                         .. " map=" .. tostring(C_Map.GetBestMapForUnit("player"))
                         .. " subs_cvar=" .. tostring(C_CVar.GetCVarBool("movieSubtitle"))
