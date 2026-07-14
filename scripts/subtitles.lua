@@ -1,6 +1,7 @@
 local _, addon_table = ...
 
 local dev_log   = addon_table.use("dev_log") ---@class dev_log_class
+local entries   = addon_table.use("entries") ---@class entries_class
 local options   = addon_table.use("options") ---@class options_class
 local subtitles = addon_table.use("subtitles") ---@class subtitles_class
 
@@ -65,6 +66,8 @@ local function translate_subtitle(message, sender)
     if not frame or not frame.Subtitles then
         return
     end
+
+    text_uk = entries.make_text(text_uk)
 
     local body_en = sender and string_format(_G.SUBTITLE_FORMAT, sender, message) or message
     local body_uk = sender and string_format(_G.SUBTITLE_FORMAT, sender, text_uk) or text_uk
@@ -161,7 +164,7 @@ local function intro_update()
     for i = 1, #intro.lines do
         local line = intro.lines[i]
         if elapsed >= line[1] and elapsed < line[2] then
-            text = line[3]
+            text = entries.make_text(line[3])
             break
         end
     end

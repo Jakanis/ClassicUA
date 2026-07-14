@@ -81,7 +81,7 @@ local subtitle = {
             -- The surviving gnomes fled to the safety of the dwarf stronghold of Ironforge. There they remained; devising strategies to retake their city.
             { 55, 65.5, "Уцілілі гноми втекли під захист дворфської твердині Залізогарту. Там вони й залишилися, розробляючи плани повернення свого міста." },
             -- As a gnome of proud stand, it falls to you to answer the challenge and lead your curious people to a brighter future.
-            { 65.5, 77, "Ви — гном гордої постави, тож саме вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
+            { 65.5, 77, "Ви — {стать:гном:гномка} гордої постави, тож саме вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
         },
         NightElf = {
             map = 1438, -- Teldrassil
@@ -121,7 +121,7 @@ local subtitle = {
             -- Based in the warrior city of Orgrimmar, they stand ready to destroy all who would challenge their supremacy.
             { 47, 54.5, "Осівши у місті воїнів Орґріммарі, вони готові знищити всіх, хто кине виклик їхній зверхності." },
             -- As a proud defender of Durotar, it is your duty to crush the enemies, both seen and unseen,
-            { 54.5, 63, "Ви — гордий захисник Дуротару, і ваш обов'язок — нищити ворогів, видимих і невидимих." },
+            { 54.5, 63, "Ви — {стать:гордий захисник:горда захисниця} Дуротару, і ваш обов'язок — нищити ворогів, видимих і невидимих." },
             -- for the nefarious agents of the Burning Legion still wander the land.
             { 63, 70, "Адже підступні посіпаки Палаючого Легіону досі блукають цими землями." },
         },
@@ -132,7 +132,7 @@ local subtitle = {
             -- Led by the banshee Sylvanas Windrunner, a group of renegades broke away from the Scourge, and freed themselves of the Lich King's domination.
             { 11, 22, "Очолювані баньші Сильваною Вітрогін, відступники відкололися від Скари та звільнилися з-під панування Короля-Лича." },
             -- Known by some as the Forsaken, this group fights a constant battle not only to retain their freedom from the Scourge, but also to slaughter those who would hunt them as monsters.
-            { 22, 35.5, "Відомі як Покинуті, вони безнастанно борються не лише за свою свободу від Скари, а й винищують тих, хто полює на них, як на чудовиськ." },
+            { 22, 35.5, "Відомі як Відречені, вони безнастанно борються не лише за свою свободу від Скари, а й винищують тих, хто полює на них, як на чудовиськ." },
             -- With Sylvanas as their banshee queen, the Forsaken have built a dark stronghold beneath the ruins of Lordaeron's former capital city.
             { 35.5, 45, "Із Сильваною, своєю королевою-баньші, Покинуті звели похмуру твердиню під руїнами колишньої столиці Лордерону." },
             -- This hidden 'Undercity' forms a sprawling labyrinth that stretches beneath the haunted woods of the Tirisfal Glades.
@@ -140,11 +140,11 @@ local subtitle = {
             -- Though the very land is cursed, the zealous humans of the Scarlet Crusade still cling to their scattered holdings, obsessed with eradicating the undead and retaking their homeland.
             { 54.5, 70, "Хоча сама земля тут проклята, фанатичні люди Багряного Походу досі чіпляються за свої розкидані володіння, одержимі винищенням нежиті та поверненням батьківщини." },
             -- Convinced that the primitive races of the Horde can help them achieve victory over their enemies, the Forsaken have entered an alliance of convenience.
-            { 70, 80.5, "Переконані, що примітивні раси Орди допоможуть їм здолати ворогів, Покинуті уклали союз із розрахунку." },
+            { 70, 80.5, "Переконані, що примітивні раси Орди допоможуть їм здолати ворогів, Відречені уклали союз із розрахунку." },
             -- Harboring no true loyalty for their new allies, they will go to any lengths to ensure their dark plans come to fruition.
             { 80.5, 90, "Не плекаючи справжньої вірності новим союзникам, вони підуть на все, аби їхні темні плани здійснилися." },
             -- As one of the Forsaken, you must massacre any who pose a threat to the new order – human, undead, or otherwise.
-            { 90, 102, "Як один із Покинутих, ви мусите винищувати всіх, хто загрожує новому порядку, — людей, нежить чи будь-кого іншого." },
+            { 90, 102, "Як {стать:один:одна} із Відречених, ви мусите винищувати всіх, хто загрожує новому порядку, — людей, нежить чи будь-кого іншого." },
         },
         Tauren = {
             map = 1412, -- Mulgore
@@ -178,7 +178,7 @@ local subtitle = {
             -- Led by the cunning Shadow Hunter, Vol'jin, the Darkspears now make their home in Durotar along with their orcish allies.
             { 38.5, 48, "Під проводом хитрого тіньового мисливця Вол'джина плем'я Темного Списа нині мешкає в Дуротарі разом зі своїми союзниками орками." },
             -- As one of the only surviving Darkspears, it falls to you to reclaim the glory of your tribe.
-            { 48, 57.5, "Ви — один з небагатьох уцілілих тролів Темного Списа, тож саме вам належить відродити славу свого племені." },
+            { 48, 57.5, "Ви — {стать:один:одна} з небагатьох уцілілих тролів Темного Списа, тож саме вам належить відродити славу свого племені." },
         },
     },
 }

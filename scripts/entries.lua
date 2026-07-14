@@ -173,12 +173,20 @@ local function make_text(text)
         return
     end
 
+    -- codes are prepared at login; until then the text is returned as is
+    if not addon_table.codes then
+        return text
+    end
+
     for k, v in pairs(addon_table.codes) do
         text = text:gsub(k, v)
     end
 
     return text
 end
+
+-- applies player codes (name/race/class cases, sex) to any translation text
+entries.make_text = make_text
 
 local function make_text_array(array)
     if not array then
