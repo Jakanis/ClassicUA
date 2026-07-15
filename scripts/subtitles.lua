@@ -123,18 +123,27 @@ local function intro_get_lines()
     end
 
     -- race intros only ever play in the racial starting zone; the optional map
-    -- guard keeps other in-engine cinematics from matching. on a brand new
-    -- character the map may not be resolved yet (nil) or resolve only to the
-    -- continent when the intro starts, so unknown maps and ancestors of the
-    -- expected zone do not block
+    -- guard keeps other in-engine cinematics from matching. map is a single
+    -- uiMapID or a list of them (ids differ per client line: cata client keeps
+    -- the classic zone ids, mists client has retail per-starting-area ids).
+    -- on a brand new character the map may not be resolved yet (nil) or
+    -- resolve only to an ancestor (zone/continent) when the intro starts, so
+    -- unknown maps and ancestors of an expected map do not block
     local player_map = lines.map and C_Map.GetBestMapForUnit("player")
-    if lines.map and player_map and lines.map ~= player_map then
-        local map_info = C_Map.GetMapInfo(lines.map)
-        while map_info and map_info.parentMapID and map_info.parentMapID > 0 do
-            if map_info.parentMapID == player_map then
+    if lines.map and player_map then
+        local maps = type(lines.map) == "table" and lines.map or { lines.map }
+        for i = 1, #maps do
+            if maps[i] == player_map then
                 return lines
             end
-            map_info = C_Map.GetMapInfo(map_info.parentMapID)
+            -- ids for other client lines do not exist here: GetMapInfo is nil
+            local map_info = C_Map.GetMapInfo(maps[i])
+            while map_info and map_info.parentMapID and map_info.parentMapID > 0 do
+                if map_info.parentMapID == player_map then
+                    return lines
+                end
+                map_info = C_Map.GetMapInfo(map_info.parentMapID)
+            end
         end
         return
     end

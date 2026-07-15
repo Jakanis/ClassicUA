@@ -22,8 +22,8 @@ local subtitle = {
     },
 
     -- race intro cinematics have no client subtitle data at all, so these are our own
-    -- subtitles: [race file name from UnitRace] = { map = starting zone uiMapID (optional
-    -- guard), { start second, stop second, translation }, ... }
+    -- subtitles: [race file name from UnitRace] = { map = starting zone uiMapID or list
+    -- of them (optional guard), { start second, stop second, translation }, ... }
     -- timings need in-game calibration with the dev-mode elapsed counter
     intro = {
         Human = {
