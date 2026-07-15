@@ -40,7 +40,7 @@ local subtitle = {
             -- For nearly seven thousand years, the high elves cultivated a shining magical kingdom hidden deep within the forests of northern Lordaeron.
             { 1, 11.5, "Майже сім тисяч років високі ельфи плекали осяйне магічне королівство, приховане в глибині лісів північного Лордерону." },
             -- But five years ago, the undead Scourge invaded Quel'Thalas and drove the elves to the brink of extinction.
-            { 11.5, 20.5, "Але п'ять років тому нежить Скари вторглася до Квел'Таласу й поставила ельфів на межу вимирання." },
+            { 11.5, 20.5, "Але п'ять років тому нежить Скари вторглася до Квел'Таласа й поставила ельфів на межу вимирання." },
             -- Led by the evil death knight Arthas, the Scourge destroyed the mystical Sunwell, thereby severing the elves from the source of their arcane power.
             { 20.5, 32, "Очолювана лихим лицарем смерті Артасом, Скара знищила містичний Сонячний Колодязь, відрізавши ельфів від джерела їхньої чарівної сили." },
             -- Though the scars of that conflict are evident, the remaining elves have banded together and retaken much of their homeland.

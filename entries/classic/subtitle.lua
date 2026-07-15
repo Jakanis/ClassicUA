@@ -48,7 +48,7 @@ local subtitle = {
         Dwarf = {
             map = 1426, -- Dun Morogh
             -- The stoic dwarves of Ironforge spent countless generations mining treasures from deep within the earth.
-            { 0, 7, "Незворушні дворфи Залізогарту незліченними поколіннями видобували скарби з земних глибин." },
+            { 0, 7, "Незворушні дворфи Залізогарта незліченними поколіннями видобували скарби з земних глибин." },
             -- Hidden within their impregnable stronghold of Ironforge Mountain, they rarely ventured beyond the wintry peaks of Dun Morogh.
             { 7, 16, "Сховані у неприступній твердині гори Залізогарт, вони рідко полишали засніжені вершини Дун-Морогу." },
             -- Recently however, the dwarves unearthed a series of ruins that held secrets to their ancient heritage.
@@ -79,7 +79,7 @@ local subtitle = {
             -- Aided by their dwarven allies, the gnomes fought a valiant battle to save their beloved city. Nevertheless, Gnomeregan was irrevocably lost.
             { 44, 55, "За підтримки союзників-дворфів гноми відважно боролися за своє улюблене місто. Та попри все, Гномреґан було безповоротно втрачено." },
             -- The surviving gnomes fled to the safety of the dwarf stronghold of Ironforge. There they remained; devising strategies to retake their city.
-            { 55, 65.5, "Уцілілі гноми втекли під захист дворфської твердині Залізогарту. Там вони й залишилися, розробляючи плани повернення свого міста." },
+            { 55, 65.5, "Уцілілі гноми втекли під захист дворфської твердині Залізогарта. Там вони й залишилися, розробляючи плани повернення свого міста." },
             -- As a gnome of proud stand, it falls to you to answer the challenge and lead your curious people to a brighter future.
             { 65.5, 77, "Ви — {стать:гном:гномка} гордої постави, тож саме вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
         },
@@ -90,7 +90,7 @@ local subtitle = {
             -- Yet recently, the catastrophic invasion of the Burning Legion shattered the tranquility of their ancient civilization.
             { 11, 21, "Але нещодавно катастрофічне вторгнення Палаючого Легіону зруйнувало спокій їхньої стародавньої цивілізації." },
             -- Led by the Arch-Druid Malfurion Stormrage and the Priestess Tyrande Whisperwind, the mighty night elves rose to challenge the demonic onslaught.
-            { 21, 31, "На чолі з архідруїдом Малфуріоном Лютобурем та жрицею Тірандою Шелест Вітру могутні нічні ельфи постали проти демонічної навали." },
+            { 21, 31, "На чолі з архідруїдом Малфуріоном Шаленством Бурі та жрицею Тірандою Шелест Вітру могутні нічні ельфи постали проти демонічної навали." },
             -- Though victorious, the night elves were forced to sacrifice their cherished immortality and watch their beloved forests burn.
             { 31, 42, "Здобувши перемогу, нічні ельфи все ж мусили пожертвувати своїм заповітним безсмертям і дивитися, як палають їхні улюблені ліси." },
             -- Seeking to regain their immortality, a number of wayward druids conspired to plant a special tree that would reestablish a link between their spirits and the eternal world.
@@ -128,13 +128,13 @@ local subtitle = {
         Scourge = { -- undead player race file name is "Scourge"
             map = 1420, -- Tirisfal Glades
             -- Bound to the iron will of the tyrant Lich King, the vast undead armies of the Scourge seek to eradicate all life on Azeroth.
-            { 0, 11, "Скуті залізною волею тирана Короля-Лича, незліченні армії нежиті Скари прагнуть винищити все живе в Азероті." },
+            { 0, 11, "Скуті залізною волею тирана Короля-Ліча, незліченні армії нежиті Скари прагнуть винищити все живе в Азероті." },
             -- Led by the banshee Sylvanas Windrunner, a group of renegades broke away from the Scourge, and freed themselves of the Lich King's domination.
-            { 11, 22, "Очолювані баньші Сильваною Вітрогін, відступники відкололися від Скари та звільнилися з-під панування Короля-Лича." },
+            { 11, 22, "Очолювані баньші Сильваною Вітрогін, відступники відкололися від Скари та звільнилися з-під панування Короля-Ліча." },
             -- Known by some as the Forsaken, this group fights a constant battle not only to retain their freedom from the Scourge, but also to slaughter those who would hunt them as monsters.
             { 22, 35.5, "Відомі як Відречені, вони безнастанно борються не лише за свою свободу від Скари, а й винищують тих, хто полює на них, як на чудовиськ." },
             -- With Sylvanas as their banshee queen, the Forsaken have built a dark stronghold beneath the ruins of Lordaeron's former capital city.
-            { 35.5, 45, "Із Сильваною, своєю королевою-баньші, Покинуті звели похмуру твердиню під руїнами колишньої столиці Лордерону." },
+            { 35.5, 45, "Із Сильваною, своєю королевою-баньші, Відречені звели похмуру твердиню під руїнами колишньої столиці Лордерону." },
             -- This hidden 'Undercity' forms a sprawling labyrinth that stretches beneath the haunted woods of the Tirisfal Glades.
             { 45, 54.5, "Це потаємне «Підмістя» — розлогий лабіринт, що тягнеться під примарними лісами Тірісфальського перелісся." },
             -- Though the very land is cursed, the zealous humans of the Scarlet Crusade still cling to their scattered holdings, obsessed with eradicating the undead and retaking their homeland.
@@ -149,7 +149,7 @@ local subtitle = {
         Tauren = {
             map = 1412, -- Mulgore
             -- Once a nomadic people, the tauren roamed the endless plains of the Barrens, hunting the mighty kodo.
-            { 1, 9.5, "Колись кочовий народ, таурени мандрували безкраїми рівнинами Пустищ, полюючи на могутніх кодо." },
+            { 1, 9.5, "Колись кочовий народ, таурени мандрували безкраїми рівнинами Степів, полюючи на могутніх кодо." },
             -- Scattered across the land, the wandering tribes were united only by their common hatred for their sworn enemy, the marauding centaur.
             { 9.5, 19, "Розпорошені по цих землях мандрівні племена єднала лише спільна ненависть до заклятого ворога — кентаврів-грабіжників." },
             -- Seeking aid against the centaur, the great chieftain, Cairne Bloodhoof, befriended the savage orcs, who had recently journeyed to Kalimdor.

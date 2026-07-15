@@ -24,7 +24,7 @@ local subtitle = {
             -- For now, the specter of death looms over the world yet again, and it has found new champions to bring about its final reign.
             { 26, 36, "Бо нині привид смерті знову навис над світом і знайшов нових поборників, що принесуть його остаточне панування." },
             -- Knights of darkness, wielding runes of death and destruction, bound by the will of the Lich King.
-            { 36, 45, "Лицарі темряви, що володіють рунами смерті й руйнування, скуті волею Короля-Лича." },
+            { 36, 45, "Лицарі темряви, що володіють рунами смерті й руйнування, скуті волею Короля-Ліча." },
             -- This is the hour of their ascension! This is the hour of your dark rebirth...
             { 45, 55, "Це година їхнього вознесіння! Це година вашого темного переродження..." },
         },

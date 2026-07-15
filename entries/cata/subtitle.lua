@@ -16,7 +16,7 @@ local subtitle = {
         Human = {
             map = { 1429, 425 }, -- Elwynn Forest (cata client), Northshire (mists client)
             -- Emboldened by the return of their heroic king, Varian Wrynn, the proud humans of Stormwind led the Alliance to victory in its war against the dreaded Lich King.
-            { 0, 11, "Підбадьорені поверненням свого героїчного короля Варіана Рінна, горді люди Штормовію привели Альянс до перемоги у війні проти жахливого Короля-Лича." },
+            { 0, 11, "Підбадьорені поверненням свого героїчного короля Варіана Рінна, горді люди Штормовію привели Альянс до перемоги у війні проти жахливого Короля-Ліча." },
             -- While successful, the campaign in Northrend proved costly and the humans now seek to bolster their strategic holdings through out the world.
             { 11, 21, "Хоча похід у Нортренд був успішним, він дорого коштував, і тепер люди прагнуть зміцнити свої стратегічні володіння по всьому світу." },
             -- Under Varian's daring leadership, humanity now braces itself for a renewed conflict with its perennial enemy, the Horde.
@@ -29,17 +29,17 @@ local subtitle = {
         Dwarf = {
             map = { 1426, 427 }, -- Dun Morogh (cata client), Coldridge Valley (mists client)
             -- Great change has come to the enduring halls of Ironforge.
-            { 0, 5, "Великі зміни прийшли до одвічних зал Залізогарту." },
+            { 0, 5, "Великі зміни прийшли до одвічних зал Залізогарта." },
             -- Obsessed with the workings of the Titans, the dwarves retrieved their creators' mystical tablets from the fabled city of Ulduar.
             { 5, 14, "Одержимі творіннями титанів, дворфи здобули містичні скрижалі своїх творців із легендарного міста Ульдуар." },
             -- Activating one such tablet, King Magni Bronzebeard fell prey to a terrible curse that fused his statue-like form into the diamond heart of Ironforge itself.
-            { 14, 26, "Активувавши одну з таких скрижалей, король Маґні Бронзобородий став жертвою жахливого прокляття, що вплавило його скам'яніле тіло в діамантове серце самого Залізогарту." },
+            { 14, 26, "Активувавши одну з таких скрижалей, король Маґні Бронзобородий став жертвою жахливого прокляття, що вплавило його скам'яніле тіло в діамантове серце самого Залізогарта." },
             -- To compound this tragedy, Magni's estranged daughter, Moira, arrived claiming her father's throne for herself and for her infant Dark Iron son.
             { 26, 37, "На довершення цієї трагедії відчужена донька Маґні, Мойра, прибула вимагати батьків трон для себе та свого немовляти — сина з клану Темного Заліза." },
             -- To avert civil war, the dwarves created the Council of Three Hammers, an uneasy coalition that would share power amongst the three clans.
             { 37, 47, "Щоб відвернути громадянську війну, дворфи створили Раду Трьох Молотів — хистку коаліцію, що ділить владу між трьома кланами." },
             -- Now, with political upheaval arising in the kingdom and the Great Cataclysm ravaging the surrounding lands, the future of Ironforge falls to brave dwarves like you.
-            { 47, 59, "Тепер, коли в королівстві наростає політичний неспокій, а Великий Катаклізм плюндрує навколишні землі, майбутнє Залізогарту залежить від хоробрих дворфів, таких як ви." },
+            { 47, 59, "Тепер, коли в королівстві наростає політичний неспокій, а Великий Катаклізм плюндрує навколишні землі, майбутнє Залізогарта залежить від хоробрих дворфів, таких як ви." },
         },
         Gnome = {
             map = { 1426, 469, 30 }, -- Dun Morogh (cata client), New Tinkertown (mists client)
@@ -57,7 +57,7 @@ local subtitle = {
         NightElf = {
             map = { 1438, 460 }, -- Teldrassil (cata client), Shadowglen (mists client)
             -- After years of imprisonment within the Emerald Nightmare, Archdruid Malfurion Stormrage has finally returned to the mortal world.
-            { 0, 10, "Після років ув'язнення у Смарагдовому Кошмарі архідруїд Малфуріон Лютобур нарешті повернувся до світу смертних." },
+            { 0, 10, "Після років ув'язнення у Смарагдовому Кошмарі архідруїд Малфуріон Шаленство Бурі нарешті повернувся до світу смертних." },
             -- Reunited with his love, Tyrande Whisperwind, Malfurion endeavors now to heal the corrupted world tree, Teldrassil, and rejuvenate the spirit of the night elf people.
             { 10, 22, "Возз'єднавшись зі своєю коханою Тірандою Шелест Вітру, Малфуріон нині прагне зцілити осквернене світове дерево Тельдрассіль і відродити дух народу нічних ельфів." },
             -- Yet, as the Great Cataclysm shakes the boughs of their colossal tree, the night elves brace themselves against the coming storm.
@@ -74,7 +74,7 @@ local subtitle = {
             -- Yet, in his absence, the Horde champion Garrosh Hellscream has become the Horde's new Warchief.
             { 14, 22, "Але за його відсутності новим вождем Орди став її поборник Ґаррош Пеклокрик." },
             -- Though popular amongst the orcs for his victories against the Lich King, Garrosh's reckless leadership has begun to cause a rift between himself and the other leaders of the Horde.
-            { 22, 34, "Хоча перемоги над Королем-Личем здобули йому шану серед орків, безрозсудне правління Ґарроша почало вбивати клин між ним та іншими лідерами Орди." },
+            { 22, 34, "Хоча перемоги над Королем-Лічем здобули йому шану серед орків, безрозсудне правління Ґарроша почало вбивати клин між ним та іншими лідерами Орди." },
             -- With Durotar's natural resources nearly depleted, Garrosh seeks to take whatever his people need to survive regardless of who stands in his way.
             { 34, 45, "Коли природні багатства Дуротару майже вичерпано, Ґаррош ладен узяти все, що потрібно його народові для виживання, хай хто стане в нього на шляху." },
             -- A dangerous new era for the Horde has dawned and it falls to brave orcs like you to uphold the will of the new Warchief and assure the dominance of your people.
@@ -83,7 +83,7 @@ local subtitle = {
         Scourge = { -- undead player race file name is "Scourge"
             map = { 1420, 465 }, -- Tirisfal Glades (cata client), Deathknell (mists client)
             -- Though Lady Sylvanas and her Forsaken finally took vengeance upon their hated enemy, the Lich King, their dark crusade in Northrend proved costly.
-            { 0, 10, "Хоча леді Сильвана та її Відречені нарешті помстилися ненависному ворогові — Королю-Личу, їхній темний похід у Нортренд дорого коштував." },
+            { 0, 10, "Хоча леді Сильвана та її Відречені нарешті помстилися ненависному ворогові — Королю-Лічу, їхній темний похід у Нортренд дорого коштував." },
             -- Betrayed by their Grand Apothecary, Putress, at the Battle of Wrathgate, the Forsaken's devious plague of death was unleashed on both the Alliance and the Horde to calamitous event.
             { 10, 23, "У битві біля Брами гніву великий аптекар Путрес зрадив Відречених, і їхня підступна чума смерті з катастрофічними наслідками вдарила і по Альянсу, і по Орді." },
             -- Unbeknownst to Sylvanas, Putress and his demonic ally, Varimathras, had taken control of the Undercity.
@@ -143,7 +143,7 @@ local subtitle = {
         BloodElf = {
             map = { 1941, 467 }, -- Eversong Woods (cata client), Sunstrider Isle (mists client)
             -- The past few years have seen unprecedented changes within the eternal land of Quel'Thalas.
-            { 0, 7, "Останні кілька років принесли небачені зміни вічній землі Квел'Таласу." },
+            { 0, 7, "Останні кілька років принесли небачені зміни вічній землі Квел'Таласа." },
             -- The blood elves, following the will of their crazed leader, Kael'thas Sunstrider, channeled dangerous, chaotic magicks to transform their sacred Sunwell into a gateway of unspeakable evil.
             { 7, 20, "Ельфи крові, виконуючи волю свого знавіснілого лідера Кель'таса Сонячного Блукача, спрямували небезпечну хаотичну магію, щоб перетворити свій священний Сонячний Колодязь на браму невимовного зла." },
             -- While Kael'thas and his demonic masters were eventually defeated, a different transformation occurred within the Sunwell itself...
@@ -155,7 +155,7 @@ local subtitle = {
             -- Over time, the Sunwell's Light could cure the blood elves of their cursed state, but many still cling to the arcane powers they procured and are hesitant to relinquish them.
             { 47, 59, "З часом Світло Сонячного Колодязя могло б зцілити ельфів крові від їхнього проклятого стану, але багато хто досі чіпляється за здобуті таємничі сили й не квапиться їх зрікатися." },
             -- As one of the remaining blood elves, you must fight to protect Quel'Thalas and help redeem the soul of your ancient people.
-            { 59, 69, "Як {стать:один:одна} з уцілілих ельфів крові, ви мусите боротися за захист Квел'Таласу та допомогти спокутувати душу свого стародавнього народу." },
+            { 59, 69, "Як {стать:один:одна} з уцілілих ельфів крові, ви мусите боротися за захист Квел'Таласа та допомогти спокутувати душу свого стародавнього народу." },
         },
         Worgen = {
             map = 202, -- Gilneas City (same id on cata and mists clients)
