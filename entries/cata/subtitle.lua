@@ -7,6 +7,107 @@ local _, addonTable = ...
 -- TRANSLATION ARE AI-GENERATED FOR TESTING PURPOSES
 
 local subtitle = {
+    -- movies: [movie id] = { [subtitle order] = translation }
+    -- order follows the client subtitle files (Movie.db2 SubtitleFileDataID -> .sbt)
+    movie = {
+        [21] = { -- worgen starting experience cinematic
+            -- Look at what you've become.
+            [1] = "Поглянь, на що ти {стать:перетворився:перетворилася}.",
+            -- Those cursed beasts …
+            [2] = "Ті прокляті звірі...",
+            -- … they've left you nothing more than just another wretched mongrel.
+            [3] = "...залишили від тебе лише ще одного жалюгідного покруча.",
+            -- Do you even remember what you did to your friends?
+            [4] = "Ти хоч пам'ятаєш, що {стать:заподіяв:заподіяла} своїм друзям?",
+            -- Your kind … haunting the wilds unchecked …
+            [5] = "Твій рід... безкарно бродив нетрями...",
+            -- … until we found you.
+            [6] = "...доки ми не знайшли тебе.",
+            -- They've kept you alive, because they still believe you can be saved.
+            [7] = "Тебе тримають {стать:живим:живою}, бо досі вірять, що тебе можна врятувати.",
+            -- To which … I must ask
+            [8] = "І тому... мушу спитати:",
+            -- Is there even a shred … of humanity left within you?
+            [9] = "чи лишилася в тобі бодай крихта... людяності?",
+            -- Perhaps.
+            [10] = "Можливо.",
+            -- We will find out … soon enough.
+            [11] = "Що ж... скоро дізнаємося.",
+        },
+        [22] = { -- goblin starting experience cinematic (slave ship)
+            -- Get down in the hull you worthless SLAAAAAAAAVES!
+            [1] = "Ану вниз, у трюм, нікчемні РАБИ!",
+            -- This is all your fault!  We were supposed to have these stupid slaves to Kalimdor days ago!
+            [2] = "Це все ти винен! Ми мали доправити цих дурних рабів до Калімдору ще кілька днів тому!",
+            -- I'm not taking the fall for this one, you're the one who got us lost!
+            [3] = "Я за це відповідати не збираюся — це ти нас завів не туди!",
+            -- What does it matter?  Gallywix is gonna have both our heads!
+            [4] = "Та яка різниця? Ґаллівікс усе одно зніме голови нам обом!",
+            -- Shh … did you hear that?
+            [5] = "Тс-с... ти чув?",
+            -- Ahhhhhhhhh!
+            [6] = "А-а-а-а!",
+            -- Captain, Who are they?
+            [7] = "Капітане, хто це такі?",
+            -- It doesn't matter.  Our orders are to capture the horde target at all costs.
+            [8] = "Неважливо. Наш наказ — захопити ціль Орди за будь-яку ціну.",
+            -- No witnesses.
+            [9] = "Жодних свідків.",
+            -- AHHHHHHH!!! Abandon ship!  Make for the escape pods!
+            [10] = "А-А-А-А!!! Покинути корабель! Усі до рятувальних капсул!",
+            -- Let us out!  Don't leave us down here! … please …
+            [11] = "Випустіть нас! Не кидайте нас тут!.. благаємо...",
+            -- Don't leave us! C-c-come back!  NoOOOoOOoo!
+            [12] = "Не кидайте нас! П-п-поверніться! НІ-І-І-І!",
+        },
+        [23] = { -- cataclysm intro (deathwing)
+            -- Pain. . .
+            [1] = "Біль...",
+            -- Agony. . .
+            [2] = "Мука...",
+            -- My hatred burns through the cavernous deeps.
+            [3] = "Моя ненависть палає крізь печерні глибини.",
+            -- The world heaves with my torment.
+            [4] = "Світ здригається від моїх страждань.",
+            -- Its wretched kingdoms quake beneath my rage. . .
+            [5] = "Його жалюгідні королівства тремтять перед моїм гнівом...",
+            -- But at last. . .  The whole of Azeroth will break. . .
+            [6] = "Але нарешті... весь Азерот розколеться...",
+            -- . . .  And all will burn beneath the shadow of my wings. . .
+            [7] = "...і все згорить у тіні моїх крил...",
+        },
+        [76] = { -- end of the cataclysm (dragon aspects)
+            -- I can feel the elements awakening;
+            [1] = "Я відчуваю, як пробуджуються стихії;",
+            -- rejoicing...
+            [2] = "як вони радіють...",
+            -- the Cataclysm is over.
+            [3] = "Катаклізм скінчився.",
+            -- The champions who fought at our side assured the survival of our world...
+            [4] = "Поборники, що билися пліч-о-пліч з нами, забезпечили виживання нашого світу...",
+            -- but now we must see it, with mortal eyes
+            [5] = "але тепер ми мусимо побачити його смертними очима.",
+            -- We dragon aspects have fulfilled our great purpose
+            [6] = "Ми, аспекти драконів, виконали своє велике призначення,",
+            -- and our ancient power...
+            [7] = "і наша прадавня сила...",
+            -- is expended.
+            [8] = "вичерпана.",
+            -- But though our day draws to an end, life endures...
+            [9] = "Та хоча наш день добігає кінця, життя триває...",
+            -- and new generations will be born.
+            [10] = "і народяться нові покоління.",
+            -- Today's victory belongs to all who stood against the shadow.
+            [11] = "Сьогоднішня перемога належить усім, хто постав проти тіні.",
+            -- You are Azeroth's true Guardians...
+            [12] = "Ви — справжні Вартівники Азероту...",
+            -- And the future of this world is in your hands...
+            [13] = "І майбутнє цього світу у ваших руках...",
+            -- For the dawning of the age of mortals has begun.
+            [14] = "Бо світанок доби смертних уже настав.",
+        },
+    },
+
     intro = {
         -- the cataclysm old-world rework replaced the narration of every earlier
         -- race intro, so all classic/tbc races are overridden here. map lists
@@ -188,6 +289,10 @@ local subtitle = {
         },
     },
 }
+
+-- movie ids 32 and 33 replay the same cinematics (shared client subtitle files)
+subtitle.movie[32] = subtitle.movie[21]
+subtitle.movie[33] = subtitle.movie[22]
 
 -- newer expansion files add or override entries per movie id / text key / race
 if addonTable.subtitle then
