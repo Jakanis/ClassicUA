@@ -8,22 +8,21 @@ local _, addonTable = ...
 
 local subtitle = {
     intro = {
-        -- TIMINGS ARE NOT CALIBRATED YET
         -- note: if the mists client turns out to deliver built-in subtitles for
         -- this cinematic (SHOW_SUBTITLE), these lines must move to the text
         -- table instead; the dev-mode missing-subtitle log will tell
         Pandaren = {
             map = 378, -- The Wandering Isle
             -- You are a pandaren born and raised on the mysterious Wandering Isle.
-            { 0, 7, "Ви — {стать:пандарен, народжений і вихований:пандаренка, народжена і вихована} на таємничому Мандрівному острові." },
+            { 0, 7.7, "Ви — {стать:пандарен, народжений і вихований:пандаренка, народжена і вихована} на таємничому Мандрівному острові." },
             -- While many of your fellow pandaren prefer a tranquil life, the lure of adventure burns in your blood.
-            { 7, 15, "Хоча багато ваших одноплемінників надають перевагу спокійному життю, у вашій крові палає жага пригод." },
+            { 7.7, 17.2, "Хоча багато ваших одноплемінників надають перевагу спокійному життю, у вашій крові палає жага пригод." },
             -- Recently, the Wandering Isle has begun erratically weaving about the world's oceans.
-            { 15, 22, "Останнім часом Мандрівний острів почав безладно блукати океанами світу." },
+            { 17.2, 24.5, "Останнім часом Мандрівний острів почав безладно блукати океанами світу." },
             -- The air grows cold and your island home is spiraling toward disaster.
-            { 22, 28, "Повітря холоднішає, і ваша острівна домівка стрімко наближається до катастрофи." },
+            { 24.5, 31, "Повітря холоднішає, і ваша острівна домівка стрімко наближається до катастрофи." },
             -- As one of the most promising of students at Master Shang's monastery, you may just be the salvation for your people, but first you must complete your training.
-            { 28, 40, "Як {стать:один із найперспективніших учнів:одна з найперспективніших учениць} монастиря майстра Шана, можливо, саме ви станете порятунком для свого народу — але спершу мусите завершити навчання." },
+            { 31, 45.5, "Як {стать:один із найперспективніших учнів:одна з найперспективніших учениць} монастиря майстра Шана, можливо, саме ви станете порятунком для свого народу — але спершу мусите завершити навчання." },
         },
     },
 }

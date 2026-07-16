@@ -12,180 +12,179 @@ local subtitle = {
         -- race intro, so all classic/tbc races are overridden here. map lists
         -- carry ids for both client lines: the cata client keeps the classic
         -- zone ids, the mists client uses retail per-starting-area ids
-        -- TIMINGS ARE NOT CALIBRATED YET
         Human = {
             map = { 1429, 425 }, -- Elwynn Forest (cata client), Northshire (mists client)
             -- Emboldened by the return of their heroic king, Varian Wrynn, the proud humans of Stormwind led the Alliance to victory in its war against the dreaded Lich King.
-            { 0, 11, "Підбадьорені поверненням свого героїчного короля Варіана Рінна, горді люди Штормовію привели Альянс до перемоги у війні проти жахливого Короля-Ліча." },
+            { 0, 13, "Підбадьорені поверненням свого героїчного короля Варіана Рінна, горді люди Штормовію привели Альянс до перемоги у війні проти жахливого Короля-Ліча." },
             -- While successful, the campaign in Northrend proved costly and the humans now seek to bolster their strategic holdings through out the world.
-            { 11, 21, "Хоча похід у Нортренд був успішним, він дорого коштував, і тепер люди прагнуть зміцнити свої стратегічні володіння по всьому світу." },
+            { 13, 23, "Хоча похід у Нортренд був успішним, він дорого коштував, і тепер люди прагнуть зміцнити свої стратегічні володіння по всьому світу." },
             -- Under Varian's daring leadership, humanity now braces itself for a renewed conflict with its perennial enemy, the Horde.
-            { 21, 29, "Під зухвалим проводом Варіана людство готується до нового конфлікту зі своїм одвічним ворогом — Ордою." },
+            { 23, 33.5, "Під зухвалим проводом Варіана людство готується до нового конфлікту зі своїм одвічним ворогом — Ордою." },
             -- Yet, as the great Cataclysm rips across the world, familiar threats have once again arisen closer to home.
-            { 29, 37, "Але поки великий Катаклізм шматує світ, знайомі загрози знову постали ближче до дому." },
+            { 33.5, 40.5, "Але поки великий Катаклізм шматує світ, знайомі загрози знову постали ближче до дому." },
             -- It now falls to you to defend the kingdom and uphold the honor of humanity.
-            { 37, 44, "Тепер саме вам належить захистити королівство та відстояти честь людства." },
+            { 40.5, 48, "Тепер саме вам належить захистити королівство та відстояти честь людства." },
         },
         Dwarf = {
             map = { 1426, 427 }, -- Dun Morogh (cata client), Coldridge Valley (mists client)
             -- Great change has come to the enduring halls of Ironforge.
             { 0, 5, "Великі зміни прийшли до одвічних зал Залізогарта." },
             -- Obsessed with the workings of the Titans, the dwarves retrieved their creators' mystical tablets from the fabled city of Ulduar.
-            { 5, 14, "Одержимі творіннями титанів, дворфи здобули містичні скрижалі своїх творців із легендарного міста Ульдуар." },
+            { 5, 14.8, "Одержимі творіннями титанів, дворфи здобули містичні скрижалі своїх творців із легендарного міста Ульдуар." },
             -- Activating one such tablet, King Magni Bronzebeard fell prey to a terrible curse that fused his statue-like form into the diamond heart of Ironforge itself.
-            { 14, 26, "Активувавши одну з таких скрижалей, король Маґні Бронзобородий став жертвою жахливого прокляття, що вплавило його скам'яніле тіло в діамантове серце самого Залізогарта." },
+            { 14.8, 27.5, "Активувавши одну з таких скрижалей, король Маґні Бронзобородий став жертвою жахливого прокляття, що вплавило його скам'яніле тіло в діамантове серце самого Залізогарта." },
             -- To compound this tragedy, Magni's estranged daughter, Moira, arrived claiming her father's throne for herself and for her infant Dark Iron son.
-            { 26, 37, "На довершення цієї трагедії відчужена донька Маґні, Мойра, прибула вимагати батьків трон для себе та свого немовляти — сина з клану Темного Заліза." },
-            -- To avert civil war, the dwarves created the Council of Three Hammers, an uneasy coalition that would share power amongst the three clans.
-            { 37, 47, "Щоб відвернути громадянську війну, дворфи створили Раду Трьох Молотів — хистку коаліцію, що ділить владу між трьома кланами." },
+            { 27.5, 39.5, "На довершення цієї трагедії відчужена донька Маґні, Мойра, прибула вимагати батьків трон для себе та свого немовляти — сина з клану Темного Заліза." },
+            -- To avert civil war, the dwarves created the Council of Three Hammers, an uneasy coalition that would share power equally amongst the three clans.
+            { 39.5, 50, "Щоб відвернути громадянську війну, дворфи створили Раду Трьох Молотів — хистку коаліцію, що ділить владу між трьома кланами." },
             -- Now, with political upheaval arising in the kingdom and the Great Cataclysm ravaging the surrounding lands, the future of Ironforge falls to brave dwarves like you.
-            { 47, 59, "Тепер, коли в королівстві наростає політичний неспокій, а Великий Катаклізм плюндрує навколишні землі, майбутнє Залізогарта залежить від хоробрих дворфів, таких як ви." },
-        },
-        Gnome = {
-            map = { 1426, 469, 30 }, -- Dun Morogh (cata client), New Tinkertown (mists client)
-            -- Given the recent political upheaval in Ironforge, the gnomes have suddenly found themselves unwelcomed guests within the city.
-            { 0, 9, "Через нещодавній політичний неспокій у Залізогарті гноми раптом виявилися небажаними гістьми в цьому місті." },
-            -- Leveraging their ingenious technologies and unquenchable spirit for adventure, the gnomes have begun to reevaluate their role within Khaz Modan.
-            { 9, 19, "Спираючись на свої геніальні технології та невгамовний дух пригод, гноми почали переосмислювати свою роль у Каз-Модані." },
-            -- Under the inventive leadership of High Tinker Gelbin Mekkatorque, the gnomes now plan a daring campaign against the barbarous troggs to retake their former capital of Gnomeregan.
-            { 19, 32, "Під винахідливим проводом верховного механіка Ґелбіна Мекаторка гноми планують зухвалий похід проти варварів-троґґів, щоб повернути свою колишню столицю Гномреґан." },
-            -- With the odds stacked against them, the gnomes are counting on brave heroes such as you to stand and be counted.
-            { 32, 41, "Попри те, що шанси проти них, гноми розраховують на хоробрих героїв, таких як ви, готових стати до лав." },
-            -- Your people's greatest hour draws near.
-            { 41, 46, "Найвеличніша година вашого народу вже близько." },
+            { 50, 62.5, "Тепер, коли в королівстві наростає політичний неспокій, а Великий Катаклізм плюндрує навколишні землі, майбутнє Залізогарта залежить від хоробрих дворфів, таких як ви." },
         },
         NightElf = {
             map = { 1438, 460 }, -- Teldrassil (cata client), Shadowglen (mists client)
             -- After years of imprisonment within the Emerald Nightmare, Archdruid Malfurion Stormrage has finally returned to the mortal world.
-            { 0, 10, "Після років ув'язнення у Смарагдовому Кошмарі архідруїд Малфуріон Шаленство Бурі нарешті повернувся до світу смертних." },
+            { 0, 10.5, "Після років ув'язнення у Смарагдовому Кошмарі архідруїд Малфуріон Шаленство Бурі нарешті повернувся до світу смертних." },
             -- Reunited with his love, Tyrande Whisperwind, Malfurion endeavors now to heal the corrupted world tree, Teldrassil, and rejuvenate the spirit of the night elf people.
-            { 10, 22, "Возз'єднавшись зі своєю коханою Тірандою Шелест Вітру, Малфуріон нині прагне зцілити осквернене світове дерево Тельдрассіль і відродити дух народу нічних ельфів." },
+            { 10.5, 22.3, "Возз'єднавшись зі своєю коханою Тірандою Шелест Вітру, Малфуріон нині прагне зцілити осквернене світове дерево Тельдрассіль і відродити дух народу нічних ельфів." },
             -- Yet, as the Great Cataclysm shakes the boughs of their colossal tree, the night elves brace themselves against the coming storm.
-            { 22, 32, "Але поки Великий Катаклізм стрясає гілля їхнього велетенського дерева, нічні ельфи готуються до прийдешньої бурі." },
+            { 22.3, 30, "Але поки Великий Катаклізм стрясає гілля їхнього велетенського дерева, нічні ельфи готуються до прийдешньої бурі." },
             -- As war and destruction close in from all sides, it falls to night elves like you to stand strong and protect the enduring legacy of your people.
-            { 32, 43, "Коли війна і руйнування підступають зусібіч, саме нічним ельфам, таким як ви, належить вистояти й захистити нетлінну спадщину свого народу." },
+            { 30, 42, "Коли війна і руйнування підступають зусібіч, саме нічним ельфам, таким як ви, належить вистояти й захистити нетлінну спадщину свого народу." },
         },
-        Orc = {
-            map = { 1411, 461 }, -- Durotar (cata client), Valley of Trials (mists client)
-            -- The Great Cataclysm has shattered more than just the world.
-            { 0, 5, "Великий Катаклізм розтрощив не лише світ." },
-            -- Warchief Thrall, arguably the most powerful living shaman has left his people behind so that he might stop the Cataclysm at its source.
-            { 5, 14, "Вождь Тралл, чи не наймогутніший з нині живих шаманів, полишив свій народ, щоб спинити Катаклізм біля самого його джерела." },
-            -- Yet, in his absence, the Horde champion Garrosh Hellscream has become the Horde's new Warchief.
-            { 14, 22, "Але за його відсутності новим вождем Орди став її поборник Ґаррош Пеклокрик." },
-            -- Though popular amongst the orcs for his victories against the Lich King, Garrosh's reckless leadership has begun to cause a rift between himself and the other leaders of the Horde.
-            { 22, 34, "Хоча перемоги над Королем-Лічем здобули йому шану серед орків, безрозсудне правління Ґарроша почало вбивати клин між ним та іншими лідерами Орди." },
-            -- With Durotar's natural resources nearly depleted, Garrosh seeks to take whatever his people need to survive regardless of who stands in his way.
-            { 34, 45, "Коли природні багатства Дуротару майже вичерпано, Ґаррош ладен узяти все, що потрібно його народові для виживання, хай хто стане в нього на шляху." },
-            -- A dangerous new era for the Horde has dawned and it falls to brave orcs like you to uphold the will of the new Warchief and assure the dominance of your people.
-            { 45, 57, "Для Орди настала небезпечна нова доба, і саме хоробрим оркам, таким як ви, належить чинити волю нового вождя та утвердити панування свого народу." },
-        },
-        Scourge = { -- undead player race file name is "Scourge"
-            map = { 1420, 465 }, -- Tirisfal Glades (cata client), Deathknell (mists client)
-            -- Though Lady Sylvanas and her Forsaken finally took vengeance upon their hated enemy, the Lich King, their dark crusade in Northrend proved costly.
-            { 0, 10, "Хоча леді Сильвана та її Відречені нарешті помстилися ненависному ворогові — Королю-Лічу, їхній темний похід у Нортренд дорого коштував." },
-            -- Betrayed by their Grand Apothecary, Putress, at the Battle of Wrathgate, the Forsaken's devious plague of death was unleashed on both the Alliance and the Horde to calamitous event.
-            { 10, 23, "У битві біля Брами гніву великий аптекар Путрес зрадив Відречених, і їхня підступна чума смерті з катастрофічними наслідками вдарила і по Альянсу, і по Орді." },
-            -- Unbeknownst to Sylvanas, Putress and his demonic ally, Varimathras, had taken control of the Undercity.
-            { 23, 31, "Без відома Сильвани Путрес та його демонічний спільник Варіматрас захопили владу над Підмістям." },
-            -- As a result, the Forsaken were wrongly blamed for the traitor's atrocities.
-            { 31, 38, "Через це провину за звірства зрадника несправедливо поклали на Відречених." },
-            -- Though the Undercity was eventually retaken, Sylvanas and her followers still bear the weight of Putress's sins.
-            { 38, 46, "Хоча Підмістя зрештою відвоювали, Сильвана та її послідовники досі несуть тягар гріхів Путреса." },
-            -- Mistrusted by the other members of the Horde, the Forsaken must now prove their loyalty to the cause and redeem themselves from their supposed treachery.
-            { 46, 56, "Позбавлені довіри інших членів Орди, Відречені мусять тепер довести свою відданість спільній справі та спокутувати приписувану їм зраду." },
-            -- To this end, Sylvanas has bolstered her defenses within the Tirisfal Glades and readied her undead forces for any contingency.
-            { 56, 65, "Задля цього Сильвана зміцнила оборону Тірісфальського перелісся та приготувала свої сили нежиті до будь-яких несподіванок." },
-            -- As one of the Forsaken, you must use your cunning and viciousness to slay any who would pose a threat to Sylvanas's rule be they human, undead, or otherwise.
-            { 65, 77, "Як {стать:один:одна} із Відречених, ви мусите вдатися до хитрості й лютості, щоб винищити всіх, хто загрожує владі Сильвани, — людей, нежить чи будь-кого іншого." },
-        },
-        Tauren = {
-            map = { 1412, 462 }, -- Mulgore (cata client), Camp Narache (mists client)
-            -- Great tragedy has rocked the tauren tribes and shaken their once-stalwart devotion to the Horde.
-            { 0, 8, "Велика трагедія сколихнула племена тауренів і похитнула їхню колись непохитну відданість Орді." },
-            -- A disagreement between the new orc Warchief, Garrosh Hellscream, and the beloved tauren chieftain, Cairne Bloodhoof, led to a duel that ended in Cairne's death.
-            { 8, 20, "Суперечка між новим вождем орків Ґаррошем Пеклокриком та улюбленим вождем тауренів Кейрном Кривавим Копитом призвела до двобою, що скінчився смертю Кейрна." },
-            -- With his loss, the vile matriarch Magatha Grimtotem launched a murderous attack, attempting to seize control of Thunder Bluff for herself.
-            { 20, 30, "Після цієї втрати підла матріархиня Маґата Зловісний Тотем розпочала кривавий напад, намагаючись захопити владу над Громовим Бескидом." },
-            -- However, Cairne's brave son, Baine Bloodhoof, successfully repelled the attack and banished the surviving Grimtotem to the farthest reaches of the land.
-            { 30, 41, "Однак хоробрий син Кейрна, Бейн Криваве Копито, відбив напад і вигнав уцілілих із клану Зловісного Тотема на найдальші краї цих земель." },
-            -- Under Baine's hopeful leadership, the tauren people seek to heal their wounds and restore the balance between the various factions of the Horde.
-            { 41, 51, "Під сповненим надії проводом Бейна народ тауренів прагне загоїти рани та відновити рівновагу між різними силами Орди." },
-            -- To this end, a new generation of tauren "Sunwalkers" has arisen to lead their people into the Light of a new dawn and the promise of rebirth.
-            { 51, 61, "Задля цього постало нове покоління тауренів-«Сонцеходців», щоб повести свій народ до Світла нового світанку та обіцянки відродження." },
-            -- As a proud tribesman of Mulgore, you must uphold the honor of your people and safeguard the lands of your ancestors.
-            { 61, 70, "Як {стать:гордий одноплемінник:горда одноплемінниця} Мулґору, ви мусите відстояти честь свого народу та вберегти землі своїх предків." },
-        },
-        Troll = {
-            map = { 1411, 463 }, -- Durotar (cata client), Echo Isles (mists client)
-            -- Exiled years ago from their land in Stranglethorn Vale, the Darkspear trolls attempted to make a new home for themselves among the disparate races of the Horde.
-            { 0, 11, "Вигнані багато років тому зі своїх земель у Тернистій долині, тролі Темного Списа спробували знайти нову домівку серед розмаїтих рас Орди." },
-            -- Under the leadership of the noble Warchief Thrall, Vol'jin and his savage trolls had finally found the honor and purpose they had been searching for...
-            { 11, 21, "Під проводом шляхетного вождя Тралла Вол'джин та його дикі тролі нарешті знайшли честь і мету, яких так довго шукали..." },
-            -- ...but now, under the rule of the headstrong Garrosh Hellscream, the trolls fear that the Horde could tear itself apart.
-            { 21, 30, "...але тепер, під владою свавільного Ґарроша Пеклокрика, тролі бояться, що Орда може розірвати сама себе на шматки." },
-            -- Vol'jin knows that whatever threats loom ahead, whether they be from within the Horde or from without, it is cunning trolls like you that will fight to preserve the honor of the Horde.
-            { 30, 42, "Вол'джин знає: хай які загрози чекають попереду — зсередини Орди чи ззовні, — саме хитрі тролі, такі як ви, боротимуться за збереження честі Орди." },
+        Gnome = {
+            map = { 1426, 469, 30 }, -- Dun Morogh (cata client), New Tinkertown (mists client)
+            -- Given the recent political upheaval in Ironforge, the gnomes have suddenly found themselves unwelcomed guests within the city.
+            { 1, 10.5, "Через нещодавній політичний неспокій у Залізогарті гноми раптом виявилися небажаними гістьми в цьому місті." },
+            -- Leveraging their ingenious technologies and unquenchable spirit for adventure, the gnomes have begun to reevaluate their role within Khaz Modan.
+            { 10.5, 21, "Спираючись на свої геніальні технології та невгамовний дух пригод, гноми почали переосмислювати свою роль у Каз-Модані." },
+            -- Under the inventive leadership of High Tinker Gelbin Mekkatorque, the gnomes now plan a daring campaign against the barbarous troggs to retake their former capital of Gnomeregan.
+            { 21, 36, "Під проводом винахідливого верховного механіка Ґелбіна Мекаторка гноми планують зухвалий похід проти варварів-троґґів, щоб повернути свою колишню столицю Гномреґан." },
+            -- With the odds stacked against them, the gnomes are counting on brave heroes such as you to stand and be counted.
+            { 36, 44, "Попри те, що шанси проти них, гноми розраховують на хоробрих героїв, таких як ви, готових стати до лав." },
+            -- Your people's greatest hour draws near.
+            { 44, 48.5, "Найвеличніша година вашого народу вже близько." },
         },
         Draenei = {
             map = { 1943, 468 }, -- Azuremyst Isle (cata client), Ammen Vale (mists client)
             -- Empowered by the Holy Light and the undying strength of their convictions, the draenei led the charge against the demonic Burning Legion in Outland.
-            { 0, 10, "Наснажені Святим Світлом і незламною силою своїх переконань, дренеї очолили наступ на демонічний Палаючий Легіон у Позамежжі." },
+            { 1, 13, "Наснажені Святим Світлом і незламною силою своїх переконань, дренеї очолили наступ на демонічний Палаючий Легіон у Позамежжі." },
             -- Now, with the Legion's defeat, they have completed the desperate mission that first brought them to Azeroth.
-            { 10, 18, "Тепер, із поразкою Легіону, вони виконали відчайдушну місію, що колись привела їх до Азероту." },
+            { 13, 20, "Тепер, із поразкою Легіону, вони виконали відчайдушну місію, що колись привела їх до Азероту." },
             -- Though some draenei were sent back to Outland to revitalize their former civilization, the majority have vowed to remain and uphold their sacred commitment to the Alliance.
-            { 18, 30, "Хоча декого з дренеїв відіслали назад у Позамежжя відроджувати їхню колишню цивілізацію, більшість заприсяглася лишитися та шанувати свій священний обов'язок перед Альянсом." },
+            { 20, 32.5, "Хоча декого з дренеїв відіслали назад у Позамежжя відроджувати їхню колишню цивілізацію, більшість заприсяглася лишитися та шанувати свій священний обов'язок перед Альянсом." },
             -- Driven by a powerful vision, the immortal Prophet Velen believes that a great war between the darkness and the Light is fast approaching and that Azeroth will be its principal battleground.
-            { 30, 42, "Скеровуваний могутнім видінням, безсмертний пророк Велен вірить, що велика війна між темрявою та Світлом стрімко наближається і що Азерот стане її головним бойовищем." },
+            { 32.5, 46.8, "Скеровуваний могутнім видінням, безсмертний пророк Велен вірить, що велика війна між темрявою та Світлом стрімко наближається і що Азерот стане її головним бойовищем." },
             -- As one of Velen's chosen, you must stand bravely before the shadow and ensure that your people are ready for the war to come.
-            { 42, 52, "Як {стать:один з обраних:одна з обраних} Велена, ви мусите хоробро постати перед тінню та подбати, щоб ваш народ був готовий до прийдешньої війни." },
-        },
-        BloodElf = {
-            map = { 1941, 467 }, -- Eversong Woods (cata client), Sunstrider Isle (mists client)
-            -- The past few years have seen unprecedented changes within the eternal land of Quel'Thalas.
-            { 0, 7, "Останні кілька років принесли небачені зміни вічній землі Квел'Таласа." },
-            -- The blood elves, following the will of their crazed leader, Kael'thas Sunstrider, channeled dangerous, chaotic magicks to transform their sacred Sunwell into a gateway of unspeakable evil.
-            { 7, 20, "Ельфи крові, виконуючи волю свого знавіснілого лідера Кель'таса Сонячного Блукача, спрямували небезпечну хаотичну магію, щоб перетворити свій священний Сонячний Колодязь на браму невимовного зла." },
-            -- While Kael'thas and his demonic masters were eventually defeated, a different transformation occurred within the Sunwell itself...
-            { 20, 30, "Хоча Кель'таса та його демонічних володарів зрештою було переможено, у самому Сонячному Колодязі відбулося інше перетворення..." },
-            -- ...as a dying naaru sacrificed its life essence to reignite the Sunwell as a font of holy energy.
-            { 30, 39, "...коли вмираючий наару пожертвував своєю життєвою сутністю, щоб знову запалити Колодязь як джерело святої енергії." },
-            -- Now, the blood elf regent, Lor'themar Theron, sees a new hope on the horizon for his people.
-            { 39, 47, "Тепер регент ельфів крові Лор'темар Терон бачить на обрії нову надію для свого народу." },
-            -- Over time, the Sunwell's Light could cure the blood elves of their cursed state, but many still cling to the arcane powers they procured and are hesitant to relinquish them.
-            { 47, 59, "З часом Світло Сонячного Колодязя могло б зцілити ельфів крові від їхнього проклятого стану, але багато хто досі чіпляється за здобуті таємничі сили й не квапиться їх зрікатися." },
-            -- As one of the remaining blood elves, you must fight to protect Quel'Thalas and help redeem the soul of your ancient people.
-            { 59, 69, "Як {стать:один:одна} з уцілілих ельфів крові, ви мусите боротися за захист Квел'Таласа та допомогти спокутувати душу свого стародавнього народу." },
+            { 46.8, 57.5, "Як {стать:один:одна} з обраних Велена, ви мусите хоробро постати перед тінню та подбати, щоб ваш народ був готовий до прийдешньої війни." },
         },
         Worgen = {
             map = 202, -- Gilneas City (same id on cata and mists clients)
             -- Led by their indomitable king, Genn Greymane, the proud citizens of Gilneas once stood with the Alliance against the vile orcish Horde that sought to conquer all of Lordaeron.
-            { 0, 12, "Очолювані своїм незламним королем Ґенном Сивогривом, горді громадяни Ґілнеасу колись стояли разом з Альянсом проти мерзенної орди орків, що прагнула підкорити весь Лордерон." },
+            { 1, 13.5, "Очолювані своїм незламним королем Ґенном Сивогривом, горді громадяни Ґілнеасу колись стояли разом з Альянсом проти мерзенної орди орків, що прагнула підкорити весь Лордерон." },
             -- Gilneas survived but, in the years following the Second War, the kingdom drew ever inward.
-            { 12, 19, "Ґілнеас вистояв, але в роки після Другої війни королівство дедалі більше замикалося в собі." },
+            { 13.5, 21, "Ґілнеас вистояв, але в роки після Другої війни королівство дедалі більше замикалося в собі." },
             -- Distrustful of their former allies, the Gilneans erected a mighty wall at the borders of their land, closing off their nation - and their hearts - from an ever-darkening world.
-            { 19, 31, "Не довіряючи колишнім союзникам, ґілнеасці звели могутню стіну на кордонах своєї землі, відгородивши свою націю — і свої серця — від світу, що поринав у темряву." },
+            { 21, 33.5, "Не довіряючи колишнім союзникам, ґілнеасці звели могутню стіну на кордонах своєї землі, відгородивши свою націю — і свої серця — від світу, що поринав у темряву." },
             -- Now, many years later, as the seemingly unstoppable undead Scourge marches across Lordaeron, human civilization once again teeters on the edge of destruction.
-            { 31, 42, "Тепер, багато років по тому, коли, здавалося б, нездоланна нежить Скари крокує Лордероном, людська цивілізація знову балансує на межі знищення." },
+            { 33.5, 46, "Тепер, багато років по тому, коли, здавалося б, нездоланна нежить Скари крокує Лордероном, людська цивілізація знову балансує на межі знищення." },
             -- As war and terror close in all around them, the citizens of Gilneas are faced with one, terrible truth: their mighty wall cannot hold back the dead for much longer...
-            { 42, 53, "Поки війна і жах підступають зусібіч, громадяни Ґілнеасу постали перед однією страшною правдою: їхня могутня стіна вже недовго стримуватиме мертвих..." },
+            { 46, 57.8, "Поки війна і жах підступають зусібіч, громадяни Ґілнеасу постали перед однією страшною правдою: їхня могутня стіна вже недовго стримуватиме мертвих..." },
             -- ...and, worse, rumors of a new threat have risen within the kingdom's borders of feral, nightmare creatures that walk upright as men but hunt and howl as wolves.
-            { 53, 65, "...а що гірше — у межах королівства ширяться чутки про нову загрозу: диких кошмарних істот, які ходять на двох ногах, мов люди, але полюють і виють, мов вовки." },
+            { 57.8, 72, "...а що гірше — у межах королівства ширяться чутки про нову загрозу: диких кошмарних істот, які ходять на двох ногах, мов люди, але полюють і виють, мов вовки." },
+        },
+        Orc = {
+            map = { 1411, 461 }, -- Durotar (cata client), Valley of Trials (mists client)
+            -- The Great Cataclysm has shattered more than just the world.
+            { 0, 5.5, "Великий Катаклізм розтрощив не лише світ." },
+            -- Warchief Thrall, arguably the most powerful living shaman has left his people behind so that he might stop the Cataclysm at its source.
+            { 5.5, 16, "Вождь Тралл, чи не наймогутніший з нині живих шаманів, полишив свій народ, щоб спинити Катаклізм біля самого його джерела." },
+            -- Yet, in his absence, the Horde champion Garrosh Hellscream has become the Horde's new Warchief.
+            { 16, 24, "Але за його відсутності новим вождем Орди став її поборник Ґаррош Пеклокрик." },
+            -- Though popular amongst the orcs for his victories against the Lich King, Garrosh's reckless leadership has begun to cause a rift between himself and the other leaders of the Horde.
+            { 24, 35.5, "Хоча перемоги над Королем-Лічем здобули йому шану серед орків, безрозсудне правління Ґарроша почало вбивати клин між ним та іншими лідерами Орди." },
+            -- With Durotar's natural resources nearly depleted, Garrosh seeks to take whatever his people need to survive regardless of who stands in his way.
+            { 35.5, 45.8, "Коли природні багатства Дуротару майже вичерпано, Ґаррош ладен узяти все, що потрібно його народові для виживання, хай хто стане в нього на шляху." },
+            -- A dangerous new era for the Horde has dawned and it falls to brave orcs like you to uphold the will of the new Warchief and assure the dominance of your people.
+            { 45.8, 57, "Для Орди настала небезпечна нова доба, і саме хоробрим оркам, таким як ви, належить чинити волю нового вождя та утвердити панування свого народу." },
+        },
+        Scourge = { -- undead player race file name is "Scourge"
+            map = { 1420, 465 }, -- Tirisfal Glades (cata client), Deathknell (mists client)
+            -- Though Lady Sylvanas and her Forsaken finally took vengeance upon their hated enemy, the Lich King, their dark crusade in Northrend proved costly.
+            { 1, 12, "Хоча леді Сильвана та її Відречені нарешті помстилися ненависному ворогові — Королю-Лічу, їхній темний похід у Нортренд дорого коштував." },
+            -- Betrayed by their Grand Apothecary, Putress, at the Battle of Wrathgate, the Forsaken's devious plague of death was unleashed upon both the Alliance and the Horde to calamitous event.
+            { 12, 25, "У битві біля Брами гніву великий аптекар Путрес зрадив Відречених, і їхня підступна чума смерті з катастрофічними наслідками вдарила і по Альянсу, і по Орді." },
+            -- Unbeknownst to Sylvanas, Putress and his demonic ally, Varimathras, had taken control of the Undercity.
+            { 25, 32.7, "Без відома Сильвани Путрес та його демонічний спільник Варіматрас захопили владу над Підмістям." },
+            -- As a result, the Forsaken were wrongly blamed for the traitor's atrocities.
+            { 32.7, 38.2, "Через це провину за звірства зрадника несправедливо поклали на Відречених." },
+            -- Though the Undercity was eventually retaken, Sylvanas and her followers still bear the weight of Putress's sins.
+            { 38.2, 46.3, "Хоча Підмістя зрештою відвоювали, Сильвана та її послідовники досі несуть тягар гріхів Путреса." },
+            -- Mistrusted by the other members of the Horde, the Forsaken must now prove their loyalty to the cause and redeem themselves from their supposed treachery.
+            { 46.3, 56, "Позбавлені довіри інших членів Орди, Відречені мусять тепер довести свою відданість спільній справі та спокутувати приписувану їм зраду." },
+            -- To this end, Sylvanas has bolstered her defenses within the Tirisfal Glades and readied her undead forces for any contingency.
+            { 56, 65.2, "Задля цього Сильвана зміцнила оборону Тірісфальського перелісся та приготувала свої сили нежиті до будь-яких несподіванок." },
+            -- As one of the Forsaken, you must use your cunning and viciousness to slay any who would pose a threat to Sylvanas's rule be they human, undead, or otherwise.
+            { 65.2, 78, "Як {стать:один:одна} із Відречених, ви мусите вдатися до хитрості й лютості, щоб винищити всіх, хто загрожує владі Сильвани, — людей, нежить чи будь-кого іншого." },
+        },
+        Tauren = {
+            map = { 1412, 462 }, -- Mulgore (cata client), Camp Narache (mists client)
+            -- Great tragedy has rocked the tauren tribes and shaken their once-stalwart devotion to the Horde.
+            { 0, 7.7, "Велика трагедія сколихнула племена тауренів і похитнула їхню колись непохитну відданість Орді." },
+            -- A disagreement between the new orc Warchief, Garrosh Hellscream, and the beloved tauren chieftain, Cairne Bloodhoof, led to a duel that ended in Cairne's death.
+            { 7.7, 19.7, "Суперечка між новим вождем орків Ґаррошем Пеклокриком та улюбленим вождем тауренів Кейрном Кривавим Копитом призвела до двобою, що скінчився смертю Кейрна." },
+            -- With his loss, the vile matriarch Magatha Grimtotem launched a murderous attack, attempting to seize control of Thunder Bluff for herself.
+            { 19.7, 29.5, "Після цієї втрати підла матріархиня Маґата Зловісний Тотем розпочала кривавий напад, намагаючись захопити владу над Громовим Бескидом." },
+            -- However, Cairne's brave son, Baine Bloodhoof, successfully repelled the attack and banished the surviving Grimtotem to the farthest reaches of the land.
+            { 29.5, 41, "Однак хоробрий син Кейрна, Бейн Криваве Копито, відбив напад і вигнав уцілілих із клану Зловісного Тотема на найдальші краї цих земель." },
+            -- Under Baine's hopeful leadership, the tauren people now seek to heal their wounds and restore the balance between the various factions of the Horde.
+            { 41, 51.2, "Під сповненим надії проводом Бейна народ тауренів прагне загоїти рани та відновити рівновагу між різними силами Орди." },
+            -- To this end, a new generation of tauren "Sunwalkers" has arisen to lead their people into the Light of a new dawn and the promise of rebirth.
+            { 51.2, 62, "Задля цього постало нове покоління тауренів-«Сонцеходців», щоб повести свій народ до Світла нового світанку та обіцянки відродження." },
+            -- As a proud tribesman of Mulgore, you must uphold the honor of your people and safeguard the lands of your ancestors.
+            { 62, 70, "Як {стать:гордий одноплемінник:горда одноплемінниця} Мулґору, ви мусите відстояти честь свого народу та вберегти землі своїх предків." },
+        },
+        Troll = {
+            map = { 1411, 463 }, -- Durotar (cata client), Echo Isles (mists client)
+            -- Exiled years ago from their land in Stranglethorn Vale, the Darkspear trolls attempted to make a new home for themselves among the disparate races of the Horde.
+            { 0, 12, "Вигнані багато років тому зі своїх земель у Тернистій долині, тролі Темного Списа спробували знайти нову домівку серед розмаїтих рас Орди." },
+            -- Under the leadership of the noble Warchief Thrall, Vol'jin and his savage trolls had finally found the honor and purpose they had been searching for...
+            { 12, 22, "Під проводом шляхетного вождя Тралла Вол'джин та його дикі тролі нарешті знайшли честь і мету, яких так довго шукали..." },
+            -- ...but now, under the rule of the headstrong Garrosh Hellscream, the trolls fear that the Horde could tear itself apart.
+            { 22, 30.7, "...але тепер, під владою свавільного Ґарроша Пеклокрика, тролі бояться, що Орда може розірвати сама себе на шматки." },
+            -- Vol'jin knows that whatever threats loom ahead, whether they be from within the Horde or from without, it is cunning trolls like you that will fight to preserve the honor of the Horde.
+            { 30.7, 43, "Вол'джин знає: хай які загрози чекають попереду — зсередини Орди чи ззовні, — саме хитрі тролі, такі як ви, боротимуться за збереження честі Орди." },
+        },
+        BloodElf = {
+            map = { 1941, 467 }, -- Eversong Woods (cata client), Sunstrider Isle (mists client)
+            -- The past few years have seen unprecedented changes within the eternal land of Quel'Thalas.
+            { 1, 8.2, "Останні кілька років принесли небачені зміни вічній землі Квел'Таласа." },
+            -- The blood elves, following the will of their crazed leader, Kael'thas Sunstrider, channeled dangerous, chaotic magicks to transform their sacred Sunwell into a gateway of unspeakable evil.
+            { 8.2, 22.8, "Ельфи крові, виконуючи волю свого знавіснілого лідера Кель'таса Сонячного Блукача, спрямували небезпечну хаотичну магію, щоб перетворити свій священний Сонячний Колодязь на браму невимовного зла." },
+            -- While Kael'thas and his demonic masters were eventually defeated, a different transformation occurred within the Sunwell itself...
+            { 22.8, 31, "Хоча Кель'таса та його демонічних володарів зрештою було переможено, у самому Сонячному Колодязі відбулося інше перетворення..." },
+            -- ...as a dying naaru sacrificed its life essence to reignite the Sunwell into a font of holy energy.
+            { 31, 40, "...коли вмираючий наару пожертвував своєю життєвою сутністю, щоб знову запалити Колодязь як джерело святої енергії." },
+            -- Now, the blood elf regent, Lor'themar Theron, sees a new hope on the horizon for his people.
+            { 40, 46.7, "Тепер регент ельфів крові Лор'темар Терон бачить на обрії нову надію для свого народу." },
+            -- Over time, the Sunwell's Light could cure the blood elves of their cursed state, but many still cling to the arcane powers they procured and are hesitant to relinquish them.
+            { 46.7, 58.7, "З часом Світло Сонячного Колодязя могло б зцілити ельфів крові від їхнього проклятого стану, але багато хто досі чіпляється за здобуті таємничі сили й не квапиться їх зрікатися." },
+            -- As one of the remaining blood elves, you must fight to protect Quel'Thalas and help redeem the soul of your ancient people.
+            { 58.7, 68, "Як {стать:один:одна} з уцілілих ельфів крові, ви мусите боротися за захист Квел'Таласа та допомогти спокутувати душу свого стародавнього народу." },
         },
         Goblin = {
             map = 194, -- Kezan (same id on cata and mists clients)
             -- The wily cunning goblins of Kezan have lived in relative peace for generations.
-            { 0, 8, "Хитрі та кмітливі гобліни Кезану поколіннями жили у відносному мирі." },
+            { 0, 6.5, "Хитрі та кмітливі гобліни Кезану поколіннями жили у відносному мирі." },
             -- Though some of their race sided with the marauding orcs during the Second War, most goblins remained neutral throughout the various conflicts between the Alliance and Horde.
-            { 8, 19, "Хоча дехто з їхнього роду став на бік орків-грабіжників під час Другої війни, більшість гоблінів зберігала нейтралітет у конфліктах між Альянсом та Ордою." },
+            { 6.5, 17.7, "Хоча дехто з їхнього роду став на бік орків-грабіжників під час Другої війни, більшість гоблінів зберігала нейтралітет у конфліктах між Альянсом та Ордою." },
             -- Ruled over by corrupt yet highly affluent Trade Princes, the goblins created a virtual paradise for themselves throughout the islands of the South Seas.
-            { 19, 30, "Під владою продажних, але надзвичайно заможних торгових принців гобліни створили собі справжній рай на островах Південних морів." },
+            { 17.7, 27.8, "Під владою продажних, але надзвичайно заможних торгових принців гобліни створили собі справжній рай на островах Південних морів." },
             -- Their ingenious feats of engineering and vast trade fleets helped make their island capital of Kezan one of the great technological wonders of the world.
-            { 30, 41, "Їхні геніальні інженерні винаходи та величезні торгові флоти зробили їхню острівну столицю Кезан одним із найбільших технологічних див світу." },
+            { 27.8, 37.8, "Їхні геніальні інженерні винаходи та величезні торгові флоти зробили їхню острівну столицю Кезан одним із найбільших технологічних див світу." },
             -- But now, as the elements themselves rise up in anger across the world, the goblins' mechanical paradise will be put to the test.
-            { 41, 50, "Але тепер, коли самі стихії гнівно повстають по всьому світу, на механічний рай гоблінів чекає випробування." },
+            { 37.8, 47.7, "Але тепер, коли самі стихії гнівно повстають по всьому світу, на механічний рай гоблінів чекає випробування." },
             -- For very soon, fate will force them to choose sides in a conflict that will shape the very history of the world.
-            { 50, 60, "Адже вже зовсім скоро доля змусить їх обрати сторону в конфлікті, що визначить саму історію світу." },
+            { 47.7, 57, "Адже вже зовсім скоро доля змусить їх обрати сторону в конфлікті, що визначить саму історію світу." },
         },
     },
 }

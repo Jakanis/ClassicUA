@@ -10,23 +10,22 @@ local subtitle = {
     intro = {
         -- the death knight intro plays for every race, so it is keyed by class
         -- file name (see intro_get_lines in scripts/subtitles.lua)
-        -- TIMINGS ARE NOT CALIBRATED YET
         DEATHKNIGHT = {
             map = 124, -- Plaguelands: The Scarlet Enclave (same id on wrath, cata and mists clients)
             level_min = 55,
             level_max = 58,
             -- A hero... that's what you once were.
-            { 0, 8, "Герой... ось ким ви колись були." },
+            { 0, 5, "Герой... ось ким ви колись були." },
             -- You stood boldly against the Shadow and purchased another dawn for the world... with your life.
-            { 8, 17, "Ви сміливо постали проти Тіні та здобули світові ще один світанок... ціною власного життя." },
+            { 5, 12.5, "Ви сміливо постали проти Тіні та здобули світові ще один світанок... ціною власного життя." },
             -- But the evil you fought is not so easily banished; the victory you claimed, not so easily held.
-            { 17, 26, "Але зло, з яким ви боролися, не так легко вигнати, а здобуту перемогу — не так легко втримати." },
+            { 12.5, 20, "Але зло, з яким ви боролися, не так легко вигнати, а здобуту перемогу — не так легко втримати." },
             -- For now, the specter of death looms over the world yet again, and it has found new champions to bring about its final reign.
-            { 26, 36, "Бо нині привид смерті знову навис над світом і знайшов нових поборників, що принесуть його остаточне панування." },
+            { 20, 29, "Бо нині привид смерті знову навис над світом і знайшов нових поборників, що принесуть його остаточне панування." },
             -- Knights of darkness, wielding runes of death and destruction, bound by the will of the Lich King.
-            { 36, 45, "Лицарі темряви, що володіють рунами смерті й руйнування, скуті волею Короля-Ліча." },
+            { 29, 38, "Лицарі темряви, що володіють рунами смерті й руйнування, скуті волею Короля-Ліча." },
             -- This is the hour of their ascension! This is the hour of your dark rebirth...
-            { 45, 55, "Це година їхнього вознесіння! Це година вашого темного переродження..." },
+            { 38, 48, "Це година їхнього вознесіння! Це година вашого темного переродження..." },
         },
     },
 }
