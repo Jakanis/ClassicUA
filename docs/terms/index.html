@@ -40,7 +40,7 @@
         rel="stylesheet">
 
     <!-- Vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16"></script>
 
     <style>
         [v-cloak] {
@@ -348,7 +348,7 @@
                                 @click.prevent.stop="toggleFilterTag(tag)">{{ tag.name }}</a>
                         </div>
                         <div v-if="termDetails.links && termDetails.links.length > 0" class="modal-footer justify-content-start">
-                            <button v-for="link in termDetails.links" :key="link.name" type="button" class="btn btn-lg btn-warning font-weight-bold"
+                            <button v-for="link in termDetails.links" :key="link.text" type="button" class="btn btn-lg btn-warning font-weight-bold"
                                 @click.prevent.stop="openLink(link.href)">{{ link.text }}</button>
                         </div>
                     </div>
@@ -492,11 +492,11 @@
                             this.tags[map[name]].count++;
                         });
 
-                        const tags = labels.map(name => this.tags.find(t => t.name == name));
+                        const tags = labels.map(name => this.tags[map[name]]);
                         this.terms.push(new Term(en, uk, tags));
                     });
 
-                    this.tags = this.tags.filter(e => !e.name.startsWith('#'))
+                    this.tags = this.tags.filter(e => !e.name.startsWith('#') && !e.name.startsWith('~'));
                 },
                 emphasizeFilterText: function (text) {
                     if (this.filterText) {
@@ -559,7 +559,7 @@
                     if (subtitle_text_en) {
                         const t = this.findTermByEn(subtitle_text_en)
                         if (t) {
-                            cases = t.uk.split('/', 2)
+                            const cases = t.uk.split('/', 2)
                             subtitle_text_uk = term.is_female() && cases.length > 1 ? cases[1] : cases[0]
                         } else {
                             subtitle_text_uk = subtitle_text_en
