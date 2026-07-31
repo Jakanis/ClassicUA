@@ -517,7 +517,7 @@
                 addFilterTag: function (tag) {
                     const index = this.filterTags.indexOf(tag);
                     if (index == -1) {
-                        gtag('event', 'select_content', { 'content_type': tag.name });
+                        gtag('event', 'select_content', { content_type: 'filter_tag', content_id: tag.name });
                         this.filterTags.push(tag);
                     }
                 },
