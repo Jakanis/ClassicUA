@@ -424,13 +424,16 @@
                     this.state = 'error';
                 });
             },
+            watch: {
+                filterText: function (text) {
+                    if (text) {
+                        gtag('event', 'search', { search_term: text });
+                    }
+                }
+            },
             computed: {
                 visibleTerms: function () {
                     const text = this.filterText;
-                    if (text) {
-                        gtag('event', 'search', { 'search_term': text });
-                    }
-
                     const re = text ? new RegExp(this.reEscape(text), 'i') : false;
                     const tags = this.filterTags;
                     return this.terms
