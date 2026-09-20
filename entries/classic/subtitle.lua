@@ -11,8 +11,11 @@ local subtitle = {
     -- order follows the client subtitle files (Movie.db2 SubtitleFileDataID -> .sbt)
     movie = {
         [2] = { -- wow intro
-            [1] = "Чотири роки минуло відтоді, як смертні раси об'єдналися і разом постали проти могутності Палаючого Легіону.",
-            [2] = "Хоча Азерот було врятовано, хисткий пакт між Ордою та Альянсом майже розвіявся.",
+            -- Four years have passed since the mortal races banded together and stood united against the might of the Burning Legion.
+            [1] = "Чотири роки минуло відтоді, як смертні раси об'єдналися щоб разом протистояти могутності Палаючого Легіону.",
+            -- Though Azeroth was saved, the tenuous pact between the Horde and the Alliance has all but evaporated.
+            [2] = "Хоча Азерот було врятовано, крихкий союз між Ордою та Альянсом майже розпався.",
+            -- The drums of war thunder once again.
             [3] = "Барабани війни гримлять знову.",
         },
     },
@@ -31,38 +34,38 @@ local subtitle = {
             -- The noble humans of Stormwind are a proud, tenacious race.
             { 14.5, 20, "Шляхетні люди Штормовію — горда та непохитна раса." },
             -- Though the recent invasion of the demonic Burning Legion decimated their sister kingdom of Lordaeron, the defenders of Stormwind stand vigilant against any who would threaten the sanctity of their lands.
-            { 20, 33, "Хоча нещодавнє вторгнення демонічного Палаючого Легіону спустошило їхнє братнє королівство Лордерон, захисники Штормовію пильно стережуть свої землі від будь-якої загрози." },
+            { 20, 33, "Нещодавнє вторгнення демонічного Палаючого Легіону спустошило їхнє братнє королівство Лордерон, але захисники Штормовію пильно стережуть свої землі від будь-якої загрози." },
             -- Nestled in the foothills of Elwynn Forest, Stormwind City is one of the last bastions of human power in the world.
             { 33, 42, "Розташоване серед пагорбів Ельвиннського лісу, місто Штормовій — один з останніх бастіонів людської могутності у світі." },
             -- Ruled by the child king, Anduin Wrynn, the people of Stormwind remain steadfast in their commitment to the Grand Alliance.
-            { 42, 51, "Кероване юним королем Андуїном Рінном, населення Штормовію лишається відданим Великому Альянсу." },
+            { 42, 51, "Під керівництвом юного короля Андуїна Рінна населення Штормовію залишається відданим Великому Альянсу." },
             -- Backed by their stalwart allies, the armies of Stormwind have been called away to fight the savage Horde on distant battlefields.
-            { 51, 60, "За підтримки вірних союзників армії Штормовію вирушили битися з жорстокою Ордою на далеких полях битв." },
+            { 51, 60, "Разом із надійними союзниками війська Штормовію вирушили на далекі поля битв, щоб битися з жорстокою Ордою." },
             -- With the armies gone, the defense of Stormwind now falls to its proud citizens.
-            { 60, 67, "Коли армії пішли, захист Штормовію ліг на плечі його гордих громадян." },
+            { 60, 67, "Тепер, коли війська пішли, захист Штормовію ліг на плечі його гордих мешканців." },
             -- You must defend the kingdom against the foul mongrels that encroach upon it and hunt down the subversive traitors who seek to destroy it from within.
-            { 67, 78, "Ви мусите захистити королівство від підлих псів, що зазіхають на нього, і вистежити підступних зрадників, які прагнуть знищити його зсередини." },
+            { 67, 78, "Ви мусите захистити королівство від бридких покидьків, що зазіхають на його землі, і вистежити підступних зрадників, які прагнуть знищити його зсередини." },
             -- Now is the time for heroes. Now humanity's greatest chapter can be told.
-            { 78, 86, "Настав час героїв. Тепер може розпочатися найвеличніший розділ історії людства." },
+            { 78, 86, "Настав час героїв. Настав час написати найвеличніший розділ історії людства." },
         },
         Dwarf = {
             map = 1426, -- Dun Morogh
             -- The stoic dwarves of Ironforge spent countless generations mining treasures from deep within the earth.
-            { 0, 7, "Незворушні дворфи Залізогарта незліченними поколіннями видобували скарби з земних глибин." },
+            { 0, 7, "Незворушні дворфи Залізогарта покоління за поколінням видобували скарби з земних глибин." },
             -- Hidden within their impregnable stronghold of Ironforge Mountain, they rarely ventured beyond the wintry peaks of Dun Morogh.
-            { 7, 16, "Сховані у неприступній твердині гори Залізогарт, вони рідко полишали засніжені вершини Дун-Морогу." },
+            { 7, 16, "Сховані у неприступній твердині гори Залізогарт, вони рідко виходили за межі засніжених вершин Дун-Морогу." },
             -- Recently however, the dwarves unearthed a series of ruins that held secrets to their ancient heritage.
-            { 16, 23, "Та нещодавно дворфи розкопали руїни, що приховували таємниці їхньої прадавньої спадщини." },
+            { 16, 23, "Та нещодавно дворфи виявили руїни, що приховували таємниці їхнього давнього минулого." },
             -- Driven to discover the truth about his people's fabled origins, the great King Magni Bronzebeard ordered that the dwarves shift their industry from mining to archaeology.
             { 23, 35, "Прагнучи дізнатися правду про легендарне походження свого народу, великий король Маґні Бронзобородий наказав дворфам змінити ремесло з гірництва на археологію." },
             -- As part of the Grand Alliance, the stalwart dwarven armies have been called away to battle the merciless Horde in faraway lands.
-            { 35, 43, "Як частина Великого Альянсу, непохитні армії дворфів вирушили битися з безжальною Ордою в далеких краях." },
+            { 35, 43, "Як частина Великого Альянсу, непохитні війська дворфів вирушили на далекі поля битв, щоб протистояти безжальній Орді." },
             -- In these perilous times, the defense of the mountain kingdom falls to brave dwarves like you.
-            { 43, 50, "У ці небезпечні часи захист гірського королівства лягає на плечі хоробрих дворфів, таких як ви." },
+            { 43, 50, "У ці небезпечні часи захист гірського королівства лягає на плечі хоробрих дворфів, таких як Ви." },
             -- The spirits of the ancient kings watch over you, and the very mountains are your strength.
-            { 50, 56.5, "Духи стародавніх королів пильнують вас, а самі гори — ваша сила." },
+            { 50, 56.5, "Духи стародавніх королів пильнують Вас, а самі гори надають Вам сили." },
             -- The future of your people is in your hands.
-            { 56.5, 60, "Майбутнє вашого народу у ваших руках." },
+            { 56.5, 60, "Майбутнє Вашого народу у Ваших руках." },
         },
         Gnome = {
             map = 1426, -- Dun Morogh
