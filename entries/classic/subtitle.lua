@@ -89,25 +89,25 @@ local subtitle = {
         NightElf = {
             map = 1438, -- Teldrassil
             -- For ten thousand years, the immortal night elves cultivated a druidic society within the shadowed recesses of Ashenvale Forest.
-            { 2, 11, "Десять тисяч років безсмертні нічні ельфи плекали друїдське суспільство в тінистих хащах Ясенедолу." },
+            { 2, 11, "Десять тисяч років безсмертні нічні ельфи плекали своє друїдське суспільство в тінистих хащах Ясенедолу." },
             -- Yet recently, the catastrophic invasion of the Burning Legion shattered the tranquility of their ancient civilization.
             { 11, 21, "Але нещодавно катастрофічне вторгнення Палаючого Легіону зруйнувало спокій їхньої стародавньої цивілізації." },
             -- Led by the Arch-Druid Malfurion Stormrage and the Priestess Tyrande Whisperwind, the mighty night elves rose to challenge the demonic onslaught.
             { 21, 31, "На чолі з архідруїдом Малфуріоном Шаленством Бурі та жрицею Тірандою Шелест Вітру могутні нічні ельфи постали проти демонічної навали." },
             -- Though victorious, the night elves were forced to sacrifice their cherished immortality and watch their beloved forests burn.
-            { 31, 42, "Здобувши перемогу, нічні ельфи все ж мусили пожертвувати своїм заповітним безсмертям і дивитися, як палають їхні улюблені ліси." },
+            { 31, 42, "Ельфи здобули перемогу, але натомість пожертвували своїм заповітним безсмертям і мусили дивитися, як палають їхні улюблені ліси." },
             -- Seeking to regain their immortality, a number of wayward druids conspired to plant a special tree that would reestablish a link between their spirits and the eternal world.
-            { 42, 53, "Прагнучи повернути безсмертя, купка свавільних друїдів змовилася посадити особливе дерево, яке відновило б зв'язок між їхніми духами та вічним світом." },
+            { 42, 53, "Прагнучи повернути безсмертя, купка свавільних друїдів змовилася посадити особливе дерево, яке мало б відновити зв'язок між їхніми духами та вічним світом." },
             -- Despite Malfurion's warning that nature would never bless such a selfish act, the druids planted the great tree, Teldrassil, off the stormy coasts of northern Kalimdor.
             { 53, 65, "Попри застереження Малфуріона, що природа ніколи не благословить такий себелюбний вчинок, друїди посадили велике дерево Тельдрассіль біля буремних берегів північного Калімдору." },
             -- Among the twilight boughs of the colossal tree, the wondrous city of Darnassus took root.
-            { 65, 71.5, "Серед сутінкового гілля велетенського дерева вкоренилося дивовижне місто Дарнас." },
+            { 65, 71.5, "Серед сутінкового гілля велетенського дерева виросло дивовижне місто Дарнас." },
             -- However, the great tree was not consecrated with nature's blessing and soon fell prey to the corruption of the Burning Legion.
-            { 71.5, 80, "Проте велике дерево не було освячене благословенням природи і невдовзі стало жертвою скверни Палаючого Легіону." },
+            { 71.5, 80, "Однак велике дерево не отримало благословення природи й невдовзі стало жертвою скверни Палаючого Легіону." },
             -- Now the wildlife and even the limbs of the great tree itself are tainted by a growing darkness.
-            { 80, 89, "Тепер дику природу й навіть віття самого великого дерева поглинає дедалі більша темрява." },
+            { 80, 89, "Тепер дедалі темніша скверна отруює тварин і навіть саме гілля великого дерева." },
             -- As one of the few Night Elves left in the world, it is your sworn duty to defend Darnassus and the wild children of nature against the Legion's encroaching corruption.
-            { 89, 102, "Ви — одні з небагатьох нічних ельфів, що лишилися у світі, тож ваш священний обов'язок — захистити Дарнас і диких дітей природи від скверни Легіону, що насувається." },
+            { 89, 102, "Ви — одні з небагатьох нічних ельфів, що лишилися у світі, тож Ваш священний обов'язок — захистити Дарнас і диких дітей природи від скверни Легіону, що насувається." },
         },
         Orc = {
             map = 1411, -- Durotar
