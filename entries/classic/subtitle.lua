@@ -112,42 +112,42 @@ local subtitle = {
         Orc = {
             map = 1411, -- Durotar
             -- Long ago, the orcish horde was corrupted by the Burning Legion and lured to the world of Azeroth.
-            { 4, 12, "Давним-давно Палаючий Легіон розбестив орківську орду та заманив її до світу Азерот." },
+            { 4, 12, "Давним-давно Палаючий Легіон осквернив орківську орду та заманив її до світу Азерот." },
             -- For generations, the orcs made war upon the human kingdoms of Stormwind and Lordaeron.
             { 12, 20, "Поколіннями орки воювали з людськими королівствами Штормовію та Лордерону." },
             -- Though the Horde was ultimately defeated, a visionary young warchief named Thrall rose to lead his people in their darkest hour.
-            { 20, 29.5, "Хоча Орду зрештою було переможено, у найтемнішу годину її народ очолив далекоглядний молодий вождь на ім'я Тралл." },
+            { 20, 29.5, "Хоча Орду зрештою було переможено, у найтемнішу годину її народ очолив мудрий молодий вождь на ім'я Тралл." },
             -- Under Thrall's rule, the orcs freed themselves from the chains of demonic corruption and embraced their shamanistic heritage.
             { 29.5, 39, "Під проводом Тралла орки звільнилися від кайданів демонічної скверни та повернулися до своєї шаманської спадщини." },
             -- After years of wandering, the orcs founded their own kingdom in the harsh wastelands of Durotar.
             { 39, 47, "Після років поневірянь орки заснували власне королівство в суворих пустках Дуротару." },
             -- Based in the warrior city of Orgrimmar, they stand ready to destroy all who would challenge their supremacy.
-            { 47, 54.5, "Осівши у місті воїнів Орґріммарі, вони готові знищити всіх, хто кине виклик їхній зверхності." },
+            { 47, 54.5, "Осівши у місті воїнів Орґріммарі, вони готові знищити кожного, хто кине їм виклик." },
             -- As a proud defender of Durotar, it is your duty to crush the enemies, both seen and unseen,
             { 54.5, 63, "Ви — {стать:гордий захисник:горда захисниця} Дуротару, і ваш обов'язок — нищити ворогів, видимих і невидимих." },
             -- for the nefarious agents of the Burning Legion still wander the land.
-            { 63, 70, "Адже підступні посіпаки Палаючого Легіону досі блукають цими землями." },
+            { 63, 70, "Адже підступні слуги Палаючого Легіону досі блукають цими землями." },
         },
         Scourge = { -- undead player race file name is "Scourge"
             map = 1420, -- Tirisfal Glades
             -- Bound to the iron will of the tyrant Lich King, the vast undead armies of the Scourge seek to eradicate all life on Azeroth.
             { 0, 11, "Скуті залізною волею тирана Короля-Ліча, незліченні армії нежиті Скари прагнуть винищити все живе в Азероті." },
             -- Led by the banshee Sylvanas Windrunner, a group of renegades broke away from the Scourge, and freed themselves of the Lich King's domination.
-            { 11, 22, "Очолювані баньші Сильваною Вітрогін, відступники відкололися від Скари та звільнилися з-під панування Короля-Ліча." },
+            { 11, 22, "Під проводом баньші Сильвани Вітрогін група відступників відкололася від Скари та звільнилася від влади Короля-Ліча." },
             -- Known by some as the Forsaken, this group fights a constant battle not only to retain their freedom from the Scourge, but also to slaughter those who would hunt them as monsters.
-            { 22, 35.5, "Відомі як Відречені, вони безнастанно борються не лише за свою свободу від Скари, а й винищують тих, хто полює на них, як на чудовиськ." },
+            { 22, 35.5, "Відомі як Відречені, вони безупинно борються за свою свободу від Скари, а також винищують тих, хто полює на них, як на чудовиськ." },
             -- With Sylvanas as their banshee queen, the Forsaken have built a dark stronghold beneath the ruins of Lordaeron's former capital city.
-            { 35.5, 45, "Із Сильваною, своєю королевою-баньші, Відречені звели похмуру твердиню під руїнами колишньої столиці Лордерону." },
+            { 35.5, 45, "Із Сильваною, своєю королевою-баньші, Відречені звели похмуру фортецю під руїнами колишньої столиці Лордерону." },
             -- This hidden 'Undercity' forms a sprawling labyrinth that stretches beneath the haunted woods of the Tirisfal Glades.
             { 45, 54.5, "Це потаємне «Підмістя» — розлогий лабіринт, що тягнеться під примарними лісами Тірісфальського перелісся." },
             -- Though the very land is cursed, the zealous humans of the Scarlet Crusade still cling to their scattered holdings, obsessed with eradicating the undead and retaking their homeland.
-            { 54.5, 70, "Хоча сама земля тут проклята, фанатичні люди Багряного Походу досі чіпляються за свої розкидані володіння, одержимі винищенням нежиті та поверненням батьківщини." },
+            { 54.5, 70, "Хоча сама земля тут проклята, фанатичні люди Багряного Походу досі тримаються за свої розрізнені володіння, одержимі бажанням винищити нежить та повернути свою батьківщину." },
             -- Convinced that the primitive races of the Horde can help them achieve victory over their enemies, the Forsaken have entered an alliance of convenience.
             { 70, 80.5, "Переконані, що примітивні раси Орди допоможуть їм здолати ворогів, Відречені уклали союз із розрахунку." },
             -- Harboring no true loyalty for their new allies, they will go to any lengths to ensure their dark plans come to fruition.
             { 80.5, 90, "Не плекаючи справжньої вірності новим союзникам, вони підуть на все, аби їхні темні плани здійснилися." },
             -- As one of the Forsaken, you must massacre any who pose a threat to the new order – human, undead, or otherwise.
-            { 90, 102, "Як {стать:один:одна} із Відречених, ви мусите винищувати всіх, хто загрожує новому порядку, — людей, нежить чи будь-кого іншого." },
+            { 90, 102, "Як {стать:один:одна} із Відречених, Ви мусите винищувати всіх, хто загрожує новому порядку, — людей, нежить чи будь-кого іншого." },
         },
         Tauren = {
             map = 1412, -- Mulgore
