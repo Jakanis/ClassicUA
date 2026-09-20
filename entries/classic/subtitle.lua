@@ -70,9 +70,9 @@ local subtitle = {
         Gnome = {
             map = 1426, -- Dun Morogh
             -- The eccentric, often brilliant gnomes are held as one of the most peculiar races of the world.
-            { 0, 7, "Ексцентричні, часто геніальні гноми вважаються однією з найхимерніших рас світу." },
+            { 0, 7, "Ексцентричні, часто геніальні гноми вважаються однією з найдивакуватіших рас світу." },
             -- With their obsession for developing radical new technologies and constructing marvels of mind-bending engineering, it's a wonder that any gnomes have survived to proliferate.
-            { 7, 18.5, "З їхньою одержимістю сміливими новими технологіями та запаморочливими дивами інженерії, дивно, що гноми взагалі вижили та розплодилися." },
+            { 7, 18.5, "Їхня одержимість сміливими новими технологіями та запаморочливими дивами інженерії вражає. Дивно, як після стількох експериментів гноми взагалі вижили та розплодилися." },
             -- Over the years, the gnomes have contributed ingenious weapons to aid the Grand Alliance in its fierce battles against the Horde.
             { 18.5, 27, "Роками гноми постачали хитромудру зброю Великому Альянсу в його запеклих битвах з Ордою." },
             -- Thriving in the wondrous techno-city of Gnomeregan, the gnomes shared the resources of the forested peaks of Dun Morogh with their dwarven cousins for generations.
@@ -80,11 +80,11 @@ local subtitle = {
             -- Yet recently, a barbaric menace rose up from the bowels of the earth and invaded Gnomeregan.
             { 37, 44, "Але нещодавно з надр землі постала варварська загроза і вдерлася до Гномреґану." },
             -- Aided by their dwarven allies, the gnomes fought a valiant battle to save their beloved city. Nevertheless, Gnomeregan was irrevocably lost.
-            { 44, 55, "За підтримки союзників-дворфів гноми відважно боролися за своє улюблене місто. Та попри все, Гномреґан було безповоротно втрачено." },
+            { 44, 55, "За підтримки союзників-дворфів гноми відважно боролися за своє улюблене місто. Та попри все, Гномреґан було втрачено назавжди." },
             -- The surviving gnomes fled to the safety of the dwarf stronghold of Ironforge. There they remained; devising strategies to retake their city.
             { 55, 65.5, "Уцілілі гноми втекли під захист дворфської твердині Залізогарта. Там вони й залишилися, розробляючи плани повернення свого міста." },
             -- As a gnome of proud stand, it falls to you to answer the challenge and lead your curious people to a brighter future.
-            { 65.5, 77, "Ви — {стать:гном:гномка} гордої постави, тож саме вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
+            { 65.5, 77, "Ви — {стать:гном:гномка} гордої породи, тож саме вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
         },
         NightElf = {
             map = 1438, -- Teldrassil
