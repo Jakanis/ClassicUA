@@ -152,34 +152,34 @@ local subtitle = {
         Tauren = {
             map = 1412, -- Mulgore
             -- Once a nomadic people, the tauren roamed the endless plains of the Barrens, hunting the mighty kodo.
-            { 1, 9.5, "Колись кочовий народ, таурени мандрували безкраїми рівнинами Степів, полюючи на могутніх кодо." },
+            { 1, 9.5, "Колись таурени були кочовим народом і мандрували безкраїми рівнинами Степів, полюючи на могутніх кодо." },
             -- Scattered across the land, the wandering tribes were united only by their common hatred for their sworn enemy, the marauding centaur.
-            { 9.5, 19, "Розпорошені по цих землях мандрівні племена єднала лише спільна ненависть до заклятого ворога — кентаврів-грабіжників." },
+            { 9.5, 19, "Розкидані по всьому краю, їхні племена об’єднувала лише спільна ненависть до заклятого ворога — кентаврів-грабіжників." },
             -- Seeking aid against the centaur, the great chieftain, Cairne Bloodhoof, befriended the savage orcs, who had recently journeyed to Kalimdor.
-            { 19, 29, "Шукаючи допомоги проти кентаврів, великий вождь Кейрн Криваве Копито заприятелював із дикими орками, що нещодавно прибули до Калімдору." },
+            { 19, 29, "Шукаючи допомоги в боротьбі з кентаврами, великий вождь Кейрн Криваве Копито заприятелював із дикими орками, що нещодавно прибули до Калімдору." },
             -- With the orcs' help, Cairne and his tribe were able to drive back the centaur and claim the grasslands of Mulgore for their own.
-            { 29, 38, "З допомогою орків Кейрн та його плем'я відтіснили кентаврів і зайняли трав'янисті землі Мулґору." },
+            { 29, 38, "За допомогою орків Кейрн та його плем'я змогли відтіснити кентаврів і зайняти трав'янисті рівнини Мулґору." },
             -- Upon the windswept mesa of Thunder Bluff, Cairne built a refuge for his people.
             { 38, 44.5, "На овіяному вітрами плоскогір'ї Громового Бескиду Кейрн збудував прихисток для свого народу." },
             -- Over time, the scattered tribes united under a single banner.
-            { 44.5, 50.5, "З часом розпорошені племена об'єдналися під єдиним стягом." },
+            { 44.5, 50.5, "Згодом розпорошені племена об'єдналися під єдиним стягом." },
             -- Though the noble tauren are peaceful in nature, the rites of the Great Hunt are venerated as the heart of their spiritual culture.
-            { 50.5, 60, "Хоча шляхетні таурени мирні за вдачею, обряди Великого Полювання шануються як серце їхньої духовної культури." },
+            { 50.5, 60, "Хоча шляхетні таурени миролюбні за вдачею, обряди Великого Полювання шануються як серце їхньої духовної культури." },
             -- As a tribesman of Mulgore, you must test your skills in the wild and prove yourself in the Great Hunt.
-            { 60, 70, "Як одноплемінник Мулґору, ви мусите випробувати свої вміння в дикій природі та проявити себе у Великому Полюванні." },
+            { 60, 70, "Як представник племені Мулґору, ви мусите випробувати свої вміння в дикій природі та проявити себе у Великому Полюванні." },
         },
         Troll = {
             map = 1411, -- Durotar
             -- The vicious trolls that populate the numerous jungle isles of the South Seas, are renowned for their cruelty and dark mysticism.
-            { 2, 11.5, "Люті тролі, що населяють численні джунглеві острови Південних морів, славляться жорстокістю та темним містицизмом." },
+            { 2, 11.5, "Люті тролі, що населяють численні джунглеві острови Південних морів, славляться жорстокістю та темним чаклунством." },
             -- Barbarous and superstitious, they carry a seething hatred for all other races.
             { 11.5, 19, "Варварські та забобонні, вони плекають кипучу ненависть до всіх інших рас." },
             -- Long since exiled from their ancestral homeland in Stranglethorn Vale, the Darkspear tribe was nearly destroyed by rampaging murlocs.
-            { 19, 29.5, "Давно вигнане з прабатьківщини в Тернистій долині, плем'я Темного Списа мало не знищили оскаженілі мурлоки." },
+            { 19, 29.5, "Давно вигнане з прабатьківщини в Тернистій долині, плем'я Темного Списа мало не було знищене оскаженілими мурлоками." },
             -- Rescued by the young Warchief Thrall and his orcish warriors, the Darkspear tribe swore an allegiance to the Horde.
             { 29.5, 38.5, "Врятоване молодим вождем Траллом та його орками-воїнами, плем'я Темного Списа присягнуло на вірність Орді." },
             -- Led by the cunning Shadow Hunter, Vol'jin, the Darkspears now make their home in Durotar along with their orcish allies.
-            { 38.5, 48, "Під проводом хитрого тіньового мисливця Вол'джина плем'я Темного Списа нині мешкає в Дуротарі разом зі своїми союзниками орками." },
+            { 38.5, 48, "Під проводом хитромудрого тіньового мисливця Вол'джина плем'я Темного Списа нині мешкає в Дуротарі разом зі своїми союзниками орками." },
             -- As one of the only surviving Darkspears, it falls to you to reclaim the glory of your tribe.
             { 48, 57.5, "Ви — {стать:один:одна} з небагатьох уцілілих тролів Темного Списа, тож саме вам належить відродити славу свого племені." },
         },
