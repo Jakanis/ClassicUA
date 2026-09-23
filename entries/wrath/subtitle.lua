@@ -20,7 +20,7 @@ local subtitle = {
             -- Back, you mindless wretches!
             [4] = "Назад, безмозкі почвари!",
             -- Fight on, brothers!
-            [5] = "Бийтеся далі, браття!",
+            [5] = "Боріться, браття!",
             -- Rise up, sons of the Horde!
             [6] = "Повстаньте, сини Орди!",
             -- Blood and glory await us!
@@ -38,7 +38,7 @@ local subtitle = {
             -- of your people,
             [13] = "твого народу,",
             -- demands justice!
-            [14] = "волає про правосуддя!",
+            [14] = "вимагає правосуддя!",
             -- Come forth, coward,
             [15] = "Виходь, боягузе,",
             -- and answer for your crimes!
@@ -48,9 +48,9 @@ local subtitle = {
             -- Of cowardice?
             [18] = "Про боягузтво?",
             -- I will show you the justice of the grave
-            [19] = "Я покажу тобі правосуддя могили",
+            [19] = "Я покажу тобі правосуддя смерті",
             -- and the true meaning of fear.
-            [20] = "і справжнє значення страху.",
+            [20] = "і що таке справжній страх.",
             -- Enough talk! Let it be finished!
             [21] = "Досить балачок! Покінчімо з цим!",
             -- You will pay for all the lives you've stolen, traitor.
@@ -124,7 +124,7 @@ local subtitle = {
             -- The dragons' flame... sealed my fate...
             [19] = "Полум'я драконів... запечатало мою долю...",
             -- The world of the living can no longer comfort me.
-            [20] = "Світ живих більше не втішить мене.",
+            [20] = "В світі живих більш немає місця для мене.",
             -- Place the crown upon my head, Tirion.
             [21] = "Поклади корону мені на голову, Тіріоне.",
             -- Forevermore - I will be the jailor of the damned.
@@ -136,13 +136,13 @@ local subtitle = {
             -- You and these brave heroes have your own destinies to fulfill.
             [25] = "На тебе й цих хоробрих героїв чекають власні долі.",
             -- This last act of service... is mine.
-            [26] = "Ця остання служба... моя.",
+            [26] = "Ця остання справа... моя.",
             -- You will not be forgotten... brother.
             [27] = "Тебе не забудуть... брате.",
             -- I MUST be forgotten, Tirion!
             [28] = "Мене МУСЯТЬ забути, Тіріоне!",
             -- If the world is to live free from the tyranny of fear - they must never know what was done here today.
-            [29] = "Якщо світ має жити вільним від тиранії страху — ніхто не повинен дізнатися, що тут сьогодні сталося.",
+            [29] = "Якщо ми хочемо звільнити світ від тиранії страху — ніхто не повинен дізнатися, що тут сьогодні сталося.",
             -- Tell them only that the Lich King is dead...
             [30] = "Скажи всім лише, що Король-Ліч мертвий...",
             -- and that Bolvar Fordragon died with him...
@@ -156,19 +156,19 @@ local subtitle = {
             -- My son,
             [1] = "Сину мій,",
             -- the day you were born, the very forests of Lordaeron whispered the name
-            [2] = "у день, коли ти народився, самі ліси Лордерону шепотіли ім'я",
+            [2] = "у день, коли ти народився, самі ліси Лордерону прошепотіли твоє ім'я",
             -- Arthas.
             [3] = "Артас.",
             -- My child,
             [4] = "Дитя моє,",
             -- I watched with pride as you grew into a weapon
-            [5] = "я з гордістю дивився, як ти виростав у зброю",
+            [5] = "я з гордістю спостерігав, як ти зростав у знаряддя",
             -- of righteousness.
             [6] = "праведності.",
             -- Remember, our line has always ruled with wisdom and strength.
             [7] = "Пам'ятай: наш рід завжди правив мудрістю та силою.",
             -- And I know you will show restraint when exercising your great power.
-            [8] = "І я знаю, що ти будеш стриманим, користуючись своєю великою владою.",
+            [8] = "І я знаю, що ти будеш стриманим у користанні своєю великою владою.",
             -- But the truest victory, my son,
             [9] = "Але найправдивіша перемога, сину мій, —",
             -- is stirring the hearts of your people.
@@ -196,7 +196,7 @@ local subtitle = {
             -- But the evil you fought is not so easily banished; the victory you claimed, not so easily held.
             { 12.5, 20, "Але зло, з яким ви боролися, не так легко вигнати, а здобуту перемогу — не так легко втримати." },
             -- For now, the specter of death looms over the world yet again, and it has found new champions to bring about its final reign.
-            { 20, 29, "Бо нині привид смерті знову навис над світом і знайшов нових поборників, що принесуть його остаточне панування." },
+            { 20, 29, "Бо нині привид смерті знову навис над світом і знайшов нових поборників, готових привести його до остаточного панування." },
             -- Knights of darkness, wielding runes of death and destruction, bound by the will of the Lich King.
             { 29, 38, "Лицарі темряви, що володіють рунами смерті й руйнування, скуті волею Короля-Ліча." },
             -- This is the hour of their ascension! This is the hour of your dark rebirth...
