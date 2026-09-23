@@ -40,7 +40,7 @@ local subtitle = {
             -- Ruled by the child king, Anduin Wrynn, the people of Stormwind remain steadfast in their commitment to the Grand Alliance.
             { 42, 51, "Під керівництвом юного короля Андуїна Рінна населення Штормовію залишається відданим Великому Альянсу." },
             -- Backed by their stalwart allies, the armies of Stormwind have been called away to fight the savage Horde on distant battlefields.
-            { 51, 60, "Разом із надійними союзниками війська Штормовію вирушили на далекі поля битв, щоб битися з жорстокою Ордою." },
+            { 51, 60, "Разом із надійними союзниками війська Штормовію вирушили на далекі поля битв, щоб протистояти жорстокій Орді." },
             -- With the armies gone, the defense of Stormwind now falls to its proud citizens.
             { 60, 67, "Тепер, коли війська пішли, захист Штормовію ліг на плечі його гордих мешканців." },
             -- You must defend the kingdom against the foul mongrels that encroach upon it and hunt down the subversive traitors who seek to destroy it from within.
@@ -84,7 +84,7 @@ local subtitle = {
             -- The surviving gnomes fled to the safety of the dwarf stronghold of Ironforge. There they remained; devising strategies to retake their city.
             { 55, 65.5, "Уцілілі гноми втекли під захист дворфської твердині Залізогарта. Там вони й залишилися, розробляючи плани повернення свого міста." },
             -- As a gnome of proud stand, it falls to you to answer the challenge and lead your curious people to a brighter future.
-            { 65.5, 77, "Ви — {стать:гном:гномка} гордої породи, тож саме вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
+            { 65.5, 77, "Ви — {стать:гном:гномка} гордої породи, тож саме Вам належить прийняти виклик і повести свій допитливий народ до світлішого майбутнього." },
         },
         NightElf = {
             map = 1438, -- Teldrassil
@@ -124,7 +124,7 @@ local subtitle = {
             -- Based in the warrior city of Orgrimmar, they stand ready to destroy all who would challenge their supremacy.
             { 47, 54.5, "Осівши у місті воїнів Орґріммарі, вони готові знищити кожного, хто кине їм виклик." },
             -- As a proud defender of Durotar, it is your duty to crush the enemies, both seen and unseen,
-            { 54.5, 63, "Ви — {стать:гордий захисник:горда захисниця} Дуротару, і ваш обов'язок — нищити ворогів, видимих і невидимих." },
+            { 54.5, 63, "Ви — {стать:гордий захисник:горда захисниця} Дуротару, і Ваш обов'язок — нищити ворогів, видимих і невидимих." },
             -- for the nefarious agents of the Burning Legion still wander the land.
             { 63, 70, "Адже підступні слуги Палаючого Легіону досі блукають цими землями." },
         },
@@ -133,11 +133,11 @@ local subtitle = {
             -- Bound to the iron will of the tyrant Lich King, the vast undead armies of the Scourge seek to eradicate all life on Azeroth.
             { 0, 11, "Скуті залізною волею тирана Короля-Ліча, незліченні армії нежиті Скари прагнуть винищити все живе в Азероті." },
             -- Led by the banshee Sylvanas Windrunner, a group of renegades broke away from the Scourge, and freed themselves of the Lich King's domination.
-            { 11, 22, "Під проводом баньші Сильвани Вітрогін група відступників відкололася від Скари та звільнилася від влади Короля-Ліча." },
+            { 11, 22, "Під проводом банші Сильвани Вітрогін група відступників відкололася від Скари та звільнилася від влади Короля-Ліча." },
             -- Known by some as the Forsaken, this group fights a constant battle not only to retain their freedom from the Scourge, but also to slaughter those who would hunt them as monsters.
-            { 22, 35.5, "Відомі як Відречені, вони безупинно борються за свою свободу від Скари, а також винищують тих, хто полює на них, як на чудовиськ." },
+            { 22, 35.5, "Відомі як Відречені, вони безупинно борються за свою свободу від Скари, а також винищують тих, хто полює на них як на чудовиськ." },
             -- With Sylvanas as their banshee queen, the Forsaken have built a dark stronghold beneath the ruins of Lordaeron's former capital city.
-            { 35.5, 45, "Із Сильваною, своєю королевою-баньші, Відречені звели похмуру фортецю під руїнами колишньої столиці Лордерону." },
+            { 35.5, 45, "Із Сильваною, своєю королевою-банші, Відречені звели похмуру фортецю під руїнами колишньої столиці Лордерону." },
             -- This hidden 'Undercity' forms a sprawling labyrinth that stretches beneath the haunted woods of the Tirisfal Glades.
             { 45, 54.5, "Це потаємне «Підмістя» — розлогий лабіринт, що тягнеться під примарними лісами Тірісфальського перелісся." },
             -- Though the very land is cursed, the zealous humans of the Scarlet Crusade still cling to their scattered holdings, obsessed with eradicating the undead and retaking their homeland.
@@ -156,17 +156,17 @@ local subtitle = {
             -- Scattered across the land, the wandering tribes were united only by their common hatred for their sworn enemy, the marauding centaur.
             { 9.5, 19, "Розкидані по всьому краю, їхні племена об’єднувала лише спільна ненависть до заклятого ворога — кентаврів-грабіжників." },
             -- Seeking aid against the centaur, the great chieftain, Cairne Bloodhoof, befriended the savage orcs, who had recently journeyed to Kalimdor.
-            { 19, 29, "Шукаючи допомоги в боротьбі з кентаврами, великий вождь Кейрн Криваве Копито заприятелював із дикими орками, що нещодавно прибули до Калімдору." },
+            { 19, 29, "Шукаючи допомоги в боротьбі з кентаврами, великий вождь Керн Криваве Копито заприятелював із дикими орками, що нещодавно прибули до Калімдору." },
             -- With the orcs' help, Cairne and his tribe were able to drive back the centaur and claim the grasslands of Mulgore for their own.
-            { 29, 38, "За допомогою орків Кейрн та його плем'я змогли відтіснити кентаврів і зайняти трав'янисті рівнини Мулґору." },
+            { 29, 38, "За допомогою орків Керн та його плем'я змогли відтіснити кентаврів і зайняти трав'янисті рівнини Мулґору." },
             -- Upon the windswept mesa of Thunder Bluff, Cairne built a refuge for his people.
-            { 38, 44.5, "На овіяному вітрами плоскогір'ї Громового Бескиду Кейрн збудував прихисток для свого народу." },
+            { 38, 44.5, "На овіяному вітрами плоскогір'ї Громового Бескиду Керн збудував прихисток для свого народу." },
             -- Over time, the scattered tribes united under a single banner.
             { 44.5, 50.5, "Згодом розпорошені племена об'єдналися під єдиним стягом." },
             -- Though the noble tauren are peaceful in nature, the rites of the Great Hunt are venerated as the heart of their spiritual culture.
             { 50.5, 60, "Хоча шляхетні таурени миролюбні за вдачею, обряди Великого Полювання шануються як серце їхньої духовної культури." },
             -- As a tribesman of Mulgore, you must test your skills in the wild and prove yourself in the Great Hunt.
-            { 60, 70, "Як представник племені Мулґору, ви мусите випробувати свої вміння в дикій природі та проявити себе у Великому Полюванні." },
+            { 60, 70, "Як представник племені Мулґору, Ви мусите випробувати свої вміння в дикій природі та проявити себе у Великому Полюванні." },
         },
         Troll = {
             map = 1411, -- Durotar
@@ -181,7 +181,7 @@ local subtitle = {
             -- Led by the cunning Shadow Hunter, Vol'jin, the Darkspears now make their home in Durotar along with their orcish allies.
             { 38.5, 48, "Під проводом хитромудрого тіньового мисливця Вол'джина плем'я Темного Списа нині мешкає в Дуротарі разом зі своїми союзниками орками." },
             -- As one of the only surviving Darkspears, it falls to you to reclaim the glory of your tribe.
-            { 48, 57.5, "Ви — {стать:один:одна} з небагатьох уцілілих тролів Темного Списа, тож саме вам належить відродити славу свого племені." },
+            { 48, 57.5, "Ви — {стать:один:одна} з небагатьох уцілілих тролів Темного Списа, тож саме Вам належить відродити славу свого племені." },
         },
     },
 }
