@@ -9,10 +9,15 @@ local _, addonTable = ...
 local subtitle = {
     movie = {
         [27] = { -- tbc intro
+            -- Imprisoned for ten thousand years.
             [1] = "Ув'язнений десять тисяч років.",
+            -- Banished from my own homeland.
             [2] = "Вигнаний з власної батьківщини.",
+            -- And now you dare enter MY realm.
             [3] = "І тепер ви смієте вступати до МОЇХ володінь.",
+            -- You are not prepared.
             [4] = "Ви не готові.",
+            -- YOU ARE NOT PREPARED!
             [5] = "ВИ НЕ ГОТОВІ!",
         },
     },
@@ -25,7 +30,7 @@ local subtitle = {
             -- At that moment, the great ship Exodar, plummeted from the heavens and crashed upon the world of Azeroth.
             { 7, 15, "Тієї миті великий корабель Екзодар упав з небес і розбився об світ Азерот." },
             -- Having fled the ravaged world of Outland, the noble draenei used the dimension traveling Exodar to reach safe haven.
-            { 15, 24, "Втікши зі сплюндрованого світу Позамежжя, шляхетні дренеї скористалися міжвимірним Екзодаром, щоб дістатися безпечного притулку." },
+            { 15, 24, "Шляхетні дренеї скористалися міжвимірним Екзодаром, щоб втекти зі сплюндрованого світу Позамежжя і дістатися безпечного притулку." },
             -- Inspired by tales of the heroic Alliance that stood against the might of the Burning Legion, the draenei have come to enlist aid in retaking their shattered homeland.
             { 24, 35, "Натхненні переказами про героїчний Альянс, що вистояв проти могутності Палаючого Легіону, дренеї прибули просити допомоги в поверненні своєї розтрощеної батьківщини." },
             -- Dedicated to preserving life and upholding the tenets of the Holy Light, the draenei hope to gather a new coalition of warriors to battle the Burning Legion and put a halt to its horrific Burning Crusade.
@@ -33,7 +38,7 @@ local subtitle = {
             -- Armed only with courage and their unshakable faith in the Light, the draenei look forward to finding the Alliance and ushering them towards the destiny that awaits beyond the skies of Azeroth.
             { 49.5, 63, "Озброєні лише відвагою та непохитною вірою у Світло, дренеї прагнуть знайти Альянс і повести його назустріч долі, що чекає за небесами Азероту." },
             -- Now, the fate of two worlds rests in your hands.
-            { 63, 69.5, "Тепер доля двох світів у ваших руках." },
+            { 63, 69.5, "Тепер доля двох світів у Ваших руках." },
         },
         BloodElf = {
             map = 1941, -- Eversong Woods
