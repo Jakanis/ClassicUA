@@ -12,7 +12,7 @@ local subtitle = {
     movie = {
         [115] = { -- mists of pandaria intro
             -- To ask why we fight…
-            [1] = "Питати, чому ми б'ємося...",
+            [1] = "Питати, чому ми боремося...",
             -- … is to ask why the leaves fall.
             [2] = "...це питати, чому падає листя.",
             -- It is in their nature.
@@ -20,7 +20,7 @@ local subtitle = {
             -- Perhaps, there is a better question.
             [4] = "Та, можливо, є краще питання.",
             -- Why do we fight?
-            [5] = "Чому б'ємося ми?",
+            [5] = "Чому ж ми боремося?",
             -- To protect Home, and Family…
             [6] = "Щоб захистити домівку та родину...",
             -- To preserve Balance, and bring Harmony
@@ -28,7 +28,7 @@ local subtitle = {
             -- For my kind, the true question is:
             [8] = "Для мого роду справжнє питання таке:",
             -- What is worth fighting for?
-            [9] = "за що варто битися?",
+            [9] = "за що варто боротися?",
         },
         [117] = { -- wandering isle finale (aysa and ji at the wound)
             -- Aysa?
@@ -54,7 +54,7 @@ local subtitle = {
             -- yet the one carrying my SON goes missing!
             [4] = "а зник саме той, що віз мого СИНА!",
             -- What of their last message? Show me whatever you have!
-            [5] = "Що з їхнім останнім повідомленням? Покажіть усе, що маєте!",
+            [5] = "Що було в їх останньому повідомленні? Покажіть усе, що маєте!",
             -- ...we have been drawn off course...Horde airfleet...many casualties...
             [6] = "...нас знесло з курсу... повітряний флот Орди... багато загиблих...",
             -- shipwrecked...on an uncharted isle...but the White Pawn is accounted for.
@@ -92,7 +92,7 @@ local subtitle = {
             -- Apparently, they found a massive uncharted landmass, shrouded, by dense mists...
             [7] = "Схоже, вони знайшли величезний недосліджений суходіл, оповитий густими туманами...",
             -- And you let the ALLIANCE get there first?!  Redirect the invasion fleet!
-            [8] = "І ви дозволили АЛЬЯНСУ дістатися туди першим?! Розвернути флот вторгнення!",
+            [8] = "І ви дозволили АЛЬЯНСУ дістатися туди першим?! Розвернути флот!",
             -- General, YOU and your best veterans will pave our way...
             [9] = "Генерале, ВИ та ваші найкращі ветерани прокладете нам шлях...",
             -- STORM the shore and PAINT THIS NEW CONTINENT RED!
@@ -170,7 +170,7 @@ local subtitle = {
             -- Already they plot against us. Seize this moment, Varian.
             [10] = "Вони вже плетуть змови проти нас. Скористайся моментом, Варіане.",
             -- Dismantle the Horde.
-            [11] = "Розпусти Орду.",
+            [11] = "Розтрощи Орду.",
             -- Guardsmen!
             [12] = "Варто!",
             -- Father – what are you doing?
@@ -207,13 +207,13 @@ local subtitle = {
             -- You are a pandaren born and raised on the mysterious Wandering Isle.
             { 0, 7.7, "Ви — {стать:пандарен, народжений і вихований:пандаренка, народжена і вихована} на таємничому Мандрівному острові." },
             -- While many of your fellow pandaren prefer a tranquil life, the lure of adventure burns in your blood.
-            { 7.7, 17.2, "Хоча багато ваших одноплемінників надають перевагу спокійному життю, у вашій крові палає жага пригод." },
+            { 7.7, 17.2, "Хоча багато Ваших одноплемінників надають перевагу спокійному життю, у Вашій крові палає жага пригод." },
             -- Recently, the Wandering Isle has begun erratically weaving about the world's oceans.
             { 17.2, 24.5, "Останнім часом Мандрівний острів почав безладно блукати океанами світу." },
             -- The air grows cold and your island home is spiraling toward disaster.
-            { 24.5, 31, "Повітря холоднішає, і ваша острівна домівка стрімко наближається до катастрофи." },
+            { 24.5, 31, "Повітря холоднішає, і Ваша острівна домівка стрімко наближається до катастрофи." },
             -- As one of the most promising of students at Master Shang's monastery, you may just be the salvation for your people, but first you must complete your training.
-            { 31, 45.5, "Як {стать:один із найперспективніших учнів:одна з найперспективніших учениць} монастиря майстра Шана, можливо, саме ви станете порятунком для свого народу — але спершу мусите завершити навчання." },
+            { 31, 45.5, "Як {стать:один із найперспективніших учнів:одна з найперспективніших учениць} монастиря майстра Шана, можливо, саме Ви станете порятунком для свого народу — але спершу мусите завершити навчання." },
         },
     },
 }
