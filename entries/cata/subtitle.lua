@@ -16,19 +16,19 @@ local subtitle = {
             -- Those cursed beasts …
             [2] = "Ті прокляті звірі...",
             -- … they've left you nothing more than just another wretched mongrel.
-            [3] = "...залишили від тебе лише ще одного жалюгідного покруча.",
+            [3] = "...зробили з тебе лише ще одного жалюгідного покруча.",
             -- Do you even remember what you did to your friends?
-            [4] = "Ти хоч пам'ятаєш, що {стать:заподіяв:заподіяла} своїм друзям?",
+            [4] = "Ти хоч пам'ятаєш, що {стать:зробив:зробила} зі своїми друзями?",
             -- Your kind … haunting the wilds unchecked …
-            [5] = "Твій рід... безкарно бродив нетрями...",
+            [5] = "Тобі подібні... безкарно нишпорили дикими землями...",
             -- … until we found you.
             [6] = "...доки ми не знайшли тебе.",
             -- They've kept you alive, because they still believe you can be saved.
-            [7] = "Тебе тримають {стать:живим:живою}, бо досі вірять, що тебе можна врятувати.",
+            [7] = "Тебе лишають {стать:живим:живою}, бо досі вірять, що тебе можна врятувати.",
             -- To which … I must ask
             [8] = "І тому... мушу спитати:",
             -- Is there even a shred … of humanity left within you?
-            [9] = "чи лишилася в тобі бодай крихта... людяності?",
+            [9] = "Чи лишилася в тобі бодай крихта... людяності?",
             -- Perhaps.
             [10] = "Можливо.",
             -- We will find out … soon enough.
@@ -36,21 +36,21 @@ local subtitle = {
         },
         [22] = { -- goblin starting experience cinematic (slave ship)
             -- Get down in the hull you worthless SLAAAAAAAAVES!
-            [1] = "Ану вниз, у трюм, нікчемні РАБИ!",
+            [1] = "Ану вниз, у трюм, нікчемні РАБИ-И-И-И-И!",
             -- This is all your fault!  We were supposed to have these stupid slaves to Kalimdor days ago!
-            [2] = "Це все ти винен! Ми мали доправити цих дурних рабів до Калімдору ще кілька днів тому!",
+            [2] = "Це все через тебе! Ми мали доправити цих довбаних рабів до Калімдору ще кілька днів тому!",
             -- I'm not taking the fall for this one, you're the one who got us lost!
             [3] = "Я за це відповідати не збираюся — це ти нас завів не туди!",
             -- What does it matter?  Gallywix is gonna have both our heads!
-            [4] = "Та яка різниця? Ґаллівікс усе одно зніме голови нам обом!",
+            [4] = "Та яка різниця? Ґаллівікс відрубає голови нам обом!",
             -- Shh … did you hear that?
-            [5] = "Тс-с... ти чув?",
+            [5] = "Тс-с... ти це чув?",
             -- Ahhhhhhhhh!
             [6] = "А-а-а-а!",
             -- Captain, Who are they?
             [7] = "Капітане, хто це такі?",
             -- It doesn't matter.  Our orders are to capture the horde target at all costs.
-            [8] = "Неважливо. Наш наказ — захопити ціль Орди за будь-яку ціну.",
+            [8] = "Неважливо. Наш наказано захопити ціль Орди за будь-яку ціну.",
             -- No witnesses.
             [9] = "Жодних свідків.",
             -- AHHHHHHH!!! Abandon ship!  Make for the escape pods!
@@ -64,15 +64,15 @@ local subtitle = {
             -- Pain. . .
             [1] = "Біль...",
             -- Agony. . .
-            [2] = "Мука...",
+            [2] = "Агонія...",
             -- My hatred burns through the cavernous deeps.
-            [3] = "Моя ненависть палає крізь печерні глибини.",
+            [3] = "Моя ненависть палає крізь найглибші надра землі.",
             -- The world heaves with my torment.
             [4] = "Світ здригається від моїх страждань.",
             -- Its wretched kingdoms quake beneath my rage. . .
-            [5] = "Його жалюгідні королівства тремтять перед моїм гнівом...",
+            [5] = "Ці жалюгідні королівства тремтять від моєї люті...",
             -- But at last. . .  The whole of Azeroth will break. . .
-            [6] = "Але нарешті... весь Азерот розколеться...",
+            [6] = "Але зрештою... весь Азерот розколеться...",
             -- . . .  And all will burn beneath the shadow of my wings. . .
             [7] = "...і все згорить у тіні моїх крил...",
         },
@@ -84,9 +84,9 @@ local subtitle = {
             -- the Cataclysm is over.
             [3] = "Катаклізм скінчився.",
             -- The champions who fought at our side assured the survival of our world...
-            [4] = "Поборники, що билися пліч-о-пліч з нами, забезпечили виживання нашого світу...",
+            [4] = "Герої, що билися пліч-о-пліч з нами, врятували наш світ...",
             -- but now we must see it, with mortal eyes
-            [5] = "але тепер ми мусимо побачити його смертними очима.",
+            [5] = "але тепер ми мусимо побачити це власними смертними очима.",
             -- We dragon aspects have fulfilled our great purpose
             [6] = "Ми, аспекти драконів, виконали своє велике призначення,",
             -- and our ancient power...
@@ -94,17 +94,17 @@ local subtitle = {
             -- is expended.
             [8] = "вичерпана.",
             -- But though our day draws to an end, life endures...
-            [9] = "Та хоча наш день добігає кінця, життя триває...",
+            [9] = "Та хоча наш час добігає кінця, життя триває...",
             -- and new generations will be born.
             [10] = "і народяться нові покоління.",
             -- Today's victory belongs to all who stood against the shadow.
-            [11] = "Сьогоднішня перемога належить усім, хто постав проти тіні.",
+            [11] = "Сьогоднішня перемога належить усім, хто постав проти темряви.",
             -- You are Azeroth's true Guardians...
             [12] = "Ви — справжні Вартівники Азероту...",
             -- And the future of this world is in your hands...
             [13] = "І майбутнє цього світу у ваших руках...",
             -- For the dawning of the age of mortals has begun.
-            [14] = "Бо світанок доби смертних уже настав.",
+            [14] = "Бо поалась нова ера — ера смертних.",
         },
     },
 
@@ -118,70 +118,70 @@ local subtitle = {
             -- Emboldened by the return of their heroic king, Varian Wrynn, the proud humans of Stormwind led the Alliance to victory in its war against the dreaded Lich King.
             { 0, 13, "Підбадьорені поверненням свого героїчного короля Варіана Рінна, горді люди Штормовію привели Альянс до перемоги у війні проти жахливого Короля-Ліча." },
             -- While successful, the campaign in Northrend proved costly and the humans now seek to bolster their strategic holdings through out the world.
-            { 13, 23, "Хоча похід у Нортренд був успішним, він дорого коштував, і тепер люди прагнуть зміцнити свої стратегічні володіння по всьому світу." },
+            { 13, 23, "Та перемога у Нортренді далася дорогою ціною, і тепер люди прагнуть зміцнити свої стратегічні позиції по всьому світу." },
             -- Under Varian's daring leadership, humanity now braces itself for a renewed conflict with its perennial enemy, the Horde.
-            { 23, 33.5, "Під зухвалим проводом Варіана людство готується до нового конфлікту зі своїм одвічним ворогом — Ордою." },
+            { 23, 33.5, "Під сміливим проводом Варіана людство готується до нового протистояння зі своїм одвічним ворогом — Ордою." },
             -- Yet, as the great Cataclysm rips across the world, familiar threats have once again arisen closer to home.
-            { 33.5, 40.5, "Але поки великий Катаклізм шматує світ, знайомі загрози знову постали ближче до дому." },
+            { 33.5, 40.5, "Але поки великий Катаклізм розриває світ на шматки, знайомі загрози знову постали ближче до дому." },
             -- It now falls to you to defend the kingdom and uphold the honor of humanity.
-            { 40.5, 48, "Тепер саме вам належить захистити королівство та відстояти честь людства." },
+            { 40.5, 48, "Тепер саме Вам належить захистити королівство й відстояти честь людства." },
         },
         Dwarf = {
             map = { 1426, 427 }, -- Dun Morogh (cata client), Coldridge Valley (mists client)
             -- Great change has come to the enduring halls of Ironforge.
             { 0, 5, "Великі зміни прийшли до одвічних зал Залізогарта." },
             -- Obsessed with the workings of the Titans, the dwarves retrieved their creators' mystical tablets from the fabled city of Ulduar.
-            { 5, 14.8, "Одержимі творіннями титанів, дворфи здобули містичні скрижалі своїх творців із легендарного міста Ульдуар." },
+            { 5, 14.8, "Одержимі таємницями титанів, дворфи відшукали містичні скрижалі своїх творців у легендарному місті Ульдуар." },
             -- Activating one such tablet, King Magni Bronzebeard fell prey to a terrible curse that fused his statue-like form into the diamond heart of Ironforge itself.
-            { 14.8, 27.5, "Активувавши одну з таких скрижалей, король Маґні Бронзобородий став жертвою жахливого прокляття, що вплавило його скам'яніле тіло в діамантове серце самого Залізогарта." },
+            { 14.8, 27.5, "Активувавши одну з таких скрижалей, король Маґні Бронзобородий став жертвою жахливого прокляття, що перетворило його тіло на камінь й обернуло на діамантове серце самого Залізогарта." },
             -- To compound this tragedy, Magni's estranged daughter, Moira, arrived claiming her father's throne for herself and for her infant Dark Iron son.
             { 27.5, 39.5, "На довершення цієї трагедії відчужена донька Маґні, Мойра, прибула вимагати батьків трон для себе та свого немовляти — сина з клану Темного Заліза." },
             -- To avert civil war, the dwarves created the Council of Three Hammers, an uneasy coalition that would share power equally amongst the three clans.
-            { 39.5, 50, "Щоб відвернути громадянську війну, дворфи створили Раду Трьох Молотів — хистку коаліцію, що ділить владу між трьома кланами." },
+            { 39.5, 50, "Щоб не допустити громадянської війни, дворфи створили Раду Трьох Молотів — хистку коаліцію, що ділить владу між трьома кланами." },
             -- Now, with political upheaval arising in the kingdom and the Great Cataclysm ravaging the surrounding lands, the future of Ironforge falls to brave dwarves like you.
-            { 50, 62.5, "Тепер, коли в королівстві наростає політичний неспокій, а Великий Катаклізм плюндрує навколишні землі, майбутнє Залізогарта залежить від хоробрих дворфів, таких як ви." },
+            { 50, 62.5, "Тепер, коли в королівстві наростає політичний неспокій, а Великий Катаклізм спустошує навколишні землі, майбутнє Залізогарта залежить від хоробрих дворфів, таких як Ви." },
         },
         NightElf = {
             map = { 1438, 460 }, -- Teldrassil (cata client), Shadowglen (mists client)
             -- After years of imprisonment within the Emerald Nightmare, Archdruid Malfurion Stormrage has finally returned to the mortal world.
-            { 0, 10.5, "Після років ув'язнення у Смарагдовому Кошмарі архідруїд Малфуріон Шаленство Бурі нарешті повернувся до світу смертних." },
+            { 0, 10.5, "Після років ув'язнення у Смарагдовому кошмарі архідруїд Малфуріон Шаленство Бурі нарешті повернувся у світ смертних." },
             -- Reunited with his love, Tyrande Whisperwind, Malfurion endeavors now to heal the corrupted world tree, Teldrassil, and rejuvenate the spirit of the night elf people.
-            { 10.5, 22.3, "Возз'єднавшись зі своєю коханою Тірандою Шелест Вітру, Малфуріон нині прагне зцілити осквернене світове дерево Тельдрассіль і відродити дух народу нічних ельфів." },
+            { 10.5, 22.3, "Возз'єднавшись зі своєю коханою Тірандою Шелест Вітру, Малфуріон нині прагне зцілити осквернене світове дерево Тельдрассіль і відродити силу духу нічних ельфів." },
             -- Yet, as the Great Cataclysm shakes the boughs of their colossal tree, the night elves brace themselves against the coming storm.
             { 22.3, 30, "Але поки Великий Катаклізм стрясає гілля їхнього велетенського дерева, нічні ельфи готуються до прийдешньої бурі." },
             -- As war and destruction close in from all sides, it falls to night elves like you to stand strong and protect the enduring legacy of your people.
-            { 30, 42, "Коли війна і руйнування підступають зусібіч, саме нічним ельфам, таким як ви, належить вистояти й захистити нетлінну спадщину свого народу." },
+            { 30, 42, "Коли війна і руйнування підступають зусібіч, саме таким нічним ельфам, таким як Ви, належить вистояти й захистити вікову спадщину свого народу." },
         },
         Gnome = {
             map = { 1426, 469, 30 }, -- Dun Morogh (cata client), New Tinkertown (mists client)
             -- Given the recent political upheaval in Ironforge, the gnomes have suddenly found themselves unwelcomed guests within the city.
-            { 1, 10.5, "Через нещодавній політичний неспокій у Залізогарті гноми раптом виявилися небажаними гістьми в цьому місті." },
+            { 1, 10.5, "Через нещодавні політичні потрясіння у Залізогарті гноми раптом виявилися небажаними гостями в цьому місті." },
             -- Leveraging their ingenious technologies and unquenchable spirit for adventure, the gnomes have begun to reevaluate their role within Khaz Modan.
-            { 10.5, 21, "Спираючись на свої геніальні технології та невгамовний дух пригод, гноми почали переосмислювати свою роль у Каз-Модані." },
+            { 10.5, 21, "Спираючись на свої геніальні технології та невгамовну жагу до пригод, гноми почали переосмислювати своє місце у Каз-Модані." },
             -- Under the inventive leadership of High Tinker Gelbin Mekkatorque, the gnomes now plan a daring campaign against the barbarous troggs to retake their former capital of Gnomeregan.
-            { 21, 36, "Під проводом винахідливого верховного механіка Ґелбіна Мекаторка гноми планують зухвалий похід проти варварів-троґґів, щоб повернути свою колишню столицю Гномреґан." },
+            { 21, 36, "Під проводом винахідливого Верховного штукаря Меккакрутя гноми планують зухвалий похід проти диких трогів, щоб повернути свою колишню столицю Гномреґан." },
             -- With the odds stacked against them, the gnomes are counting on brave heroes such as you to stand and be counted.
-            { 36, 44, "Попри те, що шанси проти них, гноми розраховують на хоробрих героїв, таких як ви, готових стати до лав." },
+            { 36, 44, "Попри всі труднощі, гноми покладаються на відважних героїв, таких як Ви, готових доєднатися до боротьби." },
             -- Your people's greatest hour draws near.
-            { 44, 48.5, "Найвеличніша година вашого народу вже близько." },
+            { 44, 48.5, "Найвеличніша година Вашого народу вже близько." },
         },
         Draenei = {
             map = { 1943, 468 }, -- Azuremyst Isle (cata client), Ammen Vale (mists client)
             -- Empowered by the Holy Light and the undying strength of their convictions, the draenei led the charge against the demonic Burning Legion in Outland.
-            { 1, 13, "Наснажені Святим Світлом і незламною силою своїх переконань, дренеї очолили наступ на демонічний Палаючий Легіон у Позамежжі." },
+            { 1, 13, "Наснажені Священим Світлом і незламною силою своїх переконань, дренеї очолили наступ на демонічний Палаючий Легіон у Позамежжі." },
             -- Now, with the Legion's defeat, they have completed the desperate mission that first brought them to Azeroth.
             { 13, 20, "Тепер, із поразкою Легіону, вони виконали відчайдушну місію, що колись привела їх до Азероту." },
             -- Though some draenei were sent back to Outland to revitalize their former civilization, the majority have vowed to remain and uphold their sacred commitment to the Alliance.
-            { 20, 32.5, "Хоча декого з дренеїв відіслали назад у Позамежжя відроджувати їхню колишню цивілізацію, більшість заприсяглася лишитися та шанувати свій священний обов'язок перед Альянсом." },
+            { 20, 32.5, "Хоча частина дренеїв повернулася назад у Позамежжя відроджувати їхню колишню цивілізацію, більшість заприсяглася лишитися та надалі виконувати свій священний обов'язок перед Альянсом." },
             -- Driven by a powerful vision, the immortal Prophet Velen believes that a great war between the darkness and the Light is fast approaching and that Azeroth will be its principal battleground.
-            { 32.5, 46.8, "Скеровуваний могутнім видінням, безсмертний пророк Велен вірить, що велика війна між темрявою та Світлом стрімко наближається і що Азерот стане її головним бойовищем." },
+            { 32.5, 46.8, "Скеровуваний могутнім видінням, безсмертний пророк Велен вірить, що велика війна між темрявою та Світлом стрімко наближається і що Азерот стане її головним полем битви." },
             -- As one of Velen's chosen, you must stand bravely before the shadow and ensure that your people are ready for the war to come.
-            { 46.8, 57.5, "Як {стать:один:одна} з обраних Велена, ви мусите хоробро постати перед тінню та подбати, щоб ваш народ був готовий до прийдешньої війни." },
+            { 46.8, 57.5, "Як {стать:один:одна} з обраних Велена, Ви мусите хоробро постати перед лицем темрями та подбати, щоб Ваш народ був готовий до прийдешньої війни." },
         },
         Worgen = {
             map = 202, -- Gilneas City (same id on cata and mists clients)
             -- Led by their indomitable king, Genn Greymane, the proud citizens of Gilneas once stood with the Alliance against the vile orcish Horde that sought to conquer all of Lordaeron.
-            { 1, 13.5, "Очолювані своїм незламним королем Ґенном Сивогривом, горді громадяни Ґілнеасу колись стояли разом з Альянсом проти мерзенної орди орків, що прагнула підкорити весь Лордерон." },
+            { 1, 13.5, "Під проводом свого незламного короля Ґенна Сивогрива, горді громадяни Ґілнеасу колись стояли пліч-о-пліч з Альянсом проти мерзенної орди орків, що прагнула підкорити весь Лордерон." },
             -- Gilneas survived but, in the years following the Second War, the kingdom drew ever inward.
             { 13.5, 21, "Ґілнеас вистояв, але в роки після Другої війни королівство дедалі більше замикалося в собі." },
             -- Distrustful of their former allies, the Gilneans erected a mighty wall at the borders of their land, closing off their nation - and their hearts - from an ever-darkening world.
@@ -189,9 +189,9 @@ local subtitle = {
             -- Now, many years later, as the seemingly unstoppable undead Scourge marches across Lordaeron, human civilization once again teeters on the edge of destruction.
             { 33.5, 46, "Тепер, багато років по тому, коли, здавалося б, нездоланна нежить Скари крокує Лордероном, людська цивілізація знову балансує на межі знищення." },
             -- As war and terror close in all around them, the citizens of Gilneas are faced with one, terrible truth: their mighty wall cannot hold back the dead for much longer...
-            { 46, 57.8, "Поки війна і жах підступають зусібіч, громадяни Ґілнеасу постали перед однією страшною правдою: їхня могутня стіна вже недовго стримуватиме мертвих..." },
+            { 46, 57.8, "Поки війна і жах підступають зусібіч, громадяни Ґілнеасу постали перед страшною правдою: їхня могутня стіна вже невдовзі не зможе стримувати мертвих..." },
             -- ...and, worse, rumors of a new threat have risen within the kingdom's borders of feral, nightmare creatures that walk upright as men but hunt and howl as wolves.
-            { 57.8, 72, "...а що гірше — у межах королівства ширяться чутки про нову загрозу: диких кошмарних істот, які ходять на двох ногах, мов люди, але полюють і виють, мов вовки." },
+            { 57.8, 72, "...і, що гірше — у межах королівства ширяться чутки про нову загрозу: диких кошмарних істот, які ходять на двох ногах, мов люди, але полюють і виють, мов вовки." },
         },
         Orc = {
             map = { 1411, 461 }, -- Durotar (cata client), Valley of Trials (mists client)
